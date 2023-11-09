@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div className='w-sreen flex flex-row justify-center bg-black py-3 text-white gap-3'>
             <p>Home</p>
-            <p>kontol</p>
+            <p>Wisata</p>
             <p>Dasbord</p>
             <p>About</p>
         </div>
