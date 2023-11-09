@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 
-const home = () => {
+const Dashboard = () => {
   return (
-    <div>home</div>
+    <div>dasboard</div>
   )
 }
 
-export default home
+export default Dashboard
