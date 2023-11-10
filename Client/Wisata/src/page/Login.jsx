@@ -6,7 +6,9 @@ const Login = () => {
   return (
     <>
     <Navbar/>
+    but
     <div>login</div>
+
     </>
   )
 }
