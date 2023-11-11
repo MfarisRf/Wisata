@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <>
     <Navbar/>
-    <CardLoginForm />
+    <CardLoginForm/>
     <div>login</div>
 
     </>

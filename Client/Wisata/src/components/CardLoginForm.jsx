@@ -2,45 +2,43 @@ import React from 'react';
 
 const CardLoginForm = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-96">
-        <h2 className="text-2xl font-semibold mb-4">Login</h2>
-        <form>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
-              placeholder="Your email"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
-              placeholder="Your password"
-            />
-          </div>
-          <div className="mb-4 flex justify-between items-center">
-            <a href="#" className="text-blue-500 text-sm">Lupa Kata Sandi?</a>
-            <button
-              type="submit"
-              className="bg-blue-500 text-white p-2 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
-            >
-              Masuk
-            </button>
-          </div>
-        </form>
+    <!-- component -->
+    <div class="bg-gray-100 flex justify-center items-center h-screen">
+        <!-- Left: Image -->
+    <div class="w-1/2 h-screen hidden lg:block">
+      <img src="https://placehold.co/800x/667fff/ffffff.png?text=Your+Image&font=Montserrat" alt="Placeholder Image" class="object-cover w-full h-full">
+    </div>
+    <!-- Right: Login Form -->
+    <div class="lg:p-36 md:p-52 sm:20 p-8 w-full lg:w-1/2">
+      <h1 class="text-2xl font-semibold mb-4">Login</h1>
+      <form action="#" method="POST">
+        <!-- Username Input -->
+        <div class="mb-4">
+          <label for="username" class="block text-gray-600">Username</label>
+          <input type="text" id="username" name="username" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
+        </div>
+        <!-- Password Input -->
+        <div class="mb-4">
+          <label for="password" class="block text-gray-600">Password</label>
+          <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
+        </div>
+        <!-- Remember Me Checkbox -->
+        <div class="mb-4 flex items-center">
+          <input type="checkbox" id="remember" name="remember" class="text-blue-500">
+          <label for="remember" class="text-gray-600 ml-2">Remember Me</label>
+        </div>
+        <!-- Forgot Password Link -->
+        <div class="mb-6 text-blue-500">
+          <a href="#" class="hover:underline">Forgot Password?</a>
+        </div>
+        <!-- Login Button -->
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full">Login</button>
+      </form>
+      <!-- Sign up  Link -->
+      <div class="mt-6 text-blue-500 text-center">
+        <a href="#" class="hover:underline">Sign up Here</a>
       </div>
+    </div>
     </div>
   );
 };
