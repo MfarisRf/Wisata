@@ -15,6 +15,9 @@ export default {
       fontfamily : {
         'poppins': ['Poppins', 'sans-serif']
       },
+      color : {
+        'hijau' : '#2D8C14',
+      },
     },
   },
   plugins: [],
