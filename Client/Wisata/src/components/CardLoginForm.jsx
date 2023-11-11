@@ -1,5 +1,3 @@
-import React from './CardLoginForm'
-
 import React from 'react';
 
 const CardLoginForm = () => {
