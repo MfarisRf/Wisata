@@ -8,12 +8,10 @@ const Navbar = () => {
 <nav className="bg-f1f1e8 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-f1f1e8 dark:border-f1f1e8">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="#" className="flex items-center">
-      <img src="#" className="h-8 mr-3" alt="Logo" />
-      <span className="self-center text-2xl font-poppins font-bold whitespace-nowrap dark:text-white">CIAYUMAJAKUNING</span>
+      <img src="..\assets\icon\icon_profile.png" className="h-8 mr-3" />
   </a>
   <div className="flex md:order-2">
-
-      <button type="button" className="text-2d8c14 border border-2d8c14 focus:outline-2d8c14 font-poppins font-bold rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-2d8c14 dark:hover:bg-2d8c14 shadow-md"><img src="./assets/icon/icon_profile.png" alt="logo" />Masuk</button>
+  <button type="button" className="py-2.5 px-5 me-2 mb-2 text-x15 font-bold text-green-700 focus:outline-none bg-f1f1e8 rounded-full border border-green-700 hover:bg-f1f1e8-100 hover:text-green-700 focus:z-10 focus:ring-2 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"><img src="" />Masuk</button>
   </div>
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
     <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-f1f1e8 :bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
