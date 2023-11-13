@@ -9,26 +9,26 @@ const CardLoginForm = () => {
         <form>
           <div className="mb-4">
             <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
-              Email
+              Email*
             </label>
             <input
               type="email"
               id="email"
               name="email"
               className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
-              placeholder="Your email"
+              placeholder="masukan email"
             />
           </div>
           <div className="mb-4">
             <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
-              Password
+              Kata sandi*
             </label>
             <input
               type="password"
               id="password"
               name="password"
               className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
-              placeholder="Your password"
+              placeholder="masukan kata sandi"
             />
           </div>
           <div className="mb-4 flex justify-between items-center">
