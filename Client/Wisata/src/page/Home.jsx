@@ -8,6 +8,7 @@ const Home = () => {
     <>
       <Navbar/>
       <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eaque quasi hic delectus, ex ad itaque voluptatem velit soluta tempora quam, eveniet reprehenderit quisquam ullam aliquid laboriosam saepe. Nihil, deleniti.</div>
+      <br /> <br />
       <Footer/>
     </>
   )
