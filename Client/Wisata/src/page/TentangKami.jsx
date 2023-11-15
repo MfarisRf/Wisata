@@ -8,7 +8,9 @@ const TentangKami = () => {
                 <a href="#" className="flex items-center">
                 <img src={logo} className="img-fluid logo h-12 w-50 ml-20" alt="brand"/>
                 </a>
-                <div></div>
+                <div>
+                    
+                </div>
                 </div>
             </nav>
         </div>
