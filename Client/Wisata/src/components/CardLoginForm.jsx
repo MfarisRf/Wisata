@@ -11,7 +11,7 @@ const CardLoginForm = () => {
 
   return (
     <div className="flex h-screen items-center justify-center">
-      <div className="bg-bfdcae w-1/3 shadow-md rounded-md overflow-hidden flex">
+      <div className="bg-bfdcae w-9/12 shadow-md rounded-md overflow-hidden flex">
         {/* Form Login */}
         <div className="w-1/2 p-8">
           <h2 className="text-2xl font-semibold mb-4">Masuk</h2>
@@ -50,7 +50,7 @@ const CardLoginForm = () => {
         </div>
 
         {/* Gambar Illustrasi */}
-        <div className="w-9/12 bg-gray-400 flex items-center justify-center">
+        <div className="w-1/2 bg-gray-400 flex items-center justify-center">
           <img
             src="" // Ganti dengan URL gambar yang diinginkan
             alt="Illustration"
