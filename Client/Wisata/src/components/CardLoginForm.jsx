@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 
-const App = () => {
+const CardLoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Implement login logic here
@@ -9,7 +9,6 @@ const App = () => {
   };
 
   return (
-        <h2 className="text-2xl font-semibold mb-4">Login</h2>
     <div className="flex h-screen items-center justify-center">
       <div className="bg-bfdcae w-96 shadow-md rounded-md overflow-hidden flex">
         {/* Form Login */}
@@ -62,4 +61,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default CardLoginForm;
