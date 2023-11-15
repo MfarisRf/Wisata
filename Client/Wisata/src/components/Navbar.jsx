@@ -7,12 +7,11 @@ const Navbar = () => {
           
 <nav className="bg-f1f1e8 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-f1f1e8 dark:border-f1f1e8">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="#" className="flex items-center">
-  <img src={logo} className="img-fluid logo h-12 ml-20" alt="brand" />
-  {/* className="" */}
+  <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+  <img src={logo} className="img-fluid logo object-contain h-15 w-40 ml-20" alt="brand" />
   </a>
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium mr-20 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-f1f1e8 :bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+    <ul className="flex flex-col p-4 md:p-0 mt-4 font-sm mr-20 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-f1f1e8 :bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
       <li>
         <a href="#Beranda" className="py-2 pl-3 pr-4 text-2d8c14 text-x15 rounded md:bg-transparent font-poppins font-bold" aria-current="page">Beranda</a>
       </li>

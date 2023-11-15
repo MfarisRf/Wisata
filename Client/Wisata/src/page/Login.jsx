@@ -8,7 +8,6 @@ const Login = () => {
     <>
     <Navbar/>
     <CardLoginForm />
-    <div>login</div>
     </>
   )
 }
