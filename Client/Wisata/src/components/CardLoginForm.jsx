@@ -4,7 +4,7 @@ import React from 'react';
 const CardLoginForm = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded shadow-md w-96">
+      <div className="bg-f1f1e8 p-8 rounded shadow-md w-96">
         <h2 className="text-2xl font-semibold mb-4">Login</h2>
         <form>
           <div className="mb-4">
