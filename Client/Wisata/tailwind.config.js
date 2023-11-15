@@ -8,6 +8,7 @@ export default {
     extend: {
       backgroundColor : {
         'f1f1e8': '#F1F1E8',
+        'bfdcae': '#BFDCAE',
       },
       textColor : {
         '2d8c14': '#2D8C14',
