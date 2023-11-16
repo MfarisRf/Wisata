@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
+import logo from '../assets/images/Logo_navbar.png'
 
 const TentangKami = () => {
     return (
@@ -16,3 +18,5 @@ const TentangKami = () => {
         </div>
     )
 }
+
+export default TentangKami
