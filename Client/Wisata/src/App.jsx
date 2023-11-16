@@ -3,6 +3,7 @@ import Home from './page/home'
 import Login from './page/login'
 import About from './page/about'
 import Landingpage from './page/Landingpage'
+import NotFound from './page/NotFound'
 import OurTeam from './components/OurTeam'
 
 
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/Login" element={<Login />} />
           <Route path="/About" element={<About />} />
           <Route path="/Landingpage" element={<Landingpage />} />
+          <Route path="/Notfound" element={<NotFound/>} />
           <Route path="/Team" element={<OurTeam/>} />
         </Routes>
       </Router>
