@@ -16,13 +16,19 @@ export default {
       },
       textColor : {
         '2d8c14': '#2D8C14',
+        '456761': '#456761',
       },
       fontfamily : {
-        'poppins': ['Poppins', 'sans-serif']
+        'poppins' : ['Poppins', 'sans-serif'],
+        'Boogaloo' : ['Boogaloo', 'sans-serif']
       },
       color : {
         'hijau' : '#2D8C14',
       },
+      spacing: {
+        '90': '90px',
+        '25': '25%',
+      }
     },
   },
   plugins: [
