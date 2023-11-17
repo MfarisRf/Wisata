@@ -11,6 +11,9 @@ export default {
         'f1f1e8': '#F1F1E8',
         'bfdcae': '#BFDCAE',
       },
+      backgroundImage : {
+        'texture': "url('../assets/images/Teksturs.png')",
+      },
       textColor : {
         '2d8c14': '#2D8C14',
       },
