@@ -1,22 +1,9 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import 'flowbite'
-import Gambar1 from '../assets/images/Cirebon.png'
-import Gambar2 from '../assets/images/indramayu.png'
-import Gambar3 from '../assets/images/majalengka.png'
-import Gambar4 from '../assets/images/Kuningan.png'
-import background from "../assets/images/Teksturs.png";
 
-const Landingpage = () => {
+const Carousel = () => {
   return (
     <div>
-        <>
-        <Navbar />
-        {/* carosel */}
-
-    <div id="default-carousel" className="relative w-full" data-carousel="slide">
+        <div id="default-carousel" className="relative w-full" data-carousel="slide">
         {/* <!-- Carousel wrapper --> */}
         <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
             {/* <!-- Item 1 --> */}
@@ -88,13 +75,11 @@ const Landingpage = () => {
         </div>
     </div>
 
-{/* tanda */}
+    {/* tanda */}
     </div>
-</div>
-        <Footer />
-        </>
     </div>
+        
   )
 }
 
-export default Landingpage
+export default Carousel
