@@ -3,13 +3,13 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import 'flowbite'
-import Gambarnfk from '../assets/images/NFK - 1920x689.png'
+import Gambarnfo from '../assets/images/NFO 1920x689.png'
 
-function Notfoundkuliner() {
+function Notfoundoleholeh() {
   return (
     <div>
     <Navbar/>
-    <img class="h-2/5 w-5/5" src={Gambarnfk} alt="image description"></img>
+    <img class="h-2/5 w-5/5" src={Gambarnfo} alt="image description"></img>
     <br/>
     <form>
     <div class="flex">
@@ -58,4 +58,4 @@ function Notfoundkuliner() {
   )
 }
 
-export default Notfoundkuliner
+export default Notfoundoleholeh

@@ -19,8 +19,8 @@ export default {
         '456761': '#456761',
       },
       fontfamily : {
-        'poppins' : ['Poppins', 'sans-serif'],
-        'Boogaloo' : ['Boogaloo', 'sans-serif']
+        'poppins' : ['Poppins'],
+        'Boogaloo' : ['Boogaloo']
       },
       color : {
         'hijau' : '#2D8C14',
