@@ -14,7 +14,7 @@ const Landingpage = () => {
         <Carosel />
 {/* Keterangan */}
 <div className='bg-f1f1e8' style={{ backgroundImage: `url(${background})`}}>
-    <h3 className='text-center text-2xl font-Boogaloo font-bold text-456761 pb-10 pt-28'>Tentang CIAYUMAJAKUNING</h3>
+    <h3 className='text-center text-2xl font-Boogaloo text-456761 pb-10 pt-28'>Tentang CIAYUMAJAKUNING</h3>
         <p className='text-center font-sm px-25 text-456761'>Ciayumajakuning adalah sebuah wilayah di Jawa Barat, Indonesia yang terdiri dari Kota Cirebon, Kabupaten Cirebon, Kabupaten Indramayu, Kabupaten Majalengka, dan Kabupaten Kuningan. Wilayah ini merupakan kekuatan ekonomi yang baru dan besar di Jawa Barat sesudah kawasan Bandung Raya.</p>
     <div className='w-4/6 ml-60 mt-20 p-5 border-4 border-green-500 rounded-lg bg-f1f1e8'>
         <h2 className='pb-10 font-bold text-2xl'>Rekomendasi Wisata</h2>
