@@ -5,6 +5,8 @@ import About from './page/about'
 import Landingpage from './page/Landingpage'
 import OurTeam from './components/OurTeam'
 import Notfoundkuliner from './page/Notfoundkuliner'
+import Notfoundwisata from './page/Notfoundwisata'
+import Notfoundoleholeh from './page/Notfoundoleholeh'
 
 
 const App = () => {
@@ -16,6 +18,8 @@ const App = () => {
           <Route path="/Login" element={<Login />} />
           <Route path="/About" element={<About />} />
           <Route path="/Notfoundkuliner" element={<Notfoundkuliner/>} />
+          <Route path="/Notfoundwisata" element={<Notfoundwisata/>} />
+          <Route path="/Notfoundoleholeh" element={<Notfoundoleholeh/>} />
           <Route path="/Team" element={<OurTeam/>} />
         </Routes>
       </Router>
