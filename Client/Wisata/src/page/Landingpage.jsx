@@ -4,6 +4,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Gambar from '../assets/images/Cirebon.png'
 import background from "../assets/images/Tekstur.png";
+import 'flowbite';
+import 'flowbite/dist/flowbite.css';
 
 const Landingpage = () => {
   return (
