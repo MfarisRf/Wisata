@@ -2,8 +2,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Home from './page/home'
 import Login from './page/login'
 import About from './page/about'
-import Dashboard from './page/Dashboard'
+import Landingpage from './page/Landingpage'
+import NotFound from './page/NotFound'
 import OurTeam from './components/OurTeam'
+
 
 const App = () => {
   return (
@@ -13,7 +15,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/About" element={<About />} />
-          <Route path="/Dasboard" element={<Dashboard/>} />
+          <Route path="/Landingpage" element={<Landingpage />} />
+          <Route path="/Notfound" element={<NotFound/>} />
           <Route path="/Team" element={<OurTeam/>} />
         </Routes>
       </Router>

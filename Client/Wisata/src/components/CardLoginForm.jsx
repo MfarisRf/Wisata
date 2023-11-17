@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 // src/App.js
 import React from 'react';
+import logo from '../assets/images/gambar_login.png'
 
 const CardLoginForm = () => {
   const handleSubmit = (e) => {
@@ -52,7 +53,7 @@ const CardLoginForm = () => {
         {/* Gambar Illustrasi */}
         <div className="w-1/2 bg-gray-400 flex items-center justify-center">
           <img
-            src="" // Ganti dengan URL gambar yang diinginkan
+            src={logo} // Ganti dengan URL gambar yang diinginkan
             alt="Illustration"
             className="object-cover w-full h-full rounded-r-md"
           />

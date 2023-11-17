@@ -2,6 +2,7 @@
 export default {
   content: [
     "./index.html",
+    "./node_modules/flowbite/**/*.js",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -9,6 +10,9 @@ export default {
       backgroundColor : {
         'f1f1e8': '#F1F1E8',
         'bfdcae': '#BFDCAE',
+      },
+      backgroundImage : {
+        'texture': "url('../assets/images/Teksturs.png')",
       },
       textColor : {
         '2d8c14': '#2D8C14',
@@ -21,5 +25,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
