@@ -2,10 +2,11 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import Gambar from '../assets/images/Cirebon.png'
+import Gambar1 from '../assets/images/Cirebon.png'
+import Gambar2 from '../assets/images/indramayu.png'
+import Gambar3 from '../assets/images/majalengka.png'
+import Gambar4 from '../assets/images/Kuningan.png'
 import background from "../assets/images/Teksturs.png";
-import 'flowbite';
-import 'flowbite/dist/flowbite.css';
 
 const Landingpage = () => {
   return (
@@ -19,23 +20,19 @@ const Landingpage = () => {
     <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
          {/* <!-- Item 1 --> */}
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src={Gambar} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            <img src={Gambar1} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
         </div>
         {/* <!-- Item 2 --> */}
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src={Gambar} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            <img src={Gambar2} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
         </div>
         {/* <!-- Item 3 --> */}
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-3.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            <img src={Gambar3} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
         </div>
         {/* <!-- Item 4 --> */}
         <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-4.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
-        </div>
-        {/* <!-- Item 5 --> */}
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-5.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            <img src={Gambar4} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
         </div>
     </div>
     {/* <!-- Slider controls --> */}
@@ -59,7 +56,7 @@ const Landingpage = () => {
 
 
 {/* Keterangan */}
-<div className='bg-f1f1e8' style={{ backgroundImage: `url(${background})` }}>
+<div className='bg-f1f1e8' style={{ backgroundImage: `url(${background})`}}>
     <h3 className='text-center font-bold pb-10'>Tentang CIAYUMAJAKUNING</h3>
         <p className='text-center font-sm px-96'>Ciayumajakuning adalah sebuah wilayah di Jawa Barat, Indonesia yang terdiri dari Kota Cirebon, Kabupaten Cirebon, Kabupaten Indramayu, Kabupaten Majalengka, dan Kabupaten Kuningan. Wilayah ini merupakan kekuatan ekonomi yang baru dan besar di Jawa Barat sesudah kawasan Bandung Raya.</p>
     <div className='w-4/6 ml-60 mt-20 p-5 border-4 border-green-500 rounded-lg bg-f1f1e8'>
