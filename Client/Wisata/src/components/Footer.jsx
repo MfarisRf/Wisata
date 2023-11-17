@@ -5,7 +5,7 @@ import logo from "../assets/images/Logo_Only.png"
 const Footer = () => {
   return (
     
-<footer className="bg-f1f1e8 dark:bg-gray-900 font-">
+<footer className="bg-f1f1e8 dark:bg-gray-900 font-sm ">
     <div className="mx-auto w-full max-w-screen-xl">
       <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
         <div>
