@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import 'flowbite'
 import Gambar1 from '../assets/images/Cirebon.png'
 import Gambar2 from '../assets/images/indramayu.png'
 import Gambar3 from '../assets/images/majalengka.png'
