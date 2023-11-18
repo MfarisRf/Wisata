@@ -21,11 +21,6 @@ export default {
       fontfamily : {
         'poppins' : ['Poppins'],
         'Boogaloo' : ['Boogaloo'],
-        "deskripsi-text": "var(--deskripsi-text-font-family)",
-        headline: "var(--headline-font-family)",
-        optional: "var(--optional-font-family)",
-        subjudul: "var(--subjudul-font-family)",
-        tagline: "var(--tagline-font-family)",
       },
       color : {
         'hijau' : '#2D8C14',
