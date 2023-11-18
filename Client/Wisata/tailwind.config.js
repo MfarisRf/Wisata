@@ -20,10 +20,21 @@ export default {
       },
       fontfamily : {
         'poppins' : ['Poppins'],
-        'Boogaloo' : ['Boogaloo']
+        'Boogaloo' : ['Boogaloo'],
+        "deskripsi-text": "var(--deskripsi-text-font-family)",
+        headline: "var(--headline-font-family)",
+        optional: "var(--optional-font-family)",
+        subjudul: "var(--subjudul-font-family)",
+        tagline: "var(--tagline-font-family)",
       },
       color : {
         'hijau' : '#2D8C14',
+        "primary-color-1": "var(--primary-color-1)",
+        "primary-color-2": "var(--primary-color-2)",
+        "primary-color-3": "var(--primary-color-3)",
+        "secondary-color-1": "var(--secondary-color-1)",
+        "secondary-color-2": "var(--secondary-color-2)",
+        "secondary-color-3": "var(--secondary-color-3)",
       },
       spacing: {
         '90': '90px',
