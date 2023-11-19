@@ -1,6 +1,8 @@
+require ('dotenv').config();
 import Admin from "../models/AdminModel.js";
 import bcrypt from "bcrypt";
-import Jwt  from "jsonwebtoken";
+import jwt from "jsonwebtoken";
+
 
 export const getAdmin = async (req, res) => {
     try {
@@ -37,7 +39,7 @@ export const Login = async (req, res) => {
         const admin = await Admin.findAll({ 
             where: { 
                 username: req.body.username
-            } 
+            }
         });
         const match = await bcrypt.compare(req.body.password, admin[0].password);
         if(!match) return res.status(400).json({ message: "Password tidak valid" });
@@ -47,7 +49,7 @@ export const Login = async (req, res) => {
         const accessToken = jwt.sign({ adminid, username, nama_admin }, process.env.ACCESS_TOKEN_SECRET,{ 
             expiresIn: '15m' 
         });
-        const refresh_token = jwt.sign({ adminid, username, nama_admin }, process.env.ACCESS_TOKEN_SECRET,{ 
+        const refreshToken = jwt.sign({ adminid, username, nama_admin }, process.env.REFRESH_TOKEN_SECRET,{ 
             expiresIn: '1d'
         });
         await Admin.update({refresh_token: refreshToken}, {
