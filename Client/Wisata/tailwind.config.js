@@ -17,6 +17,7 @@ export default {
       textColor : {
         '2d8c14': '#2D8C14',
         '456761': '#456761',
+        '29446F': '#29446F',
       },
       fontfamily : {
         'poppins' : ['Poppins'],
@@ -24,6 +25,7 @@ export default {
       },
       color : {
         'hijau' : '#2D8C14',
+        '206a5d'  : '#206A5D',
         "primary-color-1": "var(--primary-color-1)",
         "primary-color-2": "var(--primary-color-2)",
         "primary-color-3": "var(--primary-color-3)",
@@ -34,6 +36,14 @@ export default {
       spacing: {
         '90': '90px',
         '25': '25%',
+      },
+      width : {
+        '1209': '900px',
+        '234' : '234px',
+        '468' : '300px',
+      },
+      height : {
+        '420' : '420px'
       }
     },
   },

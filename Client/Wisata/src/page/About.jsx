@@ -1,5 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
+<<<<<<< HEAD
+=======
+import Navbar from '../components/Navbar'
+>>>>>>> 561e056b7ea81e0ef53808049742488c0031ba9a
 
 function About () {
     return (
