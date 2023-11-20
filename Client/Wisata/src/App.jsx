@@ -6,7 +6,6 @@ import OurTeam from './components/OurTeam'
 import Notfoundkuliner from './page/Notfoundkuliner'
 import Notfoundwisata from './page/Notfoundwisata'
 import Notfoundoleholeh from './page/Notfoundoleholeh'
-import './App.css'
 
 
 const App = () => {
