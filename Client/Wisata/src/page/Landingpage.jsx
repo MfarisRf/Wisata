@@ -27,6 +27,7 @@ import Kuningan1 from '../assets/images/wisata_kuningan1.png';
 import Kuningan2 from '../assets/images/wisata_kuningan2.png';
 import Kuningan3 from '../assets/images/wisata_kuningan3.png';
 import Kuningan4 from '../assets/images/wisata_kuningan4.png';
+import Slide_layer from '../components/Slide_layer'
 
 const Landingpage = () => {
   return (
@@ -35,10 +36,10 @@ const Landingpage = () => {
         <Navbar />
         <Carosel />
 {/* Keterangan */}
-<div className='bg-cover' style={{backgroundImage: `url(${background}) `}}>
+<div className='bg-cover px-20 pb-40' style={{backgroundImage: `url(${background}) `}}>
     <h3 className='text-center text-2xl font-Boogaloo text-456761 pb-10 pt-28 font-bold'>Tentang CIAYUMAJAKUNING</h3>
         <p className='text-center font-sm px-25 text-456761'>Ciayumajakuning adalah sebuah wilayah di Jawa Barat, Indonesia yang terdiri dari Kota Cirebon, Kabupaten Cirebon, Kabupaten Indramayu, Kabupaten Majalengka, dan Kabupaten Kuningan. Wilayah ini merupakan kekuatan ekonomi yang baru dan besar di Jawa Barat sesudah kawasan Bandung Raya.</p>
-    <div className='w-1209 pb-60 ml-60 mt-20 border-4 border-[#206A5D] rounded-lg p-5' style={{backgroundImage: `url(${background2}) `}}>
+    <div className='w-1209 pb-60 ml-40 mt-20 border-4 border-[#206A5D] rounded-lg p-5' style={{backgroundImage: `url(${background2}) `}}>
         <h2 className='pb-5 font-bold text-2xl font-Boogaloo text-2d8c14 pl-24'>Rekomendasi Wisata</h2>
         {/* card A */}
         <div className='h-56 grid grid-cols-3 pl-24'>
@@ -157,6 +158,7 @@ const Landingpage = () => {
 {/* tanda */}
     </div>
 </div>
+        <Slide_layer />
         <Footer />
         </>
     </div>
