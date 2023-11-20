@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Carosel from '../components/Carosel'
 import 'flowbite'
+import Typewriter from 'typewriter-effect';
 
 import background from "../assets/images/Teksturs.png";
 import background2 from "../assets/images/Teksturs2.png";
@@ -27,6 +28,7 @@ import Kuningan1 from '../assets/images/wisata_kuningan1.png';
 import Kuningan2 from '../assets/images/wisata_kuningan2.png';
 import Kuningan3 from '../assets/images/wisata_kuningan3.png';
 import Kuningan4 from '../assets/images/wisata_kuningan4.png';
+import Type from '../components/type.jsx'
 
 const Landingpage = () => {
   return (
