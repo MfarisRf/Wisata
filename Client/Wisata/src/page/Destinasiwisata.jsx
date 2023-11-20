@@ -2,17 +2,20 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+
 import 'flowbite'
+import background from "../assets/images/Teksturs.png";
 import Gambarnfdw from '../assets/images/NFDW 1920x689.png'
 
-function Notfoundwisata() {
+function Destinasiwisata() {
   return (
     <div>
     <Navbar/>
     <img class="h-2/5 w-5/5" src={Gambarnfdw} alt="image description"></img>
     <br/>
+    <h1>Destinasi Wisata</h1>
     <div class="flex items-center justify-between w-full sm:w-96">
-
+    
     <div class="relative w-full mr-2">
   <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Search" required />
 
@@ -23,6 +26,7 @@ function Notfoundwisata() {
     <span class="sr-only">Search</span>
   </button>
 </div>
+
 
 <form>
     <div class="relative flex-shrink-0 z-10 inline-flex items-center">
@@ -49,13 +53,10 @@ function Notfoundwisata() {
     </div>
 </form>
 </div>
+<div>
 
-    <div className="flex items-center justify-center h-screen bg-white-200">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-800">404 - Not Found</h1>
-        <p className="mt-4 text-lg text-gray-600">The page you are looking for might not exist.</p>
-      </div>
     </div>
+    <br/>
       <div>
         <Footer/>
       </div>
@@ -63,4 +64,4 @@ function Notfoundwisata() {
   )
 }
 
-export default Notfoundwisata
+export default Destinasiwisata

@@ -18,7 +18,9 @@
     "react-router-dom": "^6.18.0",
     "swiper": "^11.0.4",
     "tw-elements": "^1.0.0",
-    "tw-elements-react": "^1.0.0-alpha2"
+    "tw-elements-react": "^1.0.0-alpha2",
+    "typewriter": "^9.1.0",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
