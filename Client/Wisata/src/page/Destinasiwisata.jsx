@@ -4,14 +4,14 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 import 'flowbite'
-import background from "../assets/images/Teksturs.png";
+// import background from "../assets/images/Teksturs.png";
 import Gambarnfdw from '../assets/images/NFDW 1920x689.png'
 
 function Destinasiwisata() {
   return (
     <div>
     <Navbar/>
-    <img className="h-2/5 w-5/5 pt-32" src={Gambarnfdw} alt="image description"></img>
+    <img className="h-2/5 w-5/5 pt-20" src={Gambarnfdw} alt="image description"></img>
     <br/>
     <h1>Destinasi Wisata</h1>
     <div className="flex items-center justify-between w-full sm:w-96">

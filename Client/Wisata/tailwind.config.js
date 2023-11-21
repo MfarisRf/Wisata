@@ -10,6 +10,7 @@ export default {
       backgroundColor : {
         'f1f1e8': '#F1F1E8',
         'bfdcae': '#BFDCAE',
+        '29446f': '#29446F',
       },
       backgroundImage : {
         'texture': "url('../assets/images/Teksturs.png')",
