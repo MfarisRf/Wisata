@@ -19,7 +19,7 @@ const About = () => {
             <p className='text-center font-Lato px-25 text-456761'>Explore Ciayumajakuning adalah platform online yang berguna untuk sarana promosi bagi para pelaku usaha pariwisata. tidak hanya itu, Explore Ciayumajakuning hadir sebagai panduan Anda sebelum memutuskan untuk berkunjung ke sebuah wisata, khususnya yang ada di daerah ciayumajakuning. Memastikan kemudahan Anda dalam merencanakan atau menyiapkan perjalanan berpetualang adalah tujuan kami.</p>
             <a href="=">
                 <img className="w-234" src={foto} alt="logo nama bawah"/>
-              </a>
+            </a>
         </div>
             </a> 
         </div>
