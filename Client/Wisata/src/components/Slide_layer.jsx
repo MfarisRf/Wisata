@@ -29,7 +29,7 @@ import { Pagination } from 'swiper/modules';
 const Slide_layer = () => {
   return (
     <div className='bg-bfdcae py-10'>
-        <h2 className='pb-10 pl-5 font-bold text-2xl font-{#29446F}'>Rekomendasi Kuliner</h2>
+        <h2 className='pb-10 pl-5 font-bold text-2xl font-29446f'>Rekomendasi Kuliner</h2>
         <Swiper
         slidesPerView={1}
         spaceBetween={10}
