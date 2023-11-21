@@ -159,6 +159,37 @@ const Landingpage = () => {
     </div>
 </div>
         <Slide_layer />
+        <div>
+            <h2 className='font-bold text-2x1'>Rekomendasi Oleh-oleh</h2>
+            <div className='bg-blue-500 w-96'>
+{/* batas */}
+            <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start">
+                <a href="#">
+                    <img className="w-234" src={Indramayu1} alt="wisata indramayu" />
+                </a>
+                <a href="#">
+                    <img className="w-234" src={Indramayu2} alt="wisata indramayu" />
+                </a>
+                <a href="#">
+                    <img className="w-234" src={Indramayu3} alt="wisata indramayu" />
+                </a>
+                <a href="#">
+                    <img className="w-234" src={Indramayu4} alt="wisata indramayu" />
+                </a>
+                <div className="text-[#29446F] w-80 font-Boogaloo">
+                    <a href="#">
+                        <h5 className="mb-2 text-5 font-bold pl-3 pt-1"> Wisata indramyu</h5>
+                    </a>
+                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center ">
+                    Lihat selengkapnya
+                    <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                    </a>
+                </div>
+            </div>
+{/* batas */}
+            </div>
+        </div>
         <Footer />
         </>
     </div>
