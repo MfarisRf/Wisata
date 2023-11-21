@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Login from './page/login'
 import About from './page/About'
 import Landingpage from './page/Landingpage'
@@ -29,6 +29,7 @@ const App = () => {
         </Routes>
       </Router>
     </div>
+
   )
 }
 
