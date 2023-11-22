@@ -17,7 +17,7 @@ import { Pagination } from 'swiper/modules';
 const Slide_layer = () => {
   return (
     <div className='bg-bfdcae py-10'>
-        <h2 className='pb-10 pl-5 font-bold text-2xl font-29446f'>Rekomendasi Kuliner</h2>
+        <h2 className='pb-10 pl-5 font-bold text-2xl text-[#29446F]'>Rekomendasi Kuliner</h2>
         <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -41,13 +41,13 @@ const Slide_layer = () => {
         modules={[Pagination]}
         className="mySwiper" >
         <SwiperSlide className='pl-5'>
-            <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
+            <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70 ">
             <a href="#">
-                <img className="px-9/12" src={Kuliner1} alt="wisata majalengka" />
+                <img className="px-9/12 rounded-t-lg" src={Kuliner1} alt="wisata majalengka" />
             </a>
             <div className="text-[#29446F] w-80 font-Boogaloo">
                 <a href="#">
-                    <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Wisata majalengka</h5>
+                    <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Kuliner Cirebon</h5>
                 </a>
                 <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center ">
                 Lihat selengkapnya
@@ -58,13 +58,13 @@ const Slide_layer = () => {
             </div>
             </SwiperSlide>
         <SwiperSlide className='pl-20'>
-        <div className="max-w-md w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
+        <div className="max-w-md w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70">
             <a href="#">
-                <img className="px-9/12" src={Kuliner2} alt="wisata cirebon" />
+                <img className="px-9/12 rounded-t-lg" src={Kuliner2} alt="wisata cirebon" />
             </a>
             <div className="text-[#29446F] w-80 font-Boogaloo">
                 <a href="#">
-                    <h5 className="mb-2 text-5 font-bold pl-3 pt-1">Wisata cirebon</h5>
+                    <h5 className="mb-2 text-5 font-bold pl-3 pt-1">Kuliner Indramayu</h5>
                 </a>
                 <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
                 Lihat selengkapnya
@@ -75,13 +75,13 @@ const Slide_layer = () => {
             </div>
         </SwiperSlide>
         <SwiperSlide className='pl-36'>
-        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
+        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70">
                 <a href="#">
-                    <img className="px-9/12" src={Kuliner3} alt="wisata indramayu" />
+                    <img className="px-9/12 rounded-t-lg" src={Kuliner3} alt="wisata indramayu" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
                     <a href="#">
-                        <h5 className="mb-2 text-5 font-bold pl-3 pt-1"> Wisata indramyu</h5>
+                        <h5 className="mb-2 text-5 font-bold pl-3 pt-1">Kuliner Majalengka</h5>
                     </a>
                     <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center ">
                     Lihat selengkapnya
@@ -92,13 +92,13 @@ const Slide_layer = () => {
             </div>
         </SwiperSlide>
         <SwiperSlide className='pl-52'>
-        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
+        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70">
                 <a href="#">
-                    <img className="px-9/12" src={Kuliner4} alt="wisata kuningan" />
+                    <img className="px-9/12 rounded-t-lg" src={Kuliner4} alt="wisata kuningan" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
                     <a href="#">
-                        <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Wisata kuningan</h5>
+                        <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Kuliner Kuningan</h5>
                     </a>
                     <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
                     Lihat selengkapnya
@@ -109,13 +109,13 @@ const Slide_layer = () => {
             </div>
         </SwiperSlide>
         <SwiperSlide className='pl-72'>
-        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
+        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70">
                 <a href="#">
-                    <img className="px-9/12" src={Kuliner1} alt="wisata kuningan" />
+                    <img className="px-9/12 rounded-t-lg" src={Kuliner1} alt="wisata kuningan" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
                     <a href="#">
-                        <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Wisata kuningan</h5>
+                        <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Kuliner Cirebon</h5>
                     </a>
                     <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
                     Lihat selengkapnya
@@ -126,13 +126,13 @@ const Slide_layer = () => {
             </div>
         </SwiperSlide>
         <SwiperSlide className='pl-80'>
-        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
+        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70">
                 <a href="#">
-                    <img className="px-9/12" src={Kuliner2} alt="wisata kuningan" />
+                    <img className="px-9/12 rounded-t-lg" src={Kuliner2} alt="wisata kuningan" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
                     <a href="#">
-                        <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Wisata kuningan</h5>
+                        <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Wisata Indramayu</h5>
                     </a>
                     <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
                     Lihat selengkapnya
