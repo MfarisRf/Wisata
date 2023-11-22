@@ -29,6 +29,7 @@ import Kuningan2 from '../assets/images/wisata_kuningan2.png';
 import Kuningan3 from '../assets/images/wisata_kuningan3.png';
 import Kuningan4 from '../assets/images/wisata_kuningan4.png';
 import Slide_layer from '../components/Slide_layer'
+import Layer_lp from '../components/Layer_lp'
 
 const Landingpage = () => {
   return (
@@ -162,7 +163,7 @@ const Landingpage = () => {
     </div>
 </div>
         <Slide_layer />
-        <div className='py-10 bg-cover' style={{backgroundImage: `url(${background}) `}} >
+        <div className='pt-10 bg-cover' style={{backgroundImage: `url(${background}) `}} >
             <h2 className='font-bold text-lg pb-10 text-center text-[#2D8C14]'>Rekomendasi Oleh-oleh</h2>
             {/* content1 */}
             <div className='bg-[#D5EDC7] w-7/12 ml-56 rounded-l-lg static'>
@@ -275,6 +276,9 @@ const Landingpage = () => {
 {/* batas */}
             </div>
 
+            <br></br><br />
+
+            <Layer_lp />
         </div>
         <Footer />
         </>
