@@ -4,8 +4,10 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 import 'flowbite'
+import SwiperWisata from '../components/SwiperWisata'
 // import background from "../assets/images/Teksturs.png";
 import Gambarnfdw from '../assets/images/NFDW 1920x689.png'
+import app from '../components/SwiperWisata'
 
 function Destinasiwisata() {
   return (
@@ -54,6 +56,10 @@ function Destinasiwisata() {
 </form>
 </div>
 <div>
+  <div>
+      <SwiperWisata/>
+  </div>
+  
 
     </div>
     <br/>
