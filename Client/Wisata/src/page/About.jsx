@@ -3,12 +3,15 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import Logo from '../assets/images/Explore Ciayumajakuning.png'
 import foto from '../assets/images/logo nama bawah.png'
+import AboutKami from '../components/aboutkami'
+import AboutCiayu from '../components/AboutCiayu'
 
 const About = () => {
   return (
     <>
     <div>  
         <Navbar />
+<<<<<<< HEAD
         |<div> 
             <div className='static'>
                 <h3 className='text-justify text-align:-left text-2xl font-Libre Baskerville text-456761 pb-10 pt-28 text-45992E font-bold'>Tentang Kami</h3>
@@ -27,6 +30,18 @@ const About = () => {
             <p className='text-center font-Lato px-25 text-456761'>Memberikan pengalaman perjalanan yang tak terlupakan. Kami percaya bahwa setiap perjalanan adalah kesempatan untuk belajar, tumbuh, dan menghargai keindahan keberagaman dunia. Kami berkomitmen untuk memberikan layanan terbaik, mempromosikan keberlanjutan, dan mendukung komunitas lokal di destinasi wisata.</p>
 
             </div> 
+=======
+        <div>
+            <AboutKami/>
+            <AboutCiayu/>
+            {/* <div> */}
+                {/* <h3 className='text-center text-2x1 font-Libre Baskerville text-456761 pb-10 pt-28 font-bold'>EXPLORE CIAYUMAJAKUUNING</h3>
+                <p className='text-center font-Lato px-25 text-456761'>Explore Ciayumajakuning adalah platform online yang berguna untuk sarana promosi bagi para pelaku usaha pariwisata. tidak hanya itu, Explore Ciayumajakuning hadir sebagai panduan Anda sebelum memutuskan untuk berkunjung ke sebuah wisata, khususnya yang ada di daerah ciayumajakuning. Memastikan kemudahan Anda dalam merencanakan atau menyiapkan perjalanan berpetualang adalah tujuan kami.</p>
+                <a href="">
+                    <img className="w-234" src={foto} alt="logo nama bawah"/>
+                </a>
+            </div>  */}
+>>>>>>> c98cb559795d7882d8ff4e206601c72bc7a0d46d
         </div>
     </div>
     </>
