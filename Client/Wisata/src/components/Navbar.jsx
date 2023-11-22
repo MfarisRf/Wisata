@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div>
           
-<nav className="bg-f1f1e8 dark:bg-gray-900 fixed w-full z-70 top-0 left-0 border-b border-f1f1e8 dark:border-f1f1e8">
+<nav className="bg-f1f1e8 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-f1f1e8 dark:border-f1f1e8">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
   <img src={logo} className="img-fluid logo object-contain h-15 w-40 ml-20" alt="brand" />
