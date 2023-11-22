@@ -9,7 +9,6 @@ const About = () => {
   return (
     <div>  
         <Navbar />
-  
         <div>
             <AboutKami/>
             <AboutCiayu/>
