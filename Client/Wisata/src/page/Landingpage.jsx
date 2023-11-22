@@ -169,7 +169,7 @@ const Landingpage = () => {
             </p>
             </div>
 {/* batas */}
-            <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start absolute top-">
+            <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start absolute">
                 <a href="#">
                     <img className="w-234" src={Indramayu1} alt="wisata indramayu" />
                 </a>
