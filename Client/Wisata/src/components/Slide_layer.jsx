@@ -1,25 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 
-import Majalengka1 from '../assets/images/wisata_majalengka1.png';
-import Majalengka2 from '../assets/images/wisata_majalengka2.png';
-import Majalengka3 from '../assets/images/wisata_majalengka3.png';
-import Majalengka4 from '../assets/images/wisata_majalengka4.png';
+import Kuliner1 from '../assets/images/kuliner_cirebon.png';
 
-import Cirebon1 from '../assets/images/wisata_cirebon1.png';
-import Cirebon2 from '../assets/images/wisata_cirebon2.png';
-import Cirebon3 from '../assets/images/wisata_cirebon3.png';
-import Cirebon4 from '../assets/images/wisata_cirebon4.png';
+import Kuliner2 from '../assets/images/kuliner_idramayu.png';
 
-import Indramayu1 from '../assets/images/wisata_indramayu1.png';
-import Indramayu2 from '../assets/images/wisata_indramayu2.png';
-import Indramayu3 from '../assets/images/wisata_indramayu3.png';
-import Indramayu4 from '../assets/images/wisata_indramayu4.png';
+import Kuliner3 from '../assets/images/kuliner_majalengka.png';
 
-import Kuningan1 from '../assets/images/wisata_kuningan1.png';
-import Kuningan2 from '../assets/images/wisata_kuningan2.png';
-import Kuningan3 from '../assets/images/wisata_kuningan3.png';
-import Kuningan4 from '../assets/images/wisata_kuningan4.png';
+import Kuliner4 from '../assets/images/kuliner_kuningan.png';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -53,18 +41,9 @@ const Slide_layer = () => {
         modules={[Pagination]}
         className="mySwiper" >
         <SwiperSlide className='pl-5'>
-            <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start">
+            <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
             <a href="#">
-                <img className="w-234" src={Majalengka1} alt="wisata majalengka" />
-            </a>
-            <a href="#">
-                <img className="w-234" src={Majalengka2} alt="wisata majalengka" />
-            </a>
-            <a href="#">
-                <img className="w-234" src={Majalengka3} alt="wisata majalengka" />
-            </a>
-            <a href="#">
-                <img className="w-234" src={Majalengka4} alt="wisata majalengka" />
+                <img className="px-9/12" src={Kuliner1} alt="wisata majalengka" />
             </a>
             <div className="text-[#29446F] w-80 font-Boogaloo">
                 <a href="#">
@@ -79,18 +58,9 @@ const Slide_layer = () => {
             </div>
             </SwiperSlide>
         <SwiperSlide className='pl-20'>
-        <div className="max-w-md w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start">
+        <div className="max-w-md w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
             <a href="#">
-                <img className="w-234" src={Cirebon1} alt="wisata cirebon" />
-            </a>
-            <a href="#">
-                <img className="w-234" src={Cirebon2} alt="wisata cirebon" />
-            </a>
-            <a href="#">
-                <img className="w-234" src={Cirebon3} alt="wisata cirebon" />
-            </a>
-            <a href="#">
-                <img className="w-234" src={Cirebon4} alt="wisata cirebon" />
+                <img className="px-9/12" src={Kuliner2} alt="wisata cirebon" />
             </a>
             <div className="text-[#29446F] w-80 font-Boogaloo">
                 <a href="#">
@@ -105,18 +75,9 @@ const Slide_layer = () => {
             </div>
         </SwiperSlide>
         <SwiperSlide className='pl-36'>
-        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start">
+        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
                 <a href="#">
-                    <img className="w-234" src={Indramayu1} alt="wisata indramayu" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Indramayu2} alt="wisata indramayu" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Indramayu3} alt="wisata indramayu" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Indramayu4} alt="wisata indramayu" />
+                    <img className="px-9/12" src={Kuliner3} alt="wisata indramayu" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
                     <a href="#">
@@ -131,18 +92,9 @@ const Slide_layer = () => {
             </div>
         </SwiperSlide>
         <SwiperSlide className='pl-52'>
-        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start">
+        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
                 <a href="#">
-                    <img className="w-234" src={Kuningan1} alt="wisata kuningan" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Kuningan2} alt="wisata kuningan" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Kuningan3} alt="wisata kuningan" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Kuningan4} alt="wisata kuningan" />
+                    <img className="px-9/12" src={Kuliner4} alt="wisata kuningan" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
                     <a href="#">
@@ -157,18 +109,9 @@ const Slide_layer = () => {
             </div>
         </SwiperSlide>
         <SwiperSlide className='pl-72'>
-        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start">
+        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
                 <a href="#">
-                    <img className="w-234" src={Kuningan1} alt="wisata kuningan" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Kuningan2} alt="wisata kuningan" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Kuningan3} alt="wisata kuningan" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Kuningan4} alt="wisata kuningan" />
+                    <img className="px-9/12" src={Kuliner1} alt="wisata kuningan" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
                     <a href="#">
@@ -183,18 +126,9 @@ const Slide_layer = () => {
             </div>
         </SwiperSlide>
         <SwiperSlide className='pl-80'>
-        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start">
+        <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70">
                 <a href="#">
-                    <img className="w-234" src={Kuningan1} alt="wisata kuningan" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Kuningan2} alt="wisata kuningan" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Kuningan3} alt="wisata kuningan" />
-                </a>
-                <a href="#">
-                    <img className="w-234" src={Kuningan4} alt="wisata kuningan" />
+                    <img className="px-9/12" src={Kuliner2} alt="wisata kuningan" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
                     <a href="#">
