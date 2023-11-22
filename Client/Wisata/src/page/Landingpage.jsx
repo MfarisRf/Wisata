@@ -166,14 +166,9 @@ const Landingpage = () => {
         <div className='pt-10 bg-cover' style={{backgroundImage: `url(${background}) `}} >
             <h2 className='font-bold text-lg pb-10 text-center text-[#2D8C14]'>Rekomendasi Oleh-oleh</h2>
             {/* content1 */}
-            <div className='bg-[#D5EDC7] w-7/12 ml-56 rounded-l-lg static'>
-            <div className='ml-52'>
-            <p>
-                Oleh-oleh Cirebon merupakan bagian dari potensi wisata yang dipengaruhi kehadirannya di Pesisir Barat Jawa. Terdapat berbagai jenis oleh-oleh khas Cirebon yang bisa anda pilih dan sesuaikan dengan kebutuhan anda. Mulai dari makanan hingga kain tradisional seperti batik dan kain lainnya. Sebab kota Cirebon mempunyai sumber daya alam yang kaya dan melimpah yang bisa dijadikan oleh-oleh. Banyak juga makanan kecil dengan cita rasa yang berbeda, kerupuk, minuman, hingga kenang-kenangan berupa aksesoris maupun pernak-pernik hiasan tertentu.
-            </p>
-            </div>
+            <div className='bg-[#D5EDC7] w-7/12 ml-56 rounded-l-lg'>
 {/* batas */}
-            <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start absolute">
+            <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start">
                 <a href="#">
                     <img className="w-234" src={Indramayu1} alt="wisata indramayu" />
                 </a>
@@ -191,8 +186,8 @@ const Landingpage = () => {
                         <h5 className="mb-2 text-5 font-bold pl-20 mt-5">Oleh - Oleh Cirebon</h5>
                     </a>
                 </div>
-            </div>
 {/* batas */}
+</div>
             </div>
 
             <br />
