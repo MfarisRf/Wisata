@@ -159,9 +159,9 @@ const Landingpage = () => {
     </div>
 </div>
         <Slide_layer />
-        <div>
-            <h2 className='font-bold text-2x1'>Rekomendasi Oleh-oleh</h2>
-            <div className='bg-blue-500 w-96'>
+        <div className='py-10'>
+            <h2 className='font-bold text-2x1 pb-10 text-center'>Rekomendasi Oleh-oleh</h2>
+            <div className='bg-blue-500 w-7/12 ml-56'>
 {/* batas */}
             <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start">
                 <a href="#">
