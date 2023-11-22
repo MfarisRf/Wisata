@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Carosel from '../components/Carosel'
 import 'flowbite'
+import Type from '../components/type'
 
 import background from "../assets/images/Teksturs.png";
 import background2 from "../assets/images/Teksturs2.png";
@@ -37,7 +38,9 @@ const Landingpage = () => {
         <Carosel />
 {/* Keterangan */}
 <div className='bg-cover px-20 pb-40' style={{backgroundImage: `url(${background}) `}}>
-    <h3 className='text-center text-2xl font-Boogaloo text-456761 pb-10 pt-28 font-bold'>Tentang CIAYUMAJAKUNING</h3>
+    <div className='text-center text-2xl font-Boogaloo text-456761 pb-10 pt-28 font-bold'>
+        <Type/>
+    </div>
         <p className='text-center font-sm px-25 text-456761'>Ciayumajakuning adalah sebuah wilayah di Jawa Barat, Indonesia yang terdiri dari Kota Cirebon, Kabupaten Cirebon, Kabupaten Indramayu, Kabupaten Majalengka, dan Kabupaten Kuningan. Wilayah ini merupakan kekuatan ekonomi yang baru dan besar di Jawa Barat sesudah kawasan Bandung Raya.</p>
     <div className='w-1209 pb-60 ml-auto mr-auto mt-20 border-4 border-[#206A5D] rounded-lg p-5' style={{backgroundImage: `url(${background2}) `}}>
         <h2 className='pb-5 font-bold text-2xl font-Boogaloo text-[#2D8C14] pl-24'>Rekomendasi Wisata</h2>
