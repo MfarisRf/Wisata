@@ -24,7 +24,7 @@ const CardCirebon = () => {
                         <h5 className="mb-2 text-5 font-bold pl-20 mt-5">Oleh - Oleh Cirebon</h5>
                     </a>
                 </div>
-            </div>
+    </div>
   )
 }
 
