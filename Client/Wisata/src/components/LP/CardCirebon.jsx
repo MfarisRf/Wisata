@@ -22,7 +22,7 @@ const CardCirebon = () => {
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo pb-7">
                     <a href="#">
-                        <h5 className="text-5 font-bold pl-20 mt-5">Oleh - Oleh Cirebon</h5>
+                        <h5 className="text-base font-bold pl-20 mt-5">Oleh - Oleh Cirebon</h5>
                     </a>
                 </div>
     </div>

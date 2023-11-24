@@ -17,7 +17,7 @@ import { Pagination } from 'swiper/modules';
 const Slide_layer = () => {
   return (
     <div className='bg-bfdcae py-10'>
-        <h2 className='pb-10 pl-5 font-bold text-2xl text-[#29446F]'>Rekomendasi Kuliner</h2>
+        <h2 className="pb-10 pl-5 font-bold text-2xl text-[#29446F] font-['Boogaloo']">Rekomendasi Kuliner</h2>
         <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -46,10 +46,10 @@ const Slide_layer = () => {
                 <img className="px-9/12 rounded-t-lg" src={Kuliner1} alt="wisata majalengka" />
             </a>
             <div className="text-[#29446F] w-80 font-Boogaloo">
-                <a href="#">
+                <a href="/Kuliner">
                     <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Kuliner Cirebon</h5>
                 </a>
-                <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center ">
+                <a href="/Kuliner" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center ">
                 Lihat selengkapnya
                 <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                 </svg>
@@ -59,14 +59,14 @@ const Slide_layer = () => {
             </SwiperSlide>
         <SwiperSlide className='pl-20'>
         <div className="max-w-md w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70">
-            <a href="#">
+            <a href="/Kuliner">
                 <img className="px-9/12 rounded-t-lg" src={Kuliner2} alt="wisata cirebon" />
             </a>
             <div className="text-[#29446F] w-80 font-Boogaloo">
-                <a href="#">
+                <a href="/Kuliner">
                     <h5 className="mb-2 text-5 font-bold pl-3 pt-1">Kuliner Indramayu</h5>
                 </a>
-                <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
+                <a href="/Kuliner" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
                 Lihat selengkapnya
                 <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                 </svg>
@@ -76,14 +76,14 @@ const Slide_layer = () => {
         </SwiperSlide>
         <SwiperSlide className='pl-36'>
         <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70">
-                <a href="#">
+                <a href="/Kuliner">
                     <img className="px-9/12 rounded-t-lg" src={Kuliner3} alt="wisata indramayu" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
-                    <a href="#">
+                    <a href="/Kuliner">
                         <h5 className="mb-2 text-5 font-bold pl-3 pt-1">Kuliner Majalengka</h5>
                     </a>
-                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center ">
+                    <a href="/Kuliner" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center ">
                     Lihat selengkapnya
                     <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                     </svg>
@@ -93,14 +93,14 @@ const Slide_layer = () => {
         </SwiperSlide>
         <SwiperSlide className='pl-52'>
         <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70">
-                <a href="#">
+                <a href="/Kuliner">
                     <img className="px-9/12 rounded-t-lg" src={Kuliner4} alt="wisata kuningan" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
-                    <a href="#">
+                    <a href="/Kuliner">
                         <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Kuliner Kuningan</h5>
                     </a>
-                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
+                    <a href="/Kuliner" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
                     Lihat selengkapnya
                     <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                     </svg>
@@ -110,14 +110,14 @@ const Slide_layer = () => {
         </SwiperSlide>
         <SwiperSlide className='pl-72'>
         <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70">
-                <a href="#">
+                <a href="/Kuliner">
                     <img className="px-9/12 rounded-t-lg" src={Kuliner1} alt="wisata kuningan" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
-                    <a href="#">
+                    <a href="/Kuliner">
                         <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Kuliner Cirebon</h5>
                     </a>
-                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
+                    <a href="/Kuliner" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
                     Lihat selengkapnya
                     <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                     </svg>
@@ -127,14 +127,14 @@ const Slide_layer = () => {
         </SwiperSlide>
         <SwiperSlide className='pl-80'>
         <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg drop-shadow-xl h-70">
-                <a href="#">
+                <a href="/Kuliner">
                     <img className="px-9/12 rounded-t-lg" src={Kuliner2} alt="wisata kuningan" />
                 </a>
                 <div className="text-[#29446F] w-80 font-Boogaloo">
-                    <a href="#">
+                    <a href="/Kuliner">
                         <h5 className="mb-2 text-10 font-bold pl-3 pt-1">Wisata Indramayu</h5>
                     </a>
-                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
+                    <a href="/Kuliner" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center">
                     Lihat selengkapnya
                     <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10"><path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                     </svg>

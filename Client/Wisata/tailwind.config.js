@@ -23,7 +23,7 @@ export default {
       },
       fontfamily : {
         'poppins' : ['Poppins'],
-        'Boogaloo' : ['Boogaloo'],
+        'boogaloo': ['Boogaloo', 'cursive']
       },
       color : {
         'hijau' : '#2D8C14',
@@ -38,6 +38,7 @@ export default {
       spacing: {
         '90': '90px',
         '25': '25%',
+        'kanan': '75%',
       },
       width : {
         '1209': '900px',
