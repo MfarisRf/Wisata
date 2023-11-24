@@ -16,7 +16,7 @@ const OurTeam = () => {
     <div class="container px-5 py-24 mx-auto ">
         <div class="flex flex-col text-center w-full mb-20">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Team</h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Mari bersama-sama menjelajahi, belajar, dan menciptakan kenangan seumur hidup. Selamat datang di tim kami, tempat di mana impian perjalanan Anda menjadi kenyataan.</p>
         </div>
         <div class="flex flex-wrap -m-2">
         <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
