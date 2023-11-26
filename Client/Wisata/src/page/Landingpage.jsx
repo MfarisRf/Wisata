@@ -52,7 +52,7 @@ const Landingpage = () => {
         {/* card A */}
         <div className='h-56 grid grid-cols-3 pl-24'>
         {/* card 1 */}
-        <div className="max-w-md w-468 bg-f1f1e8 border border-f1f1e8 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start">
+        <div className="max-w-md w-468 bg-f1f1e8 border border-f1f1e8 rounded-3xl shadow-2xl h-70 grid grid-cols-2 content-start">
             <a href="/Destinasiwisata">
                 <img className="w-234" src={Cirebon1} alt="wisata cirebon" />
             </a>
