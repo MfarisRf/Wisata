@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import 'flowbite'
 import Gambarnfk from '../assets/images/B_kuliner.png'
+import Slider_kuliner from '../components/Slide_kuliner'
 
 function Kuliner() {
   return (
@@ -56,6 +57,9 @@ function Kuliner() {
 </form>
 </div>
 
+{/* Card pembuka */}
+                    <Slider_kuliner />
+{/* Card penutup */}
 
     <br/>
       <div>
