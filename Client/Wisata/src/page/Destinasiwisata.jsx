@@ -4,10 +4,10 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
 import 'flowbite'
-import SwiperWisata from '../components/SwiperWisata'
+
 // import background from "../assets/images/Teksturs.png";
 import Gambarnfdw from '../assets/images/NFDW 1920x689.png'
-import app from '../components/SwiperWisata'
+// import GambarPK from '../assets/images/PK.png'
 
 function Destinasiwisata() {
   return (
@@ -16,7 +16,8 @@ function Destinasiwisata() {
     <img className="h-2/5 w-5/5 pt-20" src={Gambarnfdw} alt="image description"></img>
     <br/>
     <h1>Destinasi Wisata</h1>
-    <div className="flex items-center justify-between w-full sm:w-96">
+    <br/>
+    <div className="flex items-center justify-space-between w-full sm:w-96">
     
     <div className="relative w-full mr-2">
   <input type="search" id="search-dropdown" className="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50 border-s-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-s-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Search" required />
@@ -55,14 +56,119 @@ function Destinasiwisata() {
     </div>
 </form>
 </div>
+<br/>
 <div>
-  <div>
-      <SwiperWisata/>
-  </div>
-  
-
-    </div>
-    <br/>
+  <div class="grid grid-cols-1 gap-6   lg:grid-cols-4 ">
+            <a href="#" class=" shadow-2xl relative ">
+                <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                    <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                        <div class="w-full h-full   p-5   relative">
+                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                <h2 class="text-2xl font-bold  text-white mb-0 pb-1">Pantai Dadap</h2>
+                                <p class="text-lg font-light text-white">Lihat Selengkapnya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://source.unsplash.com/random/400x400" class="w-full z-0  h-full    object-fill example "></img>
+                </div>
+            </a>
+            <a href="#" class=" shadow-2xl relative ">
+                <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                    <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                        <div class="w-full h-full   p-5   relative">
+                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                <h2 class="text-2xl font-bold  text-white mb-0 pb-1"> Telaga Biru Cirerem </h2>
+                                <p class="text-lg font-light text-white">Lihat Selengkapnya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://source.unsplash.com/random/400x400" class="w-full z-0  h-full    object-fill example "></img>
+                </div>
+            </a>
+            <a href="#" class=" shadow-2xl relative ">
+                <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                    <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                        <div class="w-full h-full   p-5   relative">
+                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                <h2 class="text-2xl font-bold  text-white mb-0 pb-1">Pantai Bolongan Indah</h2>
+                                <p class="text-lg font-light text-white">Lihat Selengkanya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://source.unsplash.com/random/400x400" class="w-full z-0  h-full    object-fill example "></img>
+                </div>
+            </a> 
+            <a href="#" class=" shadow-2xl relative ">
+                <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                    <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                        <div class="w-full h-full   p-5   relative">
+                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                <h2 class="text-2xl font-bold  text-white mb-0 pb-1">Pantai Kejawanan</h2>
+                                <p class="text-lg font-light text-white">Lihat Selengkapnya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://source.unsplash.com/random/400x400" class="w-full z-0  h-full    object-fill example "></img>
+                </div>
+            </a>
+        </div>
+        <br/>
+        <div class="grid grid-cols-1 gap-6   lg:grid-cols-4 ">
+            <a href="#" class=" shadow-2xl relative ">
+                <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                    <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                        <div class="w-full h-full   p-5   relative">
+                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                <h2 class="text-2xl font-bold  text-white mb-0 pb-1">Terasering Panyaweuan Argapura</h2>
+                                <p class="text-lg font-light text-white">Lihat Selengkapnya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://source.unsplash.com/random/400x400" class="w-full z-0  h-full    object-fill example "></img>
+                </div>
+            </a>
+            <a href="#" class=" shadow-2xl relative ">
+                <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                    <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                        <div class="w-full h-full   p-5   relative">
+                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                <h2 class="text-2xl font-bold  text-white mb-0 pb-1">Sunyaragi</h2>
+                                <p class="text-lg font-light text-white">Lihat Selengkapnya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://source.unsplash.com/random/400x400" class="w-full z-0  h-full    object-fill example "></img>
+                </div>
+            </a>
+            <a href="#" class=" shadow-2xl relative ">
+                <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                    <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                        <div class="w-full h-full   p-5   relative">
+                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                <h2 class="text-2xl font-bold  text-white mb-0 pb-1">Situ Cipatan</h2>
+                                <p class="text-lg font-light text-white">Lihat Selengkapnya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://source.unsplash.com/random/400x400" class="w-full z-0  h-full    object-fill example "></img>
+                </div>
+            </a> 
+            <a href="#" class=" shadow-2xl relative ">
+                <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
+                    <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
+                        <div class="w-full h-full   p-5   relative">
+                            <div class="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
+                                <h2 class="text-2xl font-bold  text-white mb-0 pb-1">Telaga Biru Cirerem</h2>
+                                <p class="text-lg font-light text-white">Lihat Selengkapnya</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img src="https://source.unsplash.com/random/400x400" class="w-full z-0  h-full    object-fill example "></img>
+                </div>
+            </a>
+        </div>
+        </div>
+        <br/>
       <div>
         <Footer/>
       </div>
