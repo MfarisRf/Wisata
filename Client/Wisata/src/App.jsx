@@ -9,6 +9,7 @@ import OurTeam from './components/OurTeam'
 import Notfoundkuliner from './page/Notfoundkuliner'
 import Notfoundwisata from './page/Notfoundwisata'
 import Notfoundoleholeh from './page/Notfoundoleholeh'
+import DetailWisata from './page/deatilWisata'
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/Notfoundwisata" element={<Notfoundwisata/>} />
           <Route path="/Notfoundoleholeh" element={<Notfoundoleholeh/>} />
           <Route path="/Team" element={<OurTeam/>} />
+          <Route path="/DetailWisata" element={<DetailWisata/>} />
         </Routes>
       </Router>
     </div>
