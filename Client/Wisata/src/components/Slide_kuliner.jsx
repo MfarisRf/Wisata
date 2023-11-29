@@ -16,7 +16,7 @@ import 'swiper/css/pagination';
 
 const Slide_layer = () => {
   return (
-    <div>
+<div>
   <div className="grid grid-cols-1 gap-6   lg:grid-cols-4 ">
             <a href="#" className=" shadow-2xl relative ">
                 <div className="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">

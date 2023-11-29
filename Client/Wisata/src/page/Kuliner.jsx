@@ -58,7 +58,9 @@ function Kuliner() {
 </div>
 
 {/* Card pembuka */}
+                    <div className='py-10'>
                     <Slider_kuliner />
+                    </div>
 {/* Card penutup */}
 
     <br/>
