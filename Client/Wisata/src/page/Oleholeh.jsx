@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import background from "../assets/images/Backgroud_kwo.png"
 import 'flowbite'
 import Gambarnfo from '../assets/images/NFO 1920x689.png'
 import GambarBMG from '../assets/images/BMG.png'
@@ -20,11 +21,11 @@ import GambarTS from '../assets/images/TS.png'
 
 function Oleholeh() {
   return (
-    <div>
+    <div className='bg-cover' style={{backgroundImage: `url(${background}) `}}>
     <Navbar/>
     <img className="h-2/5 w-5/5 pt-24" src={Gambarnfo} alt="image description"></img>
     <br/>
-    <h2 className="font-bold  text-[#29446F] font-['Boogaloo'] text-[25px] pl-20 pb-5 tracking-[.1em]">Oleh-Oleh</h2>
+    <h2 className="font-bold  text-[#29446F] font-['Boogaloo'] text-[25px] pl-20 pb-5 tracking-[.1em]">Oleh Oleh</h2>
     {/* Card */}
 
     {/* Card pennutup */}
@@ -50,7 +51,7 @@ function Oleholeh() {
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
         </svg></button>
         <div id="dropdown" className="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-[#F1F1E8]" aria-labelledby="dropdown-button">
                 <li>
                     <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cirebon</button>
                 </li>
@@ -69,8 +70,9 @@ function Oleholeh() {
 </form>
 </div>
 <br/>
+<br/>
 <div>
-  <div class="grid grid-cols-1 gap-6   lg:grid-cols-4 ">
+  <div class="grid grid-cols-1 gap-6 px-8 lg:grid-cols-4 ">
             <a href="#" class=" shadow-2xl relative ">
                 <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
                     <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
@@ -125,7 +127,7 @@ function Oleholeh() {
             </a>
         </div>
         <br/>
-        <div class="grid grid-cols-1 gap-6   lg:grid-cols-4 ">
+        <div class="grid grid-cols-1 gap-6 px-8 lg:grid-cols-4 ">
             <a href="#" class=" shadow-2xl relative ">
                 <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
                     <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">
@@ -181,7 +183,7 @@ function Oleholeh() {
         </div>
         </div>
         <br/>
-        <div class="grid grid-cols-1 gap-6   lg:grid-cols-4 ">
+        <div class="grid grid-cols-1 gap-6 px-8 lg:grid-cols-4 ">
             <a href="#" class=" shadow-2xl relative ">
                 <div class="  h-full relative shadow-2xl shadow-green-900 overflow-hidden group ">
                     <div class=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-green-900 transition-all ease-in-out duration-500  ">

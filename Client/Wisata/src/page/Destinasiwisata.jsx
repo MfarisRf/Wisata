@@ -6,7 +6,7 @@ import background from "../assets/images/Backgroud_kwo.png";
 import 'flowbite'
 
 // import background from "../assets/images/Teksturs.png";
-import Gambarnfdw from '../assets/images/NFDW 1920x689.png'
+import GambarExploreWisata from '../assets/images/ExploreWisata.png'
 import GambarTBC from '../assets/images/TBC.png'
 import GambarPK from '../assets/images/PK.png'
 import GambarPBi from '../assets/images/PBI.png'
@@ -21,7 +21,7 @@ function Destinasiwisata() {
   return (
     <div className='bg-cover' style={{backgroundImage: `url(${background}) `}}>
     <Navbar/>
-    <img className="h-2/5 w-5/5 pt-20" src={Gambarnfdw} alt="image description"></img>
+    <img className="h-2/5 w-5/5 pt-20" src={GambarExploreWisata} alt="image description"></img>
     <br/>
     <h2 className="font-bold  text-[#29446F] font-['Boogaloo'] text-[25px] pl-20 pb-5 tracking-[.1em]">Destinasi Wisata</h2>
     {/* Card */}
