@@ -5,10 +5,11 @@ import Footer from '../components/Footer'
 import 'flowbite'
 import Gambarnfk from '../assets/images/B_kuliner.png'
 import Slider_kuliner from '../components/Slide_kuliner'
+import background from "../assets/images/Backgroud_kwo.png";
 
 function Kuliner() {
   return (
-    <div>
+    <div className='' style={{backgroundImage: `url(${background}) `}}>
     <Navbar/>
     <img className="h-2/5 w-5/5 pt-20" src={Gambarnfk} alt="image description"></img>
     <br/>

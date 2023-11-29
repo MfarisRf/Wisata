@@ -16,7 +16,7 @@ const OurTeam = () => {
         <h1 className="sm:text-3xl font-['Heeboo'] text-[#FFFFFF] text-2xl font-bold title-font mb-4">Our Team</h1>
         <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-[#FFFFFF]">Mari bersama-sama menjelajahi, belajar, dan menciptakan kenangan seumur hidup. Selamat datang di tim kami, tempat di mana impian perjalanan Anda menjadi kenyataan.</p>
         </div>
-        <div className="flex flex-wrap -m-2">
+        <div className="flex flex-wrap -m-2 grid-cols-3 ">
         <div className="p-2 lg:w-1/3 md:w-1/2 w-full">
             <div className="h-full flex items-center border-[#0A5539] border-2 p-4 rounded-lg">
             <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src={Vani}/>
@@ -26,7 +26,7 @@ const OurTeam = () => {
             </div>
             </div>
         </div>
-        <div className="p-2 lg:w-1/3 md:w-1/2 w-full col-start-2 col-span-4">
+        <div className="p-2 lg:w-1/3 md:w-1/2 w-full ">
             <div className="h-full flex items-center border-[#0A5539] border-2 p-4 rounded-lg">
                 <img alt="team" className="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src={Faris}/>
 
