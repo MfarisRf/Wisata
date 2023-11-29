@@ -2,7 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-
+import background from "../assets/images/Backgroud_kwo.png";
 import 'flowbite'
 
 // import background from "../assets/images/Teksturs.png";
@@ -19,7 +19,7 @@ import GambarMAC from '../assets/images/MAC.png'
 
 function Destinasiwisata() {
   return (
-    <div>
+    <div className='bg-cover' style={{backgroundImage: `url(${background}) `}}>
     <Navbar/>
     <img className="h-2/5 w-5/5 pt-20" src={Gambarnfdw} alt="image description"></img>
     <br/>
