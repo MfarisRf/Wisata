@@ -9,7 +9,7 @@ import OurTeam from './components/OurTeam'
 import Notfoundkuliner from './page/Notfoundkuliner'
 import Notfoundwisata from './page/Notfoundwisata'
 import Notfoundoleholeh from './page/Notfoundoleholeh'
-import DetailWisata from './page/deatilWisata'
+import DetailWisata from './page/DetailWisata'
 
 
 const App = () => {
