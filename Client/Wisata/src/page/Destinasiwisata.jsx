@@ -2,7 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import background from "../assets/images/Backgroud_kwo.png";
+import background from "../assets/images/Backgroud_kwo.png"
 import 'flowbite'
 
 // import background from "../assets/images/Teksturs.png";

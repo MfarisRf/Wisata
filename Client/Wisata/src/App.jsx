@@ -10,6 +10,7 @@ import Notfoundkuliner from './page/Notfoundkuliner'
 import Notfoundwisata from './page/Notfoundwisata'
 import Notfoundoleholeh from './page/Notfoundoleholeh'
 import DetailWisata from './page/DetailWisata'
+import DetailWisataMajalengka from './page/DetailWisataMajalengka'
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/" element={<Landingpage />} />
           <Route path="/Destinasiwisata" element={<Destinasiwisata/>} /> 
           <Route path="/DetailWisata" element={<DetailWisata/>} />
+          <Route path="/DetailWisataMajalengka" element={<DetailWisataMajalengka/>} />
           <Route path="/Kuliner" element={<Kuliner/>} />
           <Route path="/Oleholeh" element={<Oleholeh/>} />
           <Route path="/Login" element={<Login />} />
