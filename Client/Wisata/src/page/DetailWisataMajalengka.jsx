@@ -29,7 +29,7 @@ function DetailWisataMajalengka() {
         <div class="bg-white p-4 mt-4 rounded-lg shadow-md">
             <h2 class="text-lg font-bold mb-2 text-left">Tiket</h2>
             <div class="bg-white p-4 mt-4 rounded-lg shadow-md">
-                <h3 class="text-lg mb-2 text-left">Gratis</h3>
+                <h3 class="text-lg mb-2 text-left">Rp. 5.000-Rp. 25.000</h3>
             </div>
 
             <ul class="list-disc list-inside">
