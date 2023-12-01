@@ -70,6 +70,7 @@ function Destinasiwisata() {
 </div>
 <br/>
 <br/>
+{/* ini awal card */}
 <div>
   <div className="grid px-12 grid-cols-1 gap-6 lg:grid-cols-4 ">
             <a href="#" className=" shadow-2xl relative ">
@@ -231,6 +232,7 @@ function Destinasiwisata() {
 </div>
         <br/>
         </div>
+{/* ini akhir card */}
         <br/>
       <div>
         <Footer/>
