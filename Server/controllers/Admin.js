@@ -38,35 +38,34 @@ export const Register = async (req, res) => {
 
 export const Login = async (req, res) => {
     try {
-        const admin = await Admin.findAll({ 
-            where: { 
+        const admin = await Admin.findAll({
+            where: {
                 username: req.body.username
             }
         });
         const match = await bcrypt.compare(req.body.password, admin[0].password);
-        if(!match) return res.status(400).json({ msg: "Password tidak valid" });
-        const adminid = admin[0].id;
+        if(!match) return res.status(400).json({message: "Password salah"});
+        const adminId = admin[0].id;
         const nama_admin = admin[0].nama_admin;
         const username = admin[0].username;
-        // const jwt=require('jsonwebtoken');
-        // const secretKey = 'rahasia';
-        const accessToken = Jwt.sign({ adminid, username, nama_admin },process.env.ACCESS_TOKEN_SECRET,{ 
-            expiresIn: '15m' 
+        const accessToken = Jwt.sign({adminId, nama_admin, username}, process.env.ACCESS_TOKEN_SECRET,{
+            expiresIn: "20s"
         });
-        const refreshToken = jwt.sign({ adminid, username, nama_admin }, process.env.REFRESH_TOKEN_SECRET,{ 
-            expiresIn: '1d'
+        const refreshToken = Jwt.sign({adminId, nama_admin, username}, process.env.REFRESH_TOKEN_SECRET, {
+            expiresIn: "1d"
         });
-        await Admin.update({refresh_token: refreshToken}, {
-                where: {
-                    id: adminid
-                }
+        await Admin.update({refresh_token: refreshToken},{
+            where:{
+                id: adminId
+            }
         });
-        res.cookie('refreshToken', refreshToken, { 
+        res.cookie('refreshToken', refreshToken, {
             httpOnly: true,
-            maxAge: 24 * 60 * 60 * 1000,
-        });
-        res.json({accessToken});
+            maxAge: 24*60*60*1000,
+        })
+        res.json({accessToken})
     } catch (error) {
         console.log(error);
+        res.status(404).json({msg : "Username tidak ditemukan"});
     }
 }
