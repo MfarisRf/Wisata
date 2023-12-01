@@ -19,7 +19,7 @@ const Slide_layer = () => {
   return (
     <div className="grid px-12 grid-cols-1 gap-6 lg:grid-cols-4 ">
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -36,7 +36,7 @@ const Slide_layer = () => {
         </div>
     </a>
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -53,7 +53,7 @@ const Slide_layer = () => {
         </div>
     </a>
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full p-5 relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -70,7 +70,7 @@ const Slide_layer = () => {
         </div>
     </a>
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -87,7 +87,7 @@ const Slide_layer = () => {
         </div>
     </a>
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -104,7 +104,7 @@ const Slide_layer = () => {
         </div>
     </a>
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -121,7 +121,7 @@ const Slide_layer = () => {
         </div>
     </a>
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -138,7 +138,7 @@ const Slide_layer = () => {
         </div>
     </a>
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -155,7 +155,7 @@ const Slide_layer = () => {
         </div>
     </a>
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -172,7 +172,7 @@ const Slide_layer = () => {
         </div>
     </a>
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -189,7 +189,7 @@ const Slide_layer = () => {
         </div>
     </a>
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
@@ -206,7 +206,7 @@ const Slide_layer = () => {
         </div>
     </a> 
     <a href="#" className=" shadow-2xl relative ">
-        <div className="  h-full relative shadow-2xl shadow-black overflow-hidden group ">
+        <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
             <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                 <div className="w-full h-full   p-5   relative">
                     <div className="absolute bottom-0 group-hover:bottom-24 text-white  text-left   transition-all ease-in-out duration-500 ">
