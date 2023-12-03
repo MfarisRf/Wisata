@@ -49,7 +49,11 @@ export default {
       },
       height : {
         '420' : '420px'
-      }
+      },
+      Rounded : {
+        'Login' : '420px'
+      },
+     
     },
   },
   plugins: [
