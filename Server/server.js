@@ -7,6 +7,7 @@ import Wisata from "./models/Wisata.js";
 import dotenv from "dotenv";
 import fileUpload from "express-fileupload";
 
+dotenv.config();
 
 const app = express();
 

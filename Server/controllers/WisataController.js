@@ -47,7 +47,7 @@ export const saveWisata = (req, res) => {
                 alamat_wisata: req.body.alamat,
                 jam_wisata: req.body.jam,
                 tiket_wisata: req.body.tiket,
-                sosmed_wisata: req.body.sosmed,
+                sosmed_wisata: sosmed_wisata,
                 url: url,
             });
             res.status(201).json({ msg: "Wisata berhasil ditambahkan" });
