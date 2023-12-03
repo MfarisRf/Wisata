@@ -11,6 +11,7 @@ import Notfoundwisata from './page/Notfoundwisata'
 import Notfoundoleholeh from './page/Notfoundoleholeh'
 import DetailWisataCrb from './page/DetailWisataCrb'
 import DetailWisataMajalengka from './page/DetailWisataMajalengka'
+import ProfileAdmin from './page/ProfileAdmin'
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
           <Route path="/Notfoundwisata" element={<Notfoundwisata/>} />
           <Route path="/Notfoundoleholeh" element={<Notfoundoleholeh/>} />
           <Route path="/Team" element={<OurTeam/>} />
+          <Route path="/ProfileAdmin" element={<ProfileAdmin/>} />
         </Routes>
       </Router>
     </div>
