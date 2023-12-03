@@ -10,8 +10,8 @@ import Notfoundkuliner from './page/Notfoundkuliner'
 import Notfoundwisata from './page/Notfoundwisata'
 import Notfoundoleholeh from './page/Notfoundoleholeh'
 import DetailWisataCrb from './page/DetailWisataCrb'
-import DetailWisataMajalengka from './page/DetailWisataMajalengka'
 import DetailKulinerMajalengka from './page/DetailKulinerMajalengka'
+import DetailWisataIndramayu from './page/DetailWisataIndramayu'
 import DetailOlehOlehMajalengka from './page/DetailOlehOlehMajalengka'
 import ProfileAdmin from './page/ProfileAdmin'
 
@@ -25,6 +25,7 @@ const App = () => {
           <Route path="/Destinasiwisata" element={<Destinasiwisata/>} /> 
           <Route path="/DetailWisataCrb" element={<DetailWisataCrb/>} />
           <Route path="/DetailWisataMajalengka" element={<DetailWisataMajalengka/>} />
+          <Route path="/DetailWisataIndramayu" element={<DetailWisataIndramayu/>} />
           <Route path="/DetailKulinerMajalengka" element={<DetailKulinerMajalengka/>} />
           <Route path="/DetailOlehOlehMajalengka" element={<DetailOlehOlehMajalengka/>} /> 
           <Route path="/Kuliner" element={<Kuliner/>} />
