@@ -18,7 +18,7 @@ function DetailWisataMajalengka() {
       <div className="grid grid-cols-2 gap-8">
         <div> 
             <figure className="max-w-lg">
-              <img className="mt-14 max-w-full ml-20 mb-14 rounded-lg" src={GambarSC} alt="image description"></img>
+              <img className="mt-14 min-w-full ml-20 mb-14 rounded-lg" src={GambarSC} alt="image description"></img>
               <figcaption className="mt-2 text-5xl ml-20 mb-14 text-left text-[#29446F]-500 dark:text-[#29446F]-400">Situ Cipaten</figcaption>
               <p className="ml-20 text-[#29446F]-700 text-left">Situ Cipanten adalah sebuah danau yang terletak di kawasan Cipanten, Desa Sukasari, Kecamatan Cikijing, Kabupaten Majalengka, Jawa Barat, Indonesia. Danau ini memiliki luas sekitar 1,2 hektar dan dan dikelilingi oleh perbukitan yang hijau dan indah. Situ Cipanten dikenal sebagai salah satu wisata alam yang menarik di kunjungi di Kabupaten Majalengka, Jawa Barat. Memiliki air berwarna hijau tosca yang jauh dari kata keruh. Wisatawan yang datang dapat berenang sembari bermain dengan kawanan ikan yang menghuni danau cantik ini.</p>
             </figure>
@@ -30,7 +30,7 @@ function DetailWisataMajalengka() {
         <p className="text-gray-700 text-left">Jam Operasional : Setiap hari 07.00 - 17.00 WIB.</p>
         <p className="text-gray-700 text-left">Sosial Media</p>
 
-        <div className="bg-[#D5EDC7] p-4 mt-4 rounded-lg shadow-md">
+        <div className="bg-[#BFDCAE] p-4 mt-4 rounded-lg shadow-md">
             <h2 className="text-lg font-bold mb-2 text-left">Tiket</h2>
             <div className="bg-[#E6E6E6] p-4 mt-4 rounded-lg shadow-md">
                 <h3 className="text-lg mb-2 text-left">Rp. 5.000-Rp. 25.000</h3>
