@@ -20,9 +20,9 @@ function DetailWisataCrb() {
         <div className="grid grid-cols-2 gap-a">
             <div>
                 <figure class="max-w-lg">
-                    <img class="mt-14 max-w-full ml-20 mb-14 rounded-lg" src={GambarPK} alt="image description"></img>
-                    <figcaption class="mt-2 text-5x1 ml-20 mb-14 text-left text-[#29446F]-500 dark:text-[#29446F]-400">Pantai Kejawanan</figcaption>
-                    <p class="ml-20 text-[#29446F]-700 text-left">Di Pantai Kejawanan pemandangan matahari terbit dapat disaksikan dengan posisi yang bagus, yaitu tepat di tengah-tengah pantai. Di sana juga kita bisa berwisata keliling pantai dengan menggunakan perahu motor milik nelayan, dengan tarif yang cukup murah yaitu seharga lima ribu Rupiah saja per orang, yang bahkan bisa di tawar hingga sebesar tiga ribu rupiah saja. Selain itu, di sana juga banyak disewakan perahu karet dengan tarif mulai seharga lima ribu Rupiah hingga sepuluh ribu Rupiah per perahu setiap satu jamnya,saat libur lebaran/jika sedang beruntung kita bisa melihat kapal nelayan/kapal tunda karena letaknya dekat dengan Pelabuhan Cirebon dan kita bisa berfoto di atas perahu dan melihat nelayan membawa hasil laut.</p>
+                    <img class="mt-14 max-w-full ml-40 mb-25 rounded-lg" src={GambarPK} alt="image description"></img>
+                    <figcaption class="mt-2 fontsize-35px text-5x1 ml-40 mb-25 font-bold text-left text-[#29446F]-500 dark:text-[#29446F]-400">Pantai Kejawanan</figcaption>
+                    <p class="ml-40 mb-25 text-[#29446F]-700 text-justify text-left">Di Pantai Kejawanan pemandangan matahari terbit dapat disaksikan dengan posisi yang bagus, yaitu tepat di tengah-tengah pantai. Di sana juga kita bisa berwisata keliling pantai dengan menggunakan perahu motor milik nelayan, dengan tarif yang cukup murah yaitu seharga lima ribu Rupiah saja per orang, yang bahkan bisa di tawar hingga sebesar tiga ribu rupiah saja. Selain itu, di sana juga banyak disewakan perahu karet dengan tarif mulai seharga lima ribu Rupiah hingga sepuluh ribu Rupiah per perahu setiap satu jamnya,saat libur lebaran/jika sedang beruntung kita bisa melihat kapal nelayan/kapal tunda karena letaknya dekat dengan Pelabuhan Cirebon dan kita bisa berfoto di atas perahu dan melihat nelayan membawa hasil laut.</p>
                 </figure>
             </div>
         <div class="p-12">
@@ -46,9 +46,6 @@ function DetailWisataCrb() {
     </div>
         </div>
         <div class="p-12">
-            <div class="container mb-20 ml-kanan mx-auto bg-[#E6E6E6] p-6 rounded-lg shadow-md text-center">
-
-            </div>
         </div>
         <br/>
             <Footer/>
