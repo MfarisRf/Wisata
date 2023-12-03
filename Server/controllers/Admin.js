@@ -5,7 +5,6 @@ import Jwt from "jsonwebtoken";
 
 
 
-
 export const getAdmin = async (req, res) => {
     try {
         const admin = await Admin.findAll();
