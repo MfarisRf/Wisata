@@ -11,7 +11,7 @@ const CardLoginForm = () => {
   };
 
   return (
-    <div className="flex h-screen items-center justify-center ">
+    <div className="flex h-screen items-center justify-center bg-[#F1F1E8] ">
       <div className="bg-bfdcae w-9/12 shadow-md rounded-3xl overflow-hidden flex">
         {/* Form Login */}
         <div className="w-1/2 p-8 ml-10 mr-10 mt-20">
