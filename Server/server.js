@@ -1,9 +1,12 @@
 import express from "express";
 import cors from "cors";
 import db from "./config/Database.js";
-import router from "./routes/index.js";
+import router from "./routes/Route.js";
 import Admin from "./models/AdminModel.js";
+import Wisata from "./models/Wisata.js";
 import dotenv from "dotenv";
+import fileUpload from "express-fileupload";
+
 
 const app = express();
 
@@ -13,6 +16,9 @@ try {
 } catch (error) {
     console.error('Unable to connect to the database:',error);
 }
+
+app.use(cors());
 app.use(express.json());
 app.use(router)
+app.use(fileUpload());
 app.listen(5000, ()=> console.log('Server up and running...'));
