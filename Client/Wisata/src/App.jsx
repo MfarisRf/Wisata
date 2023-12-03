@@ -13,6 +13,9 @@ import DetailWisataCrb from './page/DetailWisataCrb'
 import DetailWisataMajalengka from './page/DetailWisataMajalengka'
 import DetailKulinerMajalengka from './page/DetailKulinerMajalengka'
 import DetailOlehOlehMajalengka from './page/DetailOlehOlehMajalengka'
+import DetailWisataKuningan from './page/DetailWisataKuningan'
+import DetailKulinerKuningan from './page/DetailKulinerKuningan'
+import DetailOlehOlehKuningan from './page/DetailOlehOlehKuningan'
 import ProfileAdmin from './page/ProfileAdmin'
 
 
@@ -26,7 +29,10 @@ const App = () => {
           <Route path="/DetailWisataCrb" element={<DetailWisataCrb/>} />
           <Route path="/DetailWisataMajalengka" element={<DetailWisataMajalengka/>} />
           <Route path="/DetailKulinerMajalengka" element={<DetailKulinerMajalengka/>} />
-          <Route path="/DetailOlehOlehMajalengka" element={<DetailOlehOlehMajalengka/>} /> 
+          <Route path="/DetailOlehOlehMajalengka" element={<DetailOlehOlehMajalengka/>} />
+          <Route path="/DetailWisataKuningan" element={<DetailWisataKuningan/>} />
+          <Route path="/DetailKulinerKuningan" element={<DetailKulinerKuningan/>} />
+          <Route path="/DetailOlehOlehKuningan" element={<DetailOlehOlehKuningan/>} />
           <Route path="/Kuliner" element={<Kuliner/>} />
           <Route path="/Oleholeh" element={<Oleholeh/>} />
           <Route path="/Login" element={<Login />} />
