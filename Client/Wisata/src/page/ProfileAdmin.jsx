@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import Navbar_admin from '../components/Navbar_admin '
+import Gambar from '../assets/images/Ghandi.jpg'
 
 const ProfileAdmin = () => {
   return (
@@ -18,6 +19,15 @@ const ProfileAdmin = () => {
 <aside id="sidebar-multi-level-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 pt-24" aria-label="Sidebar">
    <div className="h-full px-3 py-4 overflow-y-auto bg-[#BFDCAE] dark:bg-gray-800 ml-2 rounded-lg">
       <ul className="space-y-2 font-medium">
+           {/*Profile */}
+         <div className="flex items-center gap-4 pt-10 pb-5">
+            <img className="w-15 h-14 rounded-full" src={Gambar} alt=""/>
+            <div className="font-medium dark:text-white">
+            <div>Ghandi</div>
+            <div className="text-sm text-gray-500 dark:text-gray-400">ghandi@gmail.com</div>
+         </div>
+      </div>
+      {/* Penutup */}
          <li>
             <a href="#" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
             <svg className="w-6 h-6 text-[#6FA385] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -76,10 +86,10 @@ const ProfileAdmin = () => {
 </aside>
 
 
-<div className="p-4 sm:ml-64 pt-20">
+<div className="p-4 sm:ml-64 pt-28">
    <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       <div className="grid grid-cols-3 gap-4 mb-4">
-         <div className="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+         <div className="flex items-center justify-center h-24 rounded bg-green-200 dark:bg-gray-800">
             <p className="text-2xl text-gray-400 dark:text-gray-500">
                <svg className="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
                   <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 1v16M1 9h16"/>
