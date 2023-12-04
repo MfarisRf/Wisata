@@ -45,13 +45,14 @@ export default {
         '234' : '234px',
         '468' : '300px',
         '760' : '760px',
-        'Lebar' : '65%'
+        'Lebar' : '65%',
       },
       height : {
-        '420' : '420px'
+        '420' : '420px',
+        'Profile' : '420%'
       },
-      Rounded : {
-        'Login' : '420px'
+      padding : {
+        'atas' : '7%',
       },
      
     },
