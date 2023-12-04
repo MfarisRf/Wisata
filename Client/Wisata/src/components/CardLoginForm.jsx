@@ -18,7 +18,7 @@ const CardLoginForm = () => {
         username: username,
         password: password,
     });
-    navigateTo.push('/');
+    navigateTo.push('/dashboard');
   } catch (error) {   
       if (error.response) {
         setMsg(error.response.data.msg);
@@ -59,7 +59,8 @@ const CardLoginForm = () => {
           className="bg-green-50 border border-green-500 text-green-900 placeholder-gray-300 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" 
           placeholder="Masukan Kata Sandi"/>
           </div>
-            <button type="submit" className="text-sm  bg-[#6FA385] font-bold text-[#222D3F] py-2 px-6 rounded-lg ml-40 mt-5"><a href="">Masuk</a></button>
+          {/* Button Login */}
+            <button type="submit" className="text-sm  bg-[#6FA385] font-bold text-[#222D3F] py-2 px-6 rounded-lg ml-40 mt-5">Masuk</button>
           </form>
         </div>
 

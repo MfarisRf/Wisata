@@ -4,6 +4,7 @@ import db from "./config/Database.js";
 import router from "./routes/Route.js";
 import Wisata from "./models/Wisata.js";
 import dotenv from "dotenv";
+import allowCrossDomain from "./middleware/allowCrossDomain.js";
 import fileUpload from "express-fileupload";
 
 dotenv.config();
@@ -16,6 +17,9 @@ try {
 } catch (error) {
     console.error('Unable to connect to the database:',error);
 }
+
+app.use(allowCrossDomain);
+
 
 app.use(cors());
 app.use(express.json());
