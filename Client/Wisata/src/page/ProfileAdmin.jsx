@@ -86,8 +86,8 @@ const ProfileAdmin = () => {
 </aside>
 
 
-<div className="p-4 sm:ml-64 pt-28 h-auto w-auto">
-   <div className=" p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] py-10 px-20 h-96">
+<div className="p-4 sm:ml-64 pt-atas h-auto w-auto">
+   <div className="p-52 border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-52">
       {/* Text */}
       <div className='flex ml-10'>
       <p className='font-bold text-2xl mr'>Edit</p>
@@ -97,13 +97,10 @@ const ProfileAdmin = () => {
       </div>
       {/* text */}
 
+
 {/* form */}
   <div>
   <form className="max-w-sm mx-10 pt-10 w-80">
-
-  <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
-  <svg className="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path></svg>
-  </div>
 
   <div className="mb-5">
     <input type="name" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Nama" required />
