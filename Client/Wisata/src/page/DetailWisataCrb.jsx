@@ -13,7 +13,7 @@ function DetailWisataCrb() {
     return (
         <div className='bg-[#D5EDC7]'>
             <Navbar/>
-            <img className="h-5/10 w-5/15 pt-20" src={GambarDetwisCrb} alt="image description"></img>
+            <img className="h-2/5 w-5/5 pt-20" src={GambarDetwisCrb} alt="image description"></img>
             <br/>
 
 
@@ -21,7 +21,7 @@ function DetailWisataCrb() {
             <div>
                 <figure class="max-w-lg">
                     <img class="mt-14 max-w-full ml-40 mb-25 rounded-lg" src={GambarPK} alt="image description"></img>
-                    <figcaption class="mt-20 text-5x1 ml-40 mb-25 font-bold text-left text-[#29446F]-500 dark:text-[#29446F]-400">Pantai Kejawanan</figcaption>
+                    <figcaption class="mt-2 text-5x1 ml-20 mb-14 font-bold text-left text-[#29446F]-500 dark:text-[#29446F]-400">Pantai Kejawanan</figcaption>
                     <p class="ml-40 mb-15 mt-20 text-[#29446F]-700 text-justify text-left">Di Pantai Kejawanan pemandangan matahari terbit dapat disaksikan dengan posisi yang bagus, yaitu tepat di tengah-tengah pantai. Di sana juga kita bisa berwisata keliling pantai dengan menggunakan perahu motor milik nelayan, dengan tarif yang cukup murah yaitu seharga lima ribu Rupiah saja per orang, yang bahkan bisa di tawar hingga sebesar tiga ribu rupiah saja. Selain itu, di sana juga banyak disewakan perahu karet dengan tarif mulai seharga lima ribu Rupiah hingga sepuluh ribu Rupiah per perahu setiap satu jamnya,saat libur lebaran/jika sedang beruntung kita bisa melihat kapal nelayan/kapal tunda karena letaknya dekat dengan Pelabuhan Cirebon dan kita bisa berfoto di atas perahu dan melihat nelayan membawa hasil laut.</p>
                 </figure>
             </div>
