@@ -2,7 +2,6 @@ import express from "express";
 import cors from "cors";
 import db from "./config/Database.js";
 import router from "./routes/Route.js";
-import Admin from "./models/AdminModel.js";
 import Wisata from "./models/Wisata.js";
 import dotenv from "dotenv";
 import fileUpload from "express-fileupload";
