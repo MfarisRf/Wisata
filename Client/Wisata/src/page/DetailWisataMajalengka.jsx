@@ -5,13 +5,13 @@ import Footer from '../components/Footer'
 import 'flowbite'
 // eslint-disable-next-line no-unused-vars
 import GambarSC from '../assets/images/SC.png'
-import Gambarmajalengka from '../assets/images/majalengka.png'
+import GambarMajalengka2 from '../assets/images/Majalengka2.jpeg'
 
 function DetailWisataMajalengka() {
   return (
     <div className='bg-[#D5EDC7]'>
         <Navbar/>
-        <img className="h-2/5 w-5/5 pt-20" src={Gambarmajalengka} alt="image description"></img>
+        <img className="h-2/5 w-5/5 pt-20" src={GambarMajalengka2} alt="image description"></img>
         <br/>
 
 

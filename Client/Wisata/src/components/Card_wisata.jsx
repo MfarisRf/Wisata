@@ -147,7 +147,7 @@ const Card_wisata = () => {
                     <img src={GambarPD} className="w-full z-0  h-full    object-fill example "></img>
                 </div>
             </a>
-            <a href="#" className=" shadow-2xl relative ">
+            <a href="/DetailWisatamajalengka" className=" shadow-2xl relative ">
                 <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
                     <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                         <div className="w-full h-full   p-5   relative">
@@ -198,7 +198,7 @@ const Card_wisata = () => {
                     <img src={GambarMAC} className="w-full z-0  h-full    object-fill example "></img>
                 </div>
             </a> 
-            <a href="#" className=" shadow-2xl relative ">
+            <a href="/DetailWisatamajalengka" className=" shadow-2xl relative ">
                 <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
                     <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                         <div className="w-full h-full   p-5   relative">
