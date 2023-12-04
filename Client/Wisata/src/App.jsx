@@ -12,11 +12,12 @@ import Notfoundoleholeh from './page/Notfoundoleholeh'
 import DetailWisataCrb from './page/DetailWisataCrb'
 import DetailKulinerMajalengka from './page/DetailKulinerMajalengka'
 import DetailWisataIndramayu from './page/DetailWisataIndramayu'
-import DetailKulinerIndramayu from '.page/DetailKulinerindramayu'
+import DetailWisataMajalengka from './page/DetailWisataMajalengka'
+// import DetailKulinerIndramayu from '.page/DetailKulinerindramayu'
 import DetailKulinerCirebon from './page/DetailKulinerCirebon'
 import DetailOlehOlehMajalengka from './page/DetailOlehOlehMajalengka'
 import DetailOlehOlehCirebon from './page/DetailOlehOlehCirebon'
-import DetailOlehOlehIndramayu from '.page/DetaiolehOlehIndramayu'
+// import DetailOlehOlehIndramayu from '.page/DetaiolehOlehIndramayu'
 import DetailWisataKuningan from './page/DetailWisataKuningan'
 import DetailKulinerKuningan from './page/DetailKulinerKuningan'
 import DetailOlehOlehKuningan from './page/DetailOlehOlehKuningan'
@@ -31,7 +32,7 @@ const App = () => {
           <Route path="/" element={<Landingpage />} />
           <Route path="/Destinasiwisata" element={<Destinasiwisata/>} /> 
           <Route path="/DetailWisataCrb" element={<DetailWisataCrb/>} />
-          <Route path="/DetailWisataMajalengka" element={<DetailWisataMajalengka/>} />
+          <Route path='/DetailWisataMajalengka' element={<DetailWisataMajalengka/>} />
           <Route path="/DetailWisataIndramayu" element={<DetailWisataIndramayu/>} />
           <Route path="/DetailKulinerCirebon" element={<DetailKulinerCirebon/>} />
           <Route path="/DetailKulinerMajalengka" element={<DetailKulinerMajalengka/>} />
@@ -39,9 +40,9 @@ const App = () => {
           <Route path="/DetailOlehOlehCirebon" element={<DetailOlehOlehCirebon/>} />
           <Route path="/DetailWisataKuningan" element={<DetailWisataKuningan/>} />
           <Route path="/DetailKulinerKuningan" element={<DetailKulinerKuningan/>} />
-          <Route path="/DetailKulinerIndramayu" element={<DetailKulinerIndramayu/>} />
+          {/* <Route path="/DetailKulinerIndramayu" element={<DetailKulinerIndramayu/>} /> */}
           <Route path="/DetailOlehOlehKuningan" element={<DetailOlehOlehKuningan/>} />
-          <Route path="/DetailOleholehIndramayu" element={<DetailOlehOlehIndramayu/>} />
+          {/* <Route path="/DetailOleholehIndramayu" element={<DetailOlehOlehIndramayu/>} /> */}
           <Route path="/Kuliner" element={<Kuliner/>} />
           <Route path="/Oleholeh" element={<Oleholeh/>} />
           <Route path="/Login" element={<Login />} />
