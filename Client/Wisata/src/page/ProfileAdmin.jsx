@@ -87,7 +87,7 @@ const ProfileAdmin = () => {
 
 
 <div className="p-4 sm:ml-64 pt-atas h-auto w-auto">
-   <div className="p-52 border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-52">
+   <div className="p-52q border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-52">
       {/* Text */}
       <div className='flex ml-10'>
       <p className='font-bold text-2xl mr'>Edit</p>
