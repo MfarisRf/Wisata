@@ -113,7 +113,7 @@ const ProfileAdmin = () => {
 
     {/* Nama Input */}
     <div className="mb-5 shadow-lg">
-      <input type="name" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Nama"required/>
+      <input type="name" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring--500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Nama"required/>
     </div>
 
     {/* Email Input */}
@@ -127,7 +127,7 @@ const ProfileAdmin = () => {
     </div>
 
     {/* Submit Button */}
-    <button type="submit" className="mt-32 text-[#222D3F] bg-[#6FA385] font-bold rounded-lg text-sm text-center ml-28 w-28 h-10">Simpan</button>
+    <button type="submit" className="mt-32 text-[#222D3F] bg-[#6FA385] font-bold rounded-lg text-sm text-center ml-[30%] w-28 h-10">Simpan</button>
   </form>
 </div>
 {/*  */}
