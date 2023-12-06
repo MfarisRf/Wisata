@@ -96,22 +96,29 @@ const ProfileAdmin = () => {
       </svg>
       </div>
       {/* text */}
+    
+      <div className="items-center gap-4 ml-[55%]">
+         <img className="w-40 h-40 rounded-full " src={Gambar} alt=""/>
+          <div className="font-medium dark:text-white ml-9 mt-2">
+          <div>Edit Photo</div>
+       </div>
+    </div>
 
 
 {/* form */}
   <div>
   <form className="max-w-sm mx-10 pt-10 w-80">
 
-  <div className="mb-5">
+  <div className="mb-5 shadow-lg">
     <input type="name" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Nama" required />
   </div>
-  <div className="mb-5">
-    <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Email" required />
+  <div className="mb-5 shadow-xl">
+    <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-900 focus:border-gray-900 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-900 dark:focus:border-gray-900 dark:shadow-sm-light" placeholder="Email" required />
   </div>
-  <div className="mb-5">
-    <input type="password" id="repeat-password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Kata Sandi" required />
+  <div className="mb-5 shadow-xl">
+    <input type="password" id="repeat-password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-gray-900 focus:border-gray-900 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-gray-900 dark:focus:border-gray-900 dark:shadow-sm-light" placeholder="Kata Sandi" required />
   </div>
-  <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Simpan</button>
+  <button type="submit" className="mt-32 text-[#222D3F] bg-[#6FA385] font-bold rounded-lg text-sm px-5 py-2.5 text-center ml-80 w-28 h-10">Simpan</button>
 </form>
 </div> 
 {/*  */}

@@ -54,6 +54,9 @@ export default {
       padding : {
         'atas' : '7%',
       },
+      margin: {
+        '5px': '100px',
+      }
      
     },
   },
