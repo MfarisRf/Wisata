@@ -97,7 +97,7 @@ const ProfileAdmin = () => {
       </div>
       {/* text */}
     
-   <div className="items-center gap-4 ml-[40%] py-10">
+   <div className="items-center gap-4 ml-[41%] py-10">
   {/* Image Section */}
   <img className="w-40 h-40 rounded-full" src={Gambar} alt="" />
 
