@@ -1,9 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
-import Navbar_admin from '../components/Navbar_admin '
-import Gambar from '../assets/images/Ghandi.jpg'
+import Navbar_admin from '../../components/Navbar_admin '
+import Gambar from '../../assets/images/Ghandi.jpg'
 
-const ProfileAdmin = () => {
+const HomeAdmin = () => {
   return (
     <div>
    <Navbar_admin/>
@@ -81,6 +81,9 @@ const ProfileAdmin = () => {
                <span className="flex-1 ms-3 whitespace-nowrap">Edit Profile</span>
             </a>
          </li>
+         <li>
+         <button type="Logout" className="mt-[25%] text-[#29446F] bg-[#BFDCAE] font-bold rounded-lg text-sm text-center ml-[25%] w-28 h-9 border border-[#DC4848]"><a href="/About"></a>LogOut</button>
+         </li>
       </ul>
    </div>
 </aside>
@@ -88,54 +91,12 @@ const ProfileAdmin = () => {
 
 <div className="p-4 sm:ml-64 pt-atas h-auto w-auto">
    <div className="p-52q border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-52">
-      {/* Text */}
-      <div className='flex ml-10'>
-      <p className='font-bold text-2xl mr'>Edit</p>
-      <svg className="w-5 h-5 text-gray-800 dark:text-white ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
-      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
-      </svg>
-      </div>
-      {/* text */}
-    
 
-{/* Form Section */}
-<div className="flex items-center justify-center mt-8">
-  <form className="max-w-sm mx-10 pt-10 w-80">
-
-  <div className="items-center gap-4 ml-[41%] py-10">
-  {/* Image Section */}
-  <img className="w-40 h-40 rounded-full" src={Gambar} alt="" />
-
-  {/* Edit Photo Section */}
-  <div className="font-medium dark:text-white ml-9 mt-2">
-    <div>Edit Photo</div>
-  </div>
-</div>
-    {/* Nama Input */}
-    <div className="mb-5 shadow-lg">
-      <input type="name" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring--500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Nama"required/>
-    </div>
-
-    {/* Email Input */}
-    <div className="mb-5 shadow-xl">
-      <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Email" required/>
-    </div>
-
-    {/* Password Input */}
-    <div className="mb-5 shadow-xl">
-      <input type="password" id="repeat-password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Kata Sandi" required/>
-    </div>
-
-    {/* Submit Button */}
-    <button type="submit" className="mt-32 text-[#222D3F] bg-[#6FA385] font-bold rounded-lg text-sm text-center ml-[30%] w-28 h-10">Simpan</button>
-  </form>
-</div>
-{/*  */}
    </div>
-</div>
+   </div>
 
     </div>
   )
 }
 
-export default ProfileAdmin
+export default HomeAdmin
