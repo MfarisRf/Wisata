@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import MapBox from '../components/MapBox'
 import 'flowbite'
 // eslint-disable-next-line no-unused-vars
 import GambarSC from '../assets/images/SC.png'
@@ -45,7 +46,9 @@ function DetailWisataMajalengka() {
 {/* Map */}
 <div className="p-12">
     <div className="container mb-20 ml-kanan mx-auto bg-[#E6E6E6] p-6 rounded-lg shadow-md text-center">
-   
+        <div className=''>
+          <MapBox/>
+        </div>
             </div>
             </div>
         <br/>
