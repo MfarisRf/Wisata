@@ -97,7 +97,12 @@ const ProfileAdmin = () => {
       </div>
       {/* text */}
     
-   <div className="items-center gap-4 ml-[41%] py-10">
+
+{/* Form Section */}
+<div className="flex items-center justify-center mt-8">
+  <form className="max-w-sm mx-10 pt-10 w-80">
+
+  <div className="items-center gap-4 ml-[41%] py-10">
   {/* Image Section */}
   <img className="w-40 h-40 rounded-full" src={Gambar} alt="" />
 
@@ -106,11 +111,6 @@ const ProfileAdmin = () => {
     <div>Edit Photo</div>
   </div>
 </div>
-
-{/* Form Section */}
-<div className="flex items-center justify-center mt-8">
-  <form className="max-w-sm mx-10 pt-10 w-80">
-
     {/* Nama Input */}
     <div className="mb-5 shadow-lg">
       <input type="name" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring--500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="Nama"required/>
