@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import MapBox from '../components/MapBox'
 import 'flowbite'
 
 // import background from "../assets/images/Teksturs.png";
@@ -45,11 +46,17 @@ function DetailWisataCrb() {
       </div>
     </div>
         </div>
-        <div className="p-12">
+{/* Map */}
+    <div className="p-12">
+        <div className="container mb-20 ml-kanan mx-auto bg-[#E6E6E6] p-6 rounded-lg shadow-md text-center">
+        <div className=''>
+            <MapBox/>
+        </div>
         </div>
         <br/>
-            <Footer/>
         </div>
+            <Footer/>
+    </div>
     )
 }
 
