@@ -14,11 +14,11 @@ const CardLoginForm = () => {
   const Auth = async (e) => {
     e.preventDefault();
     try {
-    await axios.post('http://localhost:5000/login', {
+    await axios.post('http://localhost:5173/api/v1/login', {
         username: username,
         password: password,
     });
-    navigateTo.push('/dashboard');
+    navigateTo.push('/profileadmin');
   } catch (error) {   
       if (error.response) {
         setMsg(error.response.data.msg);

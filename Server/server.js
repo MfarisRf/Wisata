@@ -25,4 +25,4 @@ app.use(cors());
 app.use(express.json());
 app.use(router)
 app.use(fileUpload());
-app.listen(5000, ()=> console.log('Server up and running...'));
+app.listen(5173, ()=> console.log('Server up and running...'));
