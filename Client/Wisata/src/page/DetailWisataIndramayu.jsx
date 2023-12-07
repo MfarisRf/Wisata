@@ -19,16 +19,16 @@ function DetailWisataIndramayu() {
         <div> 
             <figure className="max-w-lg">
               <img className="mt-14 min-w-full ml-20 mb-14 rounded-lg" src={GambarPD} alt="image description"></img>
-              <figcaption className="mt-2 text-5xl ml-20 mb-14 text-left text-[#29446F]-500 dark:text-[#29446F]-400">Pantai Dadap</figcaption>
-              <p className="ml-20 text-[#29446F]-700 text-Justify text-left">Pantai Dadap adalah sebuah pantai yang terletak di Desa Dadap, Kecamatan Juntinyuat, Kabupaten Indramayu, Jawa Barat, Indonesia. Pantai ini terkenal dengan pemandangan matahari terbenamnya yang indah. Pantai Dadap memiliki pemandangan yang menarik dan suasana yang tenang. Kebersihan yang terjaga di kawasan ini menjadi daya tarik tersendiri bagi para wisatawan yang ingin menikmati liburan di tepi pantai dengan suasana yang nyaman. Suasananya sejuk dengan hembusan angin yang segar. Biaya masuknya sangat terjangkau yaitu Rp2.000 per orang untuk jasa parkir motor. Pantai ini memang masih alami belum ada tangan investor yang mengembangkannya. Oleh karena itu fasilitas juga ala kadarnya. Meskipun demikian, ini dapat dikembangkan menjadi sebuah objek wisata menarik jika dikelola dengan baik.</p>
+              <figcaption className="mt-2 text-5xl ml-20 mb-14 text-left text-[#29446F] dark:text-[#29446F] font-['libre_baskerville']">Pantai Dadap</figcaption>
+              <p className="ml-20 w-full text-[#29446F] text-justify ">Pantai Dadap adalah sebuah pantai yang terletak di Desa Dadap, Kecamatan Juntinyuat, Kabupaten Indramayu, Jawa Barat, Indonesia. Pantai ini terkenal dengan pemandangan matahari terbenamnya yang indah. Pantai Dadap memiliki pemandangan yang menarik dan suasana yang tenang. Kebersihan yang terjaga di kawasan ini menjadi daya tarik tersendiri bagi para wisatawan yang ingin menikmati liburan di tepi pantai dengan suasana yang nyaman. Suasananya sejuk dengan hembusan angin yang segar. Biaya masuknya sangat terjangkau yaitu Rp2.000 per orang untuk jasa parkir motor. Pantai ini memang masih alami belum ada tangan investor yang mengembangkannya. Oleh karena itu fasilitas juga ala kadarnya. Meskipun demikian, ini dapat dikembangkan menjadi sebuah objek wisata menarik jika dikelola dengan baik.</p>
             </figure>
         </div>
       <div className="p-12">
     <div className="container mx-auto bg-[#E6E6E6] p-6 rounded-lg shadow-md text-center border-2 border-[#22B57F]">
-        <h1 className="text-2xl font-bold mb-4">Pantai Dadap</h1>
-        <p className="text-gray-700 text-left">Alamat : Kec. Juntinyuat, Kabupaten Indramayu.</p>
-        <p className="text-gray-700 text-left">Jam Operasional : Setiap hari 07.00 - 17.00 WIB.</p>
-        <p className="text-gray-700 text-left">Sosial Media</p>
+        <h1 className="text-2xl font-extrabold mb-4 text-[#091426] font-['libre_baskerville']">Pantai Dadap</h1>
+        <p className=" flex text-[#091426] text-left font-semibold">Alamat : <p className='ml-20'> Kec. Juntinyuat, Kabupaten Indramayu.</p></p>
+        <p className="flex text-[#091426] text-left font-semibold">Jam Operasional : <p className='ml-3'>Setiap hari 07.00 - 17.00 WIB.</p></p>
+        <p className="text-[#091426] text-left font-semibold">Sosial Media</p>
 
         <div className="bg-[#BFDCAE] p-4 mt-4 rounded-lg shadow-md">
             <h2 className="text-lg font-bold mb-2 text-left">Tiket</h2>
@@ -43,9 +43,8 @@ function DetailWisataIndramayu() {
     </div>
 </div>
 {/* Map */}
-<div className="p-12">
+<div className="grid grid-cols-1 h-90">
     <div className="container mb-20 ml-kanan mx-auto bg-[#E6E6E6] p-6 rounded-lg shadow-md text-center">
-   
             </div>
             </div>
         <br/>

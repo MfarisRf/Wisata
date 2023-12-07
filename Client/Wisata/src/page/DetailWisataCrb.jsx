@@ -17,25 +17,25 @@ function DetailWisataCrb() {
             <br/>
 
 
-        <div className="grid grid-cols-2 gap-a">
+        <div className="grid grid-cols-2 gap-8">
             <div>
                 <figure className="max-w-lg">
-                    <img className="mt-14 max-w-full ml-40 mb-25 rounded-lg" src={GambarPK} alt="image description"></img>
-                    <figcaption className="mt-20 text-5x1 ml-40 mb-25 font-bold text-left text-[#29446F]-500 dark:text-[#29446F]-400">Pantai Kejawanan</figcaption>
-                    <p className="ml-40 mb-15 mt-20 text-[#29446F]-700 text-justify text-left">Di Pantai Kejawanan pemandangan matahari terbit dapat disaksikan dengan posisi yang bagus, yaitu tepat di tengah-tengah pantai. Di sana juga kita bisa berwisata keliling pantai dengan menggunakan perahu motor milik nelayan, dengan tarif yang cukup murah yaitu seharga lima ribu Rupiah saja per orang, yang bahkan bisa di tawar hingga sebesar tiga ribu rupiah saja. Selain itu, di sana juga banyak disewakan perahu karet dengan tarif mulai seharga lima ribu Rupiah hingga sepuluh ribu Rupiah per perahu setiap satu jamnya,saat libur lebaran/jika sedang beruntung kita bisa melihat kapal nelayan/kapal tunda karena letaknya dekat dengan Pelabuhan Cirebon dan kita bisa berfoto di atas perahu dan melihat nelayan membawa hasil laut.</p>
+                    <img className="mt-14 min-w-full ml-20 mb-14 rounded-lg" src={GambarPK} alt="image description"></img>
+                    <figcaption className="mt-2 text-5xl ml-20 mb-14 text-left text-[#29446F] dark:text-[#29446F] font-['libre_baskerville']">Pantai Kejawanan</figcaption>
+                    <p className="ml-20 w-full text-[#29446F] text-justify ">Di Pantai Kejawanan pemandangan matahari terbit dapat disaksikan dengan posisi yang bagus, yaitu tepat di tengah-tengah pantai. Di sana juga kita bisa berwisata keliling pantai dengan menggunakan perahu motor milik nelayan, dengan tarif yang cukup murah yaitu seharga lima ribu Rupiah saja per orang, yang bahkan bisa di tawar hingga sebesar tiga ribu rupiah saja. Selain itu, di sana juga banyak disewakan perahu karet dengan tarif mulai seharga lima ribu Rupiah hingga sepuluh ribu Rupiah per perahu setiap satu jamnya,saat libur lebaran/jika sedang beruntung kita bisa melihat kapal nelayan/kapal tunda karena letaknya dekat dengan Pelabuhan Cirebon dan kita bisa berfoto di atas perahu dan melihat nelayan membawa hasil laut.</p>
                 </figure>
             </div>
         <div className="p-12">
-      <div className="container mx-auto bg-[#E6E6E6] p-6 rounded-lg shadow-md text-center">
-        <h1 className="text-2x1 font-bold mb-4">Pantai Kejawanan</h1>
-        <p className="text-gray-700 text-left">Alamat : Jl. Pelabuhan Perikanan, Pegambiran, Kec. Lemahwungkuk, Cirebon.</p>
-        <p className="text-gray-700 text-left">Jam Buka : Rabu - Minggu  10.00 - 17.00 WIB</p>
-        <p className="text-gray-700 text-left">Sosisal Media</p>
+      <div className="container mx-auto bg-[#E6E6E6] p-6 rounded-lg shadow-md text-center border-[#22B57F] border-2">
+        <h1 className="text-2xl font-extrabold mb-4 text-[#091426] font-['libre_baskerville']">Pantai Kejawanan</h1>
+        <p className="flex text-[#091426] text-left font-semibold">Alamat<p className='ml-10'>: Jl. Pelabuhan Perikanan, Pegambiran, Kec. Lemahwungkuk, Cirebon.</p></p>
+        <p className="flex text-[#091426] text-left font-semibold">Jam Buka <p className='ml-5'>: Rabu - Minggu  10.00 - 17.00 WIB</p></p>
+        <p className="flex text-[#091426] text-left font-semibold">Sosisal Media</p>
 
         <div className="bg-[#D5EDC7] p-4 mt-4 rounded-lg shadow-md">
             <h2 className="text-lg font-bold mb-2 text-left">Tiket</h2>
             <div className="bg-[#E6E6E6] p-4 mt-4 rounded-lg shadow-md">
-                <h3 className="text-lg mb-2 text-left">Gratis</h3>
+                <h3 className="text-lg mb-2 text-left font-semibold">Gratis</h3>
             </div>
 
             <ul className="list-disc list-inside">

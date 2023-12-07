@@ -17,7 +17,7 @@ const router = Express.Router();
 // Login Admin
 router.get('/admin', getAdmin );
 router.post('/admin', Register );
-router.post('/login', Login );
+router.post('/api/v1/login', Login );
 
 // Wisata
 router.get('/wisata', getWisata );
