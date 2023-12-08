@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import MapBox from '../components/MapBox'
 import 'flowbite'
 // eslint-disable-next-line no-unused-vars
 import GambarTBC from '../assets/images/TBC.png'
@@ -42,12 +43,13 @@ function DetailWisataKuningan() {
         </div>
     </div>
 </div>
+<br/>
 {/* Map */}
-<div className="p-12">
-    <div className="container mb-20 ml-kanan mx-auto bg-[#E6E6E6] p-6 rounded-lg shadow-md text-center">
-   
-            </div>
-            </div>
+<div className="p-12 z-[0]">
+<div class="box-container p-1 m-10 bg-gray-200 z-[0] rounded-md shadow-md border-2 border-[#22B57F]">
+      <MapBox />
+</div>
+</div>
         <br/>
       </div>
         <Footer/>
