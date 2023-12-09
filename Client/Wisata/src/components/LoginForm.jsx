@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import api from '../configs/api';
-
+import logo from '../assets/images/illustration.png';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
@@ -70,7 +70,7 @@ const LoginForm = () => {
 
         {/* Gambar Illustrasi */}
         <div className="w-1/2 bg- flex items-center justify-center">
-          {/* <img src={logo} alt="Illustration" className="object-cover w-full h-full rounded-l-[200px]"/> */}
+          <img src={logo} alt="Illustration" className="object-cover w-full h-full rounded-l-[200px]"/>
         </div>
       </div>
     </div>
