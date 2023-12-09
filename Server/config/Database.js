@@ -1,8 +1,9 @@
-import {Sequelize} from "sequelize";
+// Config/database.js
+import { Sequelize } from 'sequelize';
 
-const db = new Sequelize('db_wisata', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
+const sequelize = new Sequelize('db_wisata', 'root', '', {
+  host: 'localhost',
+  dialect: 'mysql',
 });
 
-export default db;
+export default sequelize;

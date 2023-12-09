@@ -1,30 +1,34 @@
-/* eslint-disable no-unused-vars */
-// src/App.js
-import React, {useState} from 'react';
-import logo from '../assets/images/gambar_login.png'
+import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import api from '../configs/api';
 
-const CardLoginForm = () => {
+
+const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [msg, setMsg] = useState('');
-  const navigateTo = useNavigate();
+  const navigate = useNavigate();  // Gunakan useNavigate di sini
 
-  const Auth = async (e) => {
-    e.preventDefault();
+  const handleLogin = async () => {
     try {
-    await axios.post('http://localhost:5170/api/v1/login', {
-        username: username,
-        password: password,
-    });
-    navigateTo.push('/profileadmin');
-  } catch (error) {   
-      if (error.response) {
-        setMsg(error.response.data.msg);
-      }
-    } 
-}
+      const response = await api.post('http://localhost:3000/auth/login', {
+        username,
+        password,
+      });
+
+      const { token } = response.data;
+      localStorage.setItem("token", token);
+      console.log('Server Response:', response.data);
+
+      // Redirect ke halaman /dashboard setelah login berhasil
+      navigate('http://localhost:5173/HomeAdmin');
+    } catch (error) {
+      console.error('Error during login:', error.response.data);
+    }
+  };
+
+
+
 
   // const handleSubmit = (e) => {
   //   e.preventDefault();
@@ -38,8 +42,7 @@ const CardLoginForm = () => {
         {/* Form Login */}
         <div className="w-1/2 p-8 ml-10 mr-10 py-20">
           <h2 className="text-2xl font-medium mb-10 text-center font-['Boogaloo'] tracking-[.1em]">Masuk</h2>
-          <p className="text-sm text-center text-red-500">{msg}</p>
-          <form onSubmit={Auth}>
+          <form>
           {/* Input Username */}
           <div className="mb-5">
           <label htmlFor="username" className="block mb-2 text-sm font-medium text-black dark:text-green-500">Username</label>
@@ -57,20 +60,21 @@ const CardLoginForm = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="bg-green-50 border border-green-500 text-green-900 placeholder-gray-300 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" 
-          placeholder="Masukan Kata Sandi"/>
+          placeholder="Masukan Kata Sandi"
+          />
           </div>
           {/* Button Login */}
-            <button type="submit" className="text-sm  bg-[#6FA385] font-bold text-[#222D3F] py-2 px-6 rounded-lg ml-40 mt-5">Masuk</button>
+            <button onClick={handleLogin} type="submit" className="text-sm  bg-[#6FA385] font-bold text-[#222D3F] py-2 px-6 rounded-lg ml-40 mt-5">Masuk</button>
           </form>
         </div>
 
         {/* Gambar Illustrasi */}
         <div className="w-1/2 bg- flex items-center justify-center">
-          <img src={logo} alt="Illustration" className="object-cover w-full h-full rounded-l-[200px]"/>
+          {/* <img src={logo} alt="Illustration" className="object-cover w-full h-full rounded-l-[200px]"/> */}
         </div>
       </div>
     </div>
   );
 };
 
-export default CardLoginForm;
+export default LoginForm;

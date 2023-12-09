@@ -1,28 +1,27 @@
-import express from "express";
-import cors from "cors";
-import db from "./config/Database.js";
-import router from "./routes/Route.js";
-import Wisata from "./models/Wisata.js";
-import dotenv from "dotenv";
-import allowCrossDomain from "./middleware/allowCrossDomain.js";
-import fileUpload from "express-fileupload";
-
-dotenv.config();
+// app.js
+import express from 'express';
+import authRoutes from './routes/authRoutes.js';
+import sequelize from './Config/database.js';
 
 const app = express();
+const PORT = 3000;
 
-try {
-    await db.authenticate();
-    console.log('DB Connected...');
-} catch (error) {
-    console.error('Unable to connect to the database:',error);
-}
-
-app.use(allowCrossDomain);
-
-
-app.use(cors());
+// Middleware untuk mengizinkan Express membaca body dari request
 app.use(express.json());
-app.use(router)
-app.use(fileUpload());
-app.listen(5170, ()=> console.log('Server up and running...'));
+
+// Menggunakan Routes
+app.use('/auth', authRoutes);
+
+// Sinkronisasi model dengan database
+sequelize.sync()
+  .then(() => {
+    console.log('Database synchronized');
+  })
+  .catch((error) => {
+    console.error('Error synchronizing database:', error);
+  });
+
+// Jalankan server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
