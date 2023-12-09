@@ -1,6 +1,7 @@
-// models/Admin.js
+// models/admin.js
 import { DataTypes } from 'sequelize';
-import sequelize from '../Config/database.js';
+import bcrypt from 'bcrypt';
+import sequelize from '../config/dbConfig.js';
 
 const Admin = sequelize.define('Admin', {
   username: {
@@ -12,6 +13,11 @@ const Admin = sequelize.define('Admin', {
     type: DataTypes.STRING,
     allowNull: false,
   },
+});
+
+Admin.beforeCreate(async (admin) => {
+  const saltRounds = 10;
+  admin.password = await bcrypt.hash(admin.password, saltRounds);
 });
 
 export default Admin;

@@ -1,33 +1,32 @@
+// LoginForm.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import api from '../configs/api';
-import logo from '../assets/images/illustration.png';
 
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();  // Gunakan useNavigate di sini
+  const navigate = useNavigate();
+
 
   const handleLogin = async () => {
     try {
-      const response = await api.post('http://localhost:3000/auth/login', {
+      const response = await axios.post('http://localhost:3000/auth/login', {
         username,
         password,
       });
 
-      const { token } = response.data;
-      localStorage.setItem("token", token);
-      console.log('Server Response:', response.data);
+      const token = response.data.token;
+      console.log('Token:', token);
+      // Simpan token di local storage
+      localStorage.setItem('token', token);
 
-      // Redirect ke halaman /dashboard setelah login berhasil
-      navigate('http://localhost:5173/HomeAdmin');
+      // Redirect ke halaman dashboard setelah login
+      navigate('/profileadmin');
     } catch (error) {
-      console.error('Error during login:', error.response.data);
+      console.log("Login Failed:", error.message);
     }
   };
-
-
 
 
   // const handleSubmit = (e) => {
@@ -49,6 +48,7 @@ const LoginForm = () => {
           <input type="text" id="username" 
           onChange={(e) => setUsername(e.target.value)}
           value={username}  
+          autoComplete="username"
           className="bg-green-50 border border-green-500 text-green-900 placeholder-gray-300  text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" 
           placeholder="Masukan Username"/>
           </div>
@@ -58,6 +58,7 @@ const LoginForm = () => {
           <input type="password" 
           id="pass" 
           value={password}
+          autoComplete="current-password"
           onChange={(e) => setPassword(e.target.value)}
           className="bg-green-50 border border-green-500 text-green-900 placeholder-gray-300 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" 
           placeholder="Masukan Kata Sandi"
@@ -70,7 +71,7 @@ const LoginForm = () => {
 
         {/* Gambar Illustrasi */}
         <div className="w-1/2 bg- flex items-center justify-center">
-          <img src={logo} alt="Illustration" className="object-cover w-full h-full rounded-l-[200px]"/>
+          {/* <img src={logokanan} alt="Illustration" className="object-cover w-full h-full rounded-l-[200px]"/> */}
         </div>
       </div>
     </div>

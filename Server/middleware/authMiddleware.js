@@ -2,20 +2,32 @@
 import jwt from 'jsonwebtoken';
 import cors from 'cors';
 
-const secretKey = 'inikuncisukses';
+const secretKey = 'inirahasiaya';
 
-app.use(cors());
 const verifyToken = (req, res, next) => {
   const token = req.header('Authorization');
-  if (!token) return res.status(401).json({ message: 'Access denied: No token provided' });
 
-  try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.admin = decoded; // Menyimpan informasi admin ke objek req
-    next();
-  } catch (error) {
-    res.status(401).json({ message: 'Invalid token' });
+  if (!token) {
+    return res.status(401).json({ message: 'Access denied: No token provided' });
   }
+
+  jwt.verify(token, secretKey, (err, decoded) => {
+    if (err) {
+      return res.status(401).json({ message: 'Access denied: Invalid token' });
+    }
+
+    req.user = decoded;
+    next();
+  });
 };
 
-export { verifyToken };
+const corsOptions = {
+  origin: 'http://localhost:5173',
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
+
+const enableCORS = cors(corsOptions);
+
+export { verifyToken, enableCORS };

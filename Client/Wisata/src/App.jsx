@@ -26,7 +26,7 @@ import HomeAdmin from './page/Admin/HomeAdmin'
 import TambahKuliner from './page/Admin/TambahKuliner'
 import TambahWisata from './page/Admin/TambahWisata'
 import TambahOleh from './page/Admin/TambahOleh'
-
+import Dashboard from './page/Admin/Dashboard'
 
 const App = () => {
   return (
@@ -60,6 +60,8 @@ const App = () => {
           <Route path="/TambahKuliner" element={<TambahKuliner/>} />
           <Route path="/TambahWisata" element={<TambahWisata/>} />
           <Route path="/TambahOleh" element={<TambahOleh/>} />
+
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>

@@ -1,25 +1,31 @@
-// app.js
+// server.js
 import express from 'express';
-import authRoutes from './routes/authRoutes.js';
-import sequelize from './Config/database.js';
-
+import sequelize from '../Server/config/dbConfig.js';
+import authRoutes from '../Server/routes/authRoutes.js';
+import { enableCORS } from '../Server/middleware/authMiddleware.js';
 const app = express();
 const PORT = 3000;
 
-// Middleware untuk mengizinkan Express membaca body dari request
+// Middleware untuk membaca body dari request
 app.use(express.json());
+app.use(enableCORS);
+app.use((req, res, next) => {
+  // Set-Cookie header dengan SameSite=None untuk mendukung cookie lintas situs
+  res.setHeader('Set-Cookie', 'myCookie=myValue; Secure');
+  next();
+});
 
-// Menggunakan Routes
-app.use('/auth', authRoutes);
-
-// Sinkronisasi model dengan database
+// Sinkronisasi database
 sequelize.sync()
   .then(() => {
-    console.log('Database synchronized');
+    console.log('Database synced');
   })
-  .catch((error) => {
-    console.error('Error synchronizing database:', error);
+  .catch((err) => {
+    console.error('Error syncing database:', err);
   });
+
+// Menggunakan rute auth
+app.use('/auth', authRoutes);
 
 // Jalankan server
 app.listen(PORT, () => {
