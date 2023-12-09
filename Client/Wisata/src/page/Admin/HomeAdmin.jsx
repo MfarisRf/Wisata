@@ -92,6 +92,16 @@ const HomeAdmin = () => {
 
 <div className="p-4 sm:ml-64 pt-atas h-auto w-auto">
    <div className="p-52q border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-52">
+      <div className='flex'>
+         <h3><a href="/TambahWisata">Wisata|</a></h3>
+         <h3><a href="/TambahKuliner">Kuliner|</a></h3>
+         <h3><a href="/TambahOleh">Oleh-Oleh</a></h3>
+      </div>
+      <div className='bg-green-300 w-[105%] h-96'>
+         <div className='m-10 bg-red-200 h-[50%]'>
+
+         </div>
+      </div>
 
    </div>
    </div>
