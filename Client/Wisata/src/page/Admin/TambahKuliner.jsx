@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar_admin from '../../components/Navbar_admin '
 import Gambar from '../../assets/images/Ghandi.jpg'
+import FooterAdmin from '../../components/FooterAdmin'
 
 const TambahKuliner = () => {
   return (
@@ -29,7 +30,7 @@ const TambahKuliner = () => {
       </div>
       {/* Penutup */}
          <li>
-            <a href="#" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
+            <a href="/HomeAdmin" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
             <svg className="w-6 h-6 text-[#6FA385] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
             <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
             </svg>
@@ -48,7 +49,7 @@ const TambahKuliner = () => {
             </button>
             <ul id="dropdown-example" className="hidden py-2 space-y-2">
                   <li className='pl-5'>
-                     <a href="#" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
+                     <a href="/TambahWisata" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
                      <svg className="w-[23px] h-[23px] text-[#6FA385] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 5.757v8.486M5.757 10h8.486M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                      </svg>
@@ -56,7 +57,7 @@ const TambahKuliner = () => {
                      </a>
                   </li>
                   <li className='pl-5'>
-                     <a href="#" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
+                     <a href="/TamabahKuliner" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
                      <svg className="w-[23px] h-[23px] text-[#6FA385] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 5.757v8.486M5.757 10h8.486M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                      </svg>
@@ -64,7 +65,7 @@ const TambahKuliner = () => {
                      </a>
                   </li>
                   <li className='pl-5'>
-                     <a href="#" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
+                     <a href="/TambahOleh" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
                      <svg className="w-[23px] h-[23px] text-[#6FA385] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 5.757v8.486M5.757 10h8.486M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                      </svg>
@@ -74,7 +75,7 @@ const TambahKuliner = () => {
             </ul>
          </li>
          <li>
-            <a href="#" className="flex items-center p-2 text-[#29446F] rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group font-bold">
+            <a href="/ProfileAdmin" className="flex items-center p-2 text-[#29446F] rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group font-bold">
             <svg className="w-[23px] h-[23px] text-[#6FA385] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
             </svg>
@@ -82,7 +83,7 @@ const TambahKuliner = () => {
             </a>
          </li>
          <li>
-         <button type="Logout" className="mt-[25%] text-[#29446F] bg-[#BFDCAE] font-bold rounded-lg text-sm text-center ml-[25%] w-28 h-9 border border-[#DC4848]"><a href="/About"></a>LogOut</button>
+         <button type="Logout" className="mt-[25%] text-[#29446F] bg-[#BFDCAE] font-bold rounded-lg text-sm text-center ml-[25%] w-28 h-9 border border-[#DC4848]"><a href="/Login">LogOut</a></button>
          </li>
       </ul>
    </div>
@@ -93,6 +94,10 @@ const TambahKuliner = () => {
    <div className="p-52q border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-52">
 
    </div>
+   </div>
+
+   <div>
+         <FooterAdmin/>
    </div>
 
     </div>
