@@ -21,7 +21,7 @@ function DetailWisataMajalengka() {
             <figure className="max-w-lg">
               <img className="mt-14 min-w-full ml-20 mb-14 rounded-lg" src={GambarSC} alt="image description"></img>
               <figcaption className="mt-2 text-5xl ml-20 mb-14 text-left text-[#29446F] dark:text-[#29446F] font-['libre_baskerville']">Situ Cipaten</figcaption>
-              <p className="ml-20 text-[#29446F] text-justify ">Situ Cipanten adalah sebuah danau yang terletak di kawasan Cipanten, Desa Sukasari, Kecamatan Cikijing, Kabupaten Majalengka, Jawa Barat, Indonesia. Danau ini memiliki luas sekitar 1,2 hektar dan dan dikelilingi oleh perbukitan yang hijau dan indah. Situ Cipanten dikenal sebagai salah satu wisata alam yang menarik di kunjungi di Kabupaten Majalengka, Jawa Barat. Memiliki air berwarna hijau tosca yang jauh dari kata keruh. Wisatawan yang datang dapat berenang sembari bermain dengan kawanan ikan yang menghuni danau cantik ini.</p>
+              <p className="mt-14 ml-20 text-[#29446F] text-justify ">Situ Cipanten adalah sebuah danau yang terletak di kawasan Cipanten, Desa Sukasari, Kecamatan Cikijing, Kabupaten Majalengka, Jawa Barat, Indonesia. Danau ini memiliki luas sekitar 1,2 hektar dan dan dikelilingi oleh perbukitan yang hijau dan indah. Situ Cipanten dikenal sebagai salah satu wisata alam yang menarik di kunjungi di Kabupaten Majalengka, Jawa Barat. Memiliki air berwarna hijau tosca yang jauh dari kata keruh. Wisatawan yang datang dapat berenang sembari bermain dengan kawanan ikan yang menghuni danau cantik ini.</p>
             </figure>
         </div>
       <div className="p-12">
@@ -40,21 +40,16 @@ function DetailWisataMajalengka() {
             <ul className="list-disc list-inside">
                 
             </ul>
-
         </div>
     </div>
-    
-        {/* Map */}
-        <div className="p-12 z-[0] m-[10]">
-          <div className="box-container p-1 m-[10] bg-gray-200 z-[0] rounded-md shadow-md border-2 border-[#22B57F]">
-              <MapBox />
-          </div>
-        </div>
-
 </div>
 <br/>
-
-
+{/* Map */}
+<div className="p-12 z-[0] m-[10]">
+              <div className="box-container p-1 m-[10] bg-gray-200 z-[0] rounded-md shadow-md border-2 border-[#22B57F]">
+                  <MapBox />
+              </div>
+            </div>
         <br/>
       </div>
         <Footer/>
