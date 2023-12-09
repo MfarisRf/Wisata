@@ -1,28 +1,33 @@
-import express from "express";
-import cors from "cors";
-import db from "./config/Database.js";
-import router from "./routes/Route.js";
-import Wisata from "./models/Wisata.js";
-import dotenv from "dotenv";
-import allowCrossDomain from "./middleware/allowCrossDomain.js";
-import fileUpload from "express-fileupload";
-
-dotenv.config();
-
+// server.js
+import express from 'express';
+import sequelize from '../Server/config/dbConfig.js';
+import authRoutes from '../Server/routes/authRoutes.js';
+import { enableCORS } from '../Server/middleware/authMiddleware.js';
 const app = express();
+const PORT = 3000;
 
-try {
-    await db.authenticate();
-    console.log('DB Connected...');
-} catch (error) {
-    console.error('Unable to connect to the database:',error);
-}
-
-app.use(allowCrossDomain);
-
-
-app.use(cors());
+// Middleware untuk membaca body dari request
 app.use(express.json());
-app.use(router)
-app.use(fileUpload());
-app.listen(5170, ()=> console.log('Server up and running...'));
+app.use(enableCORS);
+app.use((req, res, next) => {
+  // Set-Cookie header dengan SameSite=None untuk mendukung cookie lintas situs
+  res.setHeader('Set-Cookie', 'myCookie=myValue; Secure');
+  next();
+});
+
+// Sinkronisasi database
+sequelize.sync()
+  .then(() => {
+    console.log('Database synced');
+  })
+  .catch((err) => {
+    console.error('Error syncing database:', err);
+  });
+
+// Menggunakan rute auth
+app.use('/auth', authRoutes);
+
+// Jalankan server
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
