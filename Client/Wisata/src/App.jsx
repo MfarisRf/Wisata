@@ -22,7 +22,9 @@ import DetailWisataKuningan from './page/DetailWisataKuningan'
 import DetailKulinerKuningan from './page/DetailKulinerKuningan'
 import DetailOlehOlehKuningan from './page/DetailOlehOlehKuningan'
 import ProfileAdmin from './page/Admin/ProfileAdmin'
-import HomeAdmin from './page/Admin/HomeAdmin'
+import HomeWisata from './page/Admin/HomeWisata'
+import HomeKuliner from './page/Admin/HomeKuliner'
+import HomeOleh from './page/Admin/HomeOleh'
 import TambahKuliner from './page/Admin/TambahKuliner'
 import TambahWisata from './page/Admin/TambahWisata'
 import TambahOleh from './page/Admin/TambahOleh'
@@ -56,7 +58,9 @@ const App = () => {
           <Route path="/Notfoundoleholeh" element={<Notfoundoleholeh/>} />
           <Route path="/Team" element={<OurTeam/>} />
           <Route path="/ProfileAdmin" element={<ProfileAdmin/>} />
-          <Route path="/HomeAdmin" element={<HomeAdmin/>} />
+          <Route path="/HomeWisata" element={<HomeWisata/>} />
+          <Route path="/HomeKuliner" element={<HomeKuliner/>} />
+          <Route path="/HomeOleh" element={<HomeOleh/>} />
           <Route path="/TambahKuliner" element={<TambahKuliner/>} />
           <Route path="/TambahWisata" element={<TambahWisata/>} />
           <Route path="/TambahOleh" element={<TambahOleh/>} />

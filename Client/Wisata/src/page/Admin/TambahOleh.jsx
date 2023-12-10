@@ -30,7 +30,7 @@ const TambahOleh = () => {
       </div>
       {/* Penutup */}
          <li>
-            <a href="/HomeAdmin" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
+            <a href="/HomeWisata" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
             <svg className="w-6 h-6 text-[#6FA385] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
             <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
             </svg>
@@ -92,63 +92,63 @@ const TambahOleh = () => {
 
 <div className="p-4 sm:ml-64 pt-atas h-auto w-auto">
    <div className="p-52q border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-52">
-
-   <div className="p-4 sm:ml-64 pt-atas h-auto w-auto">
-   <div className="p-52q border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-52">
       <div className='flex ml-10'>
-         <p className='font-bold text-2xl mr text-[#29446F]'>Tambah Kuliner</p>
+         <p className='font-bold text-2xl mr text-[#29446F]'>Tambahkan Oleh oleh </p>
       </div>
    
    
 
-<form className="max-w-md mx-auto">
+<form className="max-w-md mx-auto mr-[45%] pt-5">
   <div className="flex md:grid-cols-2 md:gap-6">
   <div className="mb-5">
-    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Email</label>
-    <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required/>
+    <label htmlFor="name" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Nama Kuliner</label>
+    <input type="name" id="name" className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required/>
   </div>
       <form className="max-w-sm mx-auto">
-         <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
-            <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+         <label htmlFor="message" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Deskripsi</label>
+            <textarea id="message" rows="4" className="block p-2.5 w-[120%] text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-[#206A5D] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
       </form>
   </div>
   <div className="mb-5">
       <form className="max-w-lg mx-auto">
-         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="user_avatar">Upload file</label>
-            <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file"/>
+         <label className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white" htmlFor="user_avatar">Photo</label>
+            <input className="block w-full text-sm text-gray-900 border-2 border-[#206A5D] rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file"/>
       </form>
   </div>
+      <div className='py-10'>
+         <h3 className="text-[25px] font-bold text-[#29446F] text-['Heebo']">Rekomendasi Tempat Oleh oleh </h3>
+      </div>
+  <div className='bg-[#D8E7CB] bg:opacity-[50%] w-[180%] h-auto rounded-lg border-2 border-[#206A5D]'>
 
-  <div className='bg-green-500 w-auto h-auto'>
-   <h3>Tambah Kuliner</h3>
-   
+<form className="max-w-sm mx-auto py-10 mr-[45%]">
+  <div className="mb-5">
+    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Toko Oleh-oleh</label>
+    <input type="email" id="email" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="" required/>
+  </div>
+  <div className='py-2 mr-14 mb-4 '>
+   <form className="max-w-sm mx-auto">
+      <label htmlFor="countries" className="block mb-2 w-[500%] text-[15px] font-medium text-[#29446F]">Kategori</label>
+      <select id="countries" className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg block w-[210%] p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#6FA385] dark:focus:border-[#6FA385]">
 
-<form className="max-w-sm mx-auto py-10">
+         <option></option>
+         <option>Cirebon</option>
+         <option>Indramayu</option>
+         <option>Kuninggan</option>
+      </select>
+   </form>
+   </div>
   <div className="mb-5">
-    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Restoean Kuliner</label>
-    <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required/>
+    <label htmlFor="address" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat Tempat</label>
+    <input type="address" id="address" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
   </div>
   <div className="mb-5">
-    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kategori</label>
-    <input type="password" id="password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
-  </div>
-  <div className="mb-5">
-    <label htmlFor="repeat-password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat Tempat</label>
-    <input type="password" id="repeat-password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
-  </div>
-  <div className="mb-5">
-    <label htmlFor="repeat-password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jam Buka</label>
-    <input type="password" id="repeat-password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+    <label htmlFor="time" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jam Buka</label>
+    <input type="time" id="time" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
   </div>
 </form>
-
   </div>
-
-  <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+  <button type="submit" className="px-[9%] ml-[75%] mt-[15%] text-[] bg-[#6FA385] font-medium rounded-lg text-sm w-[100%] sm:w-auto py-2.5 text-center">Simpan</button>
 </form>
-   </div>
-   </div>
-
    </div>
    </div>
 
