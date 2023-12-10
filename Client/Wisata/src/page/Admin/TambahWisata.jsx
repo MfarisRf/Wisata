@@ -91,71 +91,72 @@ const TambahWisata = () => {
 
 
 <div className="p-4 sm:ml-64 pt-atas h-auto w-auto">
-   <div className="p-52q border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-52">
-   <div className='flex ml-10'>
+   <div className="p-52 border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-52 pr-[4%]">
+   <div className='flex ml-10 pb-10'>
       <p className='font-bold text-2xl mr text-[#29446F]'>Tambah Wisata</p>
       </div>
 
    
 
-<form className="max-w-md mx-auto">
+<form className="max-w-md mx-auto mr-[48%]">
 <div className="mb-5">
-    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Wisata</label>
-    <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required />
+    <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Wisata</label>
+    <input type="name" id="name" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="" required />
   </div>
   <div className="grid md:grid-cols-2 md:gap-6">
   <div className="mb-5">
-    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jam Buka</label>
-    <input type="password" id="password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+    <label htmlFor="time" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jam Buka</label>
+    <input type="time" id="time" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
    </div>
-   <form className="max-w-sm mx-auto">
+   <form className="max-w-sm mx-auto w-[100%]">
       <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Deskripsi</label>
-      <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+      <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
    </form>
     </div>
    <div className="mb-5">
-      <label htmlFor="repeat-password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jam Tutup</label>
-      <input type="password" id="repeat-password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+      <label htmlFor="time" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jam Tutup</label>
+      <input type="time" id="time" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
    </div>
   <div className="grid md:grid-cols-2 md:gap-6">
   <div className="mb-5">
-    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga Tiket</label>
-    <input type="password" id="password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+    <label htmlFor="price" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga Tiket</label>
+    <input type="price" id="price" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
    </div>
-  <form className="max-w-sm mx-auto">
+  <form className="max-w-sm mx-auto w-[100%]">
      <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Maps / Lokasi Wisata</label>
-     <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+     <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
   </form>
   </div>
 
-   <div className='py-2 mr-16 mb-4 '>
+   <div className='py-2 mr-14 mb-4 '>
    <form className="max-w-sm mx-auto">
-      <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select your country</label>
-      <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+      <label htmlFor="countries" className="block mb-2  w-[300%] text-sm font-medium text-gray-900 dark:text-white">Select your country</label>
+      <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#6FA385] dark:focus:border-[#6FA385]">
 
          <option></option>
-         <option>Canada</option>
-         <option>France</option>
-         <option>Germany</option>
+         <option>Cirebon</option>
+         <option>Indramayu</option>
+         <option>Kuninggan</option>
       </select>
    </form>
    </div>
 
   <div className="grid md:gap-6">
    <div className="mb-5">
-     <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat</label>
-     <input type="password" id="password" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+     <label htmlFor="address" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat</label>
+     <input type="address" id="address" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#6FA385] focus:border-[#6FA385] block w-full p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
     </div>
   </div>
   <div className="grid md:gap-6 pb-5 mr-52 mb-4">
-      <form className="max-w-lg mx-auto">
-         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="user_avatar">Upload file</label>
-            <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file"/>
+      <form className="max-w-lg mx-auto w-[187%]">
+         <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white" htmlFor="image">Upload file</label>
+            <input className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-[#C7E8B4] focus:outline-none dark:bg-[#C7E8B4] dark:border-[#C7E8B4] dark:placeholder-gray-400" aria-describedby="image" id="image" type="file" placeholder='No file chosen'/>
       </form>
   </div>
-  <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Simpan</button>
+  <div className='ml-[70%] pt-10'>
+      <button type="submit" className="text-[#222D3F] bg-[#6FA385] hover:bg-[#6FA385]focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-[100%] px-5 py-2.5 text-center text-bold shadow-lg">Simpan</button>
+  </div>
 </form>
-
 
    </div>
    </div>
