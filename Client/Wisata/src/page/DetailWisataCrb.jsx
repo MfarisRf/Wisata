@@ -44,11 +44,11 @@ function DetailWisataCrb() {
             </ul>
         </div>
       </div>
-    </div>
-    <br/>
-    <div className="relative w-[100%] z-10 mt-10 p-1 bg-white rounded-md shadow-md border-2 border-[#22B57F]">
+      <div className="relative w-[100%] z-10 mt-10 p-1 bg-white rounded-md shadow-md border-2 border-[#22B57F]">
             <MapBox />
         </div>
+    </div>
+    <br/>
         </div>
         <br/>
             <Footer/>
