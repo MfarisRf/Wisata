@@ -22,8 +22,8 @@ POST  http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "username": "ujang",
-    "password": "12345678"
+    "username": "admin",
+    "password": "faris123"
 }
 
 ###
@@ -31,6 +31,6 @@ POST  http://localhost:3000/auth/admin/create
 Content-Type: application/json
 
 {
-    "username": "ujang",
-    "password": "12345678"
+    "username": "admin",
+    "password": "faris123"
 }
