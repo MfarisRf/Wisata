@@ -110,7 +110,7 @@ const TambahKuliner = () => {
       </form>
   </div>
   <div className="mb-5">
-      <form className="max-w-lg mx-auto">
+      <form className="max-w-lg mx-auto shadow-xl">
          <label className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white" htmlFor="user_avatar">Photo</label>
             <input className="block w-full text-sm text-gray-900 border-2 border-[#206A5D] rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file"/>
       </form>
@@ -121,7 +121,7 @@ const TambahKuliner = () => {
   <div className='bg-[#D8E7CB] bg:opacity-[50%] w-[180%] h-auto rounded-lg border-2 border-[#206A5D]'>
 
 <form className="max-w-sm mx-auto py-10 mr-[45%]">
-  <div className="mb-5">
+  <div className="mb-5 shadow-w-xl">
     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Restoran Kuliner</label>
     <input type="email" id="email" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="" required/>
   </div>
