@@ -42,14 +42,13 @@ function DetailWisataMajalengka() {
             </ul>
         </div>
     </div>
+    <br/>
+    <br/>
     {/* Map */}
-      <div className="p-12 z-[0] m-[10]">
-        <div className="box-container p-1 m-[10] bg-gray-200 z-[0] rounded-md shadow-md border-2 border-[#22B57F]">
+        <div className="container mx-auto z-20 mt-10 p-1 rounded-md shadow-md border-2 border-[#22B57F]">
             <MapBox />
         </div>
       </div>
-</div>
-<br/>
         <br/>
       </div>
         <Footer/>

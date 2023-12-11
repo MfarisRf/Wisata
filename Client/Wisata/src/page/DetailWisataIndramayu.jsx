@@ -2,6 +2,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import MapBox from '../components/MapBox'
 import 'flowbite'
 // eslint-disable-next-line no-unused-vars
 import GambarPD from '../assets/images/PD.png'
@@ -40,13 +41,15 @@ function DetailWisataIndramayu() {
                 
             </ul>
         </div>
+        <div>
+        </div>
     </div>
 </div>
-{/* Map */}
-<div className="grid grid-cols-1 h-90">
-    <div className="container mb-20 ml-kanan mx-auto bg-[#E6E6E6] p-6 rounded-lg shadow-md text-center">
-            </div>
-            </div>
+<br/>
+        <div class="container mx-auto z-10 p-1 mt-10 bg-white rounded-md shadow-md border-2 border-[#22B57F]">
+            <MapBox />
+        </div>
+<br/>
         <br/>
       </div>
         <Footer/>

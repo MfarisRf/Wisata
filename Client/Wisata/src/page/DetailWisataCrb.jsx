@@ -45,6 +45,10 @@ function DetailWisataCrb() {
         </div>
       </div>
     </div>
+    <br/>
+        <div className="container mx-auto z-10 p-1 m-10 bg-white rounded-md shadow-md">
+            <MapBox />
+        </div>
         </div>
         <br/>
         {/* Map */}
