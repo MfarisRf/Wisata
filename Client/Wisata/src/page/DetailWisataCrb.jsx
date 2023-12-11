@@ -45,15 +45,12 @@ function DetailWisataCrb() {
         </div>
       </div>
     </div>
+    <br/>
+        <div class="container mx-auto z-10 p-1 m-10 bg-white rounded-md shadow-md">
+            <MapBox />
+        </div>
         </div>
         <br/>
-{/* Map */}
-<div className="p-12 z-[0] m-[10]">
-<div class="box-container p-1 m-[10] bg-gray-200 z-[0] rounded-md shadow-md border-2 border-[#22B57F]">
-      <MapBox />
-</div>
-        <br/>
-        </div>
             <Footer/>
     </div>
     )
