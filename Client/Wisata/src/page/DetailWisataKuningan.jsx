@@ -37,16 +37,10 @@ function DetailWisataKuningan() {
                 <h3 className="text-lg mb-2 text-left font-semibold">Rp. 15.000</h3>
             </div>
 
-            <ul className="list-disc list-inside">
-                
-            </ul>
-
         </div>
     </div>
-    <br/>
-    <br/>
     {/* Map */}
-        <div className="box-container z-20 mt-10 p-1 rounded-md shadow-md border-2 border-[#22B57F]">
+    <div className="relative w-[100%] z-10 mt-10 p-1 bg-white rounded-md shadow-md border-2 border-[#22B57F]">
             <MapBox />
         </div>
       </div>
