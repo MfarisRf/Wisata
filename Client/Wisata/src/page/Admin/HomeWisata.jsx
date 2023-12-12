@@ -17,7 +17,7 @@ const HomeWisata = () => {
    </svg>
 </button>
 
-<aside id="sidebar-multi-level-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 pt-24" aria-label="Sidebar">
+<aside id="sidebar-multi-level-sidebar" className="fixed top-0 left-0 z-0 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 pt-24" aria-label="Sidebar">
    <div className="h-full px-3 py-4 overflow-y-auto bg-[#BFDCAE] dark:bg-gray-800 ml-2 rounded-lg">
       <ul className="space-y-2 font-medium">
            {/*Profile */}
@@ -30,7 +30,7 @@ const HomeWisata = () => {
       </div>
       {/* Penutup */}
          <li>
-            <a href="/HomeWisata" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
+            <a href="/Dashboard" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
             <svg className="w-6 h-6 text-[#6FA385] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
             <path d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"/>
             </svg>
@@ -49,7 +49,7 @@ const HomeWisata = () => {
             </button>
             <ul id="dropdown-example" className="hidden py-2 space-y-2">
                   <li className='pl-5'>
-                     <a href="TambahWisata" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
+                     <a href="/TambahWisata" className="flex items-center p-2 text-[#29446F] font-bold rounded-lg dark:text-white hover:bg-[#F1F1E8] dark:hover:bg-gray-700 group">
                      <svg className="w-[23px] h-[23px] text-[#6FA385] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 5.757v8.486M5.757 10h8.486M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                      </svg>
@@ -93,7 +93,7 @@ const HomeWisata = () => {
 <div className="p-4 sm:ml-64 pt-atas h-auto w-auto">
    <div className="p-52q border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-20">
       <div className="flex font-bold text-['Heebo'] text-[#29446F] text-[20px] mb-10">
-         <h3 className='pr-5'><a href="/HomeWisata">Wisata</a></h3>
+         <h3 className='pr-5'><a href="/Dashboard">Wisata</a></h3>
          <h3 className='pr-5'><a href="/HomeKuliner">Kuliner</a></h3>
          <h3><a href="/HomeOleh">Oleh-Oleh</a></h3>
       </div>
