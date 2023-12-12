@@ -24,7 +24,7 @@ Content-Type: application/json
 {
     "username": "admin",
     "password": "faris123"
-}
+} 
 
 ###
 POST  http://localhost:3000/auth/admin/create
