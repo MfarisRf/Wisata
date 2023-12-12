@@ -122,8 +122,8 @@ const TambahOleh = () => {
 
 <form className="max-w-sm mx-auto py-10 mr-[45%]">
   <div className="mb-5">
-    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Toko Oleh-oleh</label>
-    <input type="email" id="email" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="" required/>
+    <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Toko Oleh-oleh</label>
+    <input type="name" id="name" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="" required/>
   </div>
   <div className='py-2 mr-14 mb-4 '>
    <form className="max-w-sm mx-auto">
