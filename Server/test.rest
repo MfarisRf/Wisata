@@ -1,0 +1,40 @@
+
+//CreateUser
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "username" : "admindonegabang?",
+    "password" : "123456",
+    "confPassword" : "123456"
+}
+
+###
+//GetAdmin
+GET http://localhost:5000/users
+
+###
+GET http://localhost:5000/users/944c7243-a4b7-4839-be4b-9aef17d26863
+
+###
+PATCH http://localhost:5000/users/c4da1634-4130-42be-9cce-6f6ba422af73
+Content-Type: application/json
+
+{
+    "username": "admin"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "username" : "admindonegabang?",
+    "password" : "123456"   
+}
+
+###
+GET http://localhost:5000/me
+ 
+###
+DELETE  http://localhost:5000/logout

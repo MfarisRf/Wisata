@@ -1,47 +1,38 @@
 // LoginForm.jsx
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { LoginUser,reset } from '../features/authSlice.js';
 
 const LoginForm = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const {user, isError, isSuccess, isLoading, message} = useSelector(
+    (state) => state.auth
+    );
 
+    useEffect(() => {
+      if (user || isSuccess) {
+        navigate('/dashboard');
+      }
+      dispatch(reset());
+    }, [user, isSuccess, navigate, dispatch]);
 
-  const handleLogin = async () => {
-    try {
-      const response = await axios.post('http://localhost:3000/auth/login', {
-        username,
-        password,
-      });
-
-      const token = response.data.token;
-      console.log('Token:', token);
-      // Simpan token di local storage
-      localStorage.setItem('token', token);
-
-      // Redirect ke halaman dashboard setelah login
-      navigate('/profileadmin');
-    } catch (error) {
-      console.log("Login Failed:", error.message);
-    }
-  };
-
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   // Implement login logic here
-  //   console.log('Login logic goes here');
-  // };
-
+    const Auth = async (e) => {
+      e.preventDefault();
+      dispatch(LoginUser({username, password}));
+    };
   return (
     <div className="flex h-screen items-center justify-center bg-[#F1F1E8] pt-20">
       <div className="bg-bfdcae w-9/12 shadow-md rounded-3xl overflow-hidden flex">
         {/* Form Login */}
         <div className="w-1/2 p-8 ml-10 mr-10 py-20">
           <h2 className="text-2xl font-medium mb-10 text-center font-['Boogaloo'] tracking-[.1em]">Masuk</h2>
-          <form>
+          <form onSubmit={Auth}>
+            { isError && <p className="hash-text-centered">{message}</p>}
           {/* Input Username */}
           <div className="mb-5">
           <label htmlFor="username" className="block mb-2 text-sm font-medium text-black dark:text-green-500">Username</label>
@@ -65,7 +56,9 @@ const LoginForm = () => {
           />
           </div>
           {/* Button Login */}
-            <button onClick={handleLogin} type="submit" className="text-sm  bg-[#6FA385] font-bold text-[#222D3F] py-2 px-6 rounded-lg ml-40 mt-5">Masuk</button>
+            <button type="submit" className="text-sm  bg-[#6FA385] font-bold text-[#222D3F] py-2 px-6 rounded-lg ml-40 mt-5">
+              {isLoading ? "Loading..." : "Login"}
+            </button>
           </form>
         </div>
 
