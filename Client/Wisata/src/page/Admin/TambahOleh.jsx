@@ -53,7 +53,7 @@ const TambahOleh = () => {
                      <svg className="w-[23px] h-[23px] text-[#6FA385] dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 5.757v8.486M5.757 10h8.486M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                      </svg>
-                     <span className="ms-3">Tambah Wisata</span>
+                     <span className="ms-3">Tambah</span>
                      </a>
                   </li>
                   <li className='pl-5'>
@@ -101,7 +101,7 @@ const TambahOleh = () => {
 <form className="max-w-md mx-auto mr-[45%] pt-5">
   <div className="flex md:grid-cols-2 md:gap-6">
   <div className="">
-    <label htmlFor="name" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Nama Kuliner</label>
+    <label htmlFor="name" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Nama Oleh-Oleh</label>
     <input type="name" id="name" className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required/>
   </div>
       <form className="max-w-sm mx-auto">
@@ -109,6 +109,19 @@ const TambahOleh = () => {
             <textarea id="message" rows="4" className="block p-2.5 w-[120%] text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-[#206A5D] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
       </form>
   </div>
+  <div className='py-2 mr-14 mb-4 '>
+   <form className="max-w-sm mx-auto">
+      <label htmlFor="countries" className="block mb-2 w-[500%] text-[15px] font-medium text-[#29446F]">Kategori</label>
+      <select id="countries" className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg block w-[115%] p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#6FA385] dark:focus:border-[#6FA385]">
+
+         <option></option>
+         <option>Cirebon</option>
+         <option>Indramayu</option>
+         <option>Kuninggan</option>
+         <option>Majalengka</option>
+      </select>
+   </form>
+   </div>
   <div className="mb-5">
       <form className="max-w-lg mx-auto">
          <label className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white" htmlFor="user_avatar">Photo</label>
@@ -125,18 +138,6 @@ const TambahOleh = () => {
     <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Toko Oleh-oleh</label>
     <input type="name" id="name" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="" required/>
   </div>
-  <div className='py-2 mr-14 mb-4 '>
-   <form className="max-w-sm mx-auto">
-      <label htmlFor="countries" className="block mb-2 w-[500%] text-[15px] font-medium text-[#29446F]">Kategori</label>
-      <select id="countries" className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg block w-[210%] p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#6FA385] dark:focus:border-[#6FA385]">
-
-         <option></option>
-         <option>Cirebon</option>
-         <option>Indramayu</option>
-         <option>Kuninggan</option>
-      </select>
-   </form>
-   </div>
   <div className="mb-5">
     <label htmlFor="address" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat Tempat</label>
     <input type="address" id="address" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>

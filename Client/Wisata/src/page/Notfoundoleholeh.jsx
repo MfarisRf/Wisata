@@ -4,13 +4,16 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import 'flowbite'
 import Gambarnfo from '../assets/images/NFO 1920x689.png'
+import pencarian from '../assets/images/Search.png'
+import background from '../assets/images/Teksturs.png'
+
 
 function Notfoundoleholeh() {
   return (
     <div>
     <Navbar/>
-    <img class="h-2/5 w-5/5" src={Gambarnfo} alt="image description"></img>
-    <br/>
+    <img className="h-2/5 w-5/5" src={Gambarnfo} alt="image description"></img>
+    <div className='bg-cover mt-[-10]' style={{backgroundImage: `url(${background}) `}}>
     <h2 className="font-bold  text-[#29446F] font-['Boogaloo'] text-[25px] pl-20 pb-5 tracking-[.1em]">Oleh Oleh</h2>
     {/* Card */}
 
@@ -57,11 +60,14 @@ function Notfoundoleholeh() {
 </div>
     <div className="flex items-center justify-center h-screen bg-white-200">
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-800">404 - Not Found</h1>
-        <p className="mt-4 text-lg text-gray-600">The page you are looking for might not exist.</p>
+      <img src={pencarian} className='ml-[30%]' alt="pencarian" />
+        <h1 className="text-4xl font-bold text-gray-800">No Results Found for</h1>
+        <h2 className="text-4xl font-bold text-gray-800">“Jenang”</h2><br />
+        <p className="mt-4 text-lg text-gray-600">Try shortening or rephrasing your search</p>
       </div>
     </div>
       <div>
+    </div>
         <Footer/>
       </div>
   </div>

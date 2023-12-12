@@ -150,7 +150,7 @@ const TambahWisata = () => {
   <div className="grid md:gap-6 pb-5 mr-52 mb-4">
       <form className="max-w-lg mx-auto w-[187%] shadow-lg">
          <label className=" block mb-2 text-[15px] font-medium text-[#29446F] dark:text-[#29446F]" htmlFor="image">Upload file</label>
-            <input className="block w-full text-sm text-gray-900 border-2 border-[#206A5D] rounded-lg cursor-pointer bg-gray-50 dark:text-[#C7E8B4] focus:outline-none dark:bg-[#C7E8B4] dark:border-[#C7E8B4] dark:placeholder-gray-400" aria-describedby="image" id="image" type="file" placeholder='No file chosen'/>
+            <input className="block w-full text-sm text-red-900 border-2 border-[#206A5D] rounded-lg cursor-pointer bg-gray-50 dark:text-[#C7E8B4] focus:outline-none dark:bg-[#C7E8B4] dark:border-[#C7E8B4] dark:placeholder-gray-400" aria-describedby="image" id="image" type="file" placeholder='No file chosen'/>
       </form>
   </div>
   <div className='ml-[90%] pt-10'>

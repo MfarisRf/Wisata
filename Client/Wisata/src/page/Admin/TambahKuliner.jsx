@@ -109,6 +109,18 @@ const TambahKuliner = () => {
             <textarea id="message" rows="4" className="block p-2.5 w-[120%] text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-[#206A5D] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
       </form>
   </div>
+  <div className='py-2 mr-14 mb-4 '>
+   <form className="max-w-sm mx-auto">
+      <label htmlFor="countries" className="block mb-2 w-[500%] text-[15px] font-medium text-[#29446F]">Kategori</label>
+      <select id="countries" className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg block w-[115%] p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#6FA385] dark:focus:border-[#6FA385]">
+         <option></option>
+         <option>Cirebon</option>
+         <option>Indramayu</option>
+         <option>Kuninggan</option>
+         <option>Majalengka</option>
+      </select>
+   </form>
+   </div>
   <div className="mb-5">
       <form className="max-w-lg mx-auto shadow-xl">
          <label className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white" htmlFor="user_avatar">Photo</label>
@@ -125,18 +137,6 @@ const TambahKuliner = () => {
     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Restoran Kuliner</label>
     <input type="email" id="email" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="" required/>
   </div>
-  <div className='py-2 mr-14 mb-4 '>
-   <form className="max-w-sm mx-auto">
-      <label htmlFor="countries" className="block mb-2 w-[500%] text-[15px] font-medium text-[#29446F]">Kategori</label>
-      <select id="countries" className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg block w-[210%] p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#6FA385] dark:focus:border-[#6FA385]">
-
-         <option></option>
-         <option>Cirebon</option>
-         <option>Indramayu</option>
-         <option>Kuninggan</option>
-      </select>
-   </form>
-   </div>
   <div className="mb-5">
     <label htmlFor="address" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat Tempat</label>
     <input type="address" id="address" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
