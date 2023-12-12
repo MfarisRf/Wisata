@@ -58,14 +58,13 @@ const App = () => {
           <Route path="/Notfoundoleholeh" element={<Notfoundoleholeh/>} />
           <Route path="/Team" element={<OurTeam/>} />
           <Route path="/ProfileAdmin" element={<ProfileAdmin/>} />
-          <Route path="/HomeWisata" element={<HomeWisata/>} />
+          <Route path="/Dashboard" element={<HomeWisata/>} />
           <Route path="/HomeKuliner" element={<HomeKuliner/>} />
           <Route path="/HomeOleh" element={<HomeOleh/>} />
           <Route path="/TambahKuliner" element={<TambahKuliner/>} />
           <Route path="/TambahWisata" element={<TambahWisata/>} />
           <Route path="/TambahOleh" element={<TambahOleh/>} />
 
-          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>
