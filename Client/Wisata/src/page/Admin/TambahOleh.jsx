@@ -145,6 +145,10 @@ const TambahOleh = () => {
     <label htmlFor="time" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jam Buka</label>
     <input type="time" id="time" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
   </div>
+  <div className="mb-5">
+    <label htmlFor="price" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga</label>
+    <input type="text" id="price" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+  </div>
 </form>
   </div>
   <button type="submit" className="px-[9%] ml-[75%] mt-[15%] text-[] bg-[#6FA385] font-medium rounded-lg text-sm w-[100%] sm:w-auto py-2.5 text-center">Simpan</button>
