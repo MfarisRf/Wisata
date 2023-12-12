@@ -17,7 +17,7 @@ const ProfileAdmin = () => {
    </svg>
 </button>
 
-<aside id="sidebar-multi-level-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 pt-24" aria-label="Sidebar">
+<aside id="sidebar-multi-level-sidebar" className="fixed top-0 left-0 z-0 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 pt-24" aria-label="Sidebar">
    <div className="h-full px-3 py-4 overflow-y-auto bg-[#BFDCAE] dark:bg-gray-800 ml-2 rounded-lg">
       <ul className="space-y-2 font-medium">
            {/*Profile */}
@@ -140,7 +140,7 @@ const ProfileAdmin = () => {
    </div>
 </div>
 
-      <div>
+      <div className='relative'>
          <FooterAdmin/>
       </div>
       

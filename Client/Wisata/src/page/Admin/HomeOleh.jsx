@@ -221,7 +221,7 @@ const HomeOleh = () => {
    </div>
    </div>
 
-   <div>
+   <div className='relative'>
          <FooterAdmin/>
    </div>
 

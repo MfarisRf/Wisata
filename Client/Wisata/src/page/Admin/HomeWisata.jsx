@@ -221,7 +221,7 @@ const HomeWisata = () => {
    </div>
    </div>
 
-   <div>
+   <div className='relative'>
          <FooterAdmin/>
    </div>
 

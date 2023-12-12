@@ -161,7 +161,7 @@ const TambahWisata = () => {
    </div>
    </div>
 
-   <div>
+   <div className='relative'>
       <FooterAdmin/>
    </div>
 

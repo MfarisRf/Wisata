@@ -152,7 +152,7 @@ const TambahOleh = () => {
    </div>
    </div>
 
-   <div>
+   <div className='relative'>
          <FooterAdmin/>
    </div>
 
