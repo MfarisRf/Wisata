@@ -6,7 +6,6 @@ import background from "../assets/images/Backgroud_kwo.png"
 import 'flowbite'
 import Gambarnfo from '../assets/images/NFO 1920x689.png'
 import pencarian from '../assets/images/Search.png'
-import background from '../assets/images/Teksturs.png'
 
 
 function Notfoundoleholeh() {
@@ -14,7 +13,6 @@ function Notfoundoleholeh() {
     <div className='bg-cover' style={{backgroundImage: `url(${background}) `}}>
     <Navbar/>
     <img className="h-2/5 w-5/5" src={Gambarnfo} alt="image description"></img>
-    <div className='bg-cover mt-[-10]' style={{backgroundImage: `url(${background}) `}}>
     <h2 className="font-bold  text-[#29446F] font-['Boogaloo'] text-[25px] pl-20 pb-5 tracking-[.1em]">Oleh Oleh</h2>
     {/* Card */}
 
@@ -71,7 +69,6 @@ function Notfoundoleholeh() {
     </div>
         <Footer/>
       </div>
-  </div>
   )
 }
 
