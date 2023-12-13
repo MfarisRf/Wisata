@@ -1,4 +1,4 @@
-import e from "express";
+import express from "express";
 import User from "../models/UserModel.js";
 import argon2 from "argon2";
 

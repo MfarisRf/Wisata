@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import UserRoute from './routes/UserRoute.js';
 import WisataRoute from './routes/WisataRoute.js';
 import AuthRoute from './routes/AuthRoute.js';
+import KulinerRoutes from './routes/KulinerRoutes.js';
 import db from './config/Database.js';
 import SequelizeStore from 'connect-session-sequelize';
 
@@ -52,6 +53,7 @@ app.use(express.json());
 app.use(UserRoute);
 app.use(AuthRoute);
 app.use(WisataRoute);
+app.use(KulinerRoutes);
 // store.sync();
 app.listen(5000, () => {
     console.log("Server running on port 5000");

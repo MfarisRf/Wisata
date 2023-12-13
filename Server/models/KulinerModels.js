@@ -1,10 +1,9 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
 import category from "./kategori.js";
-
 const { DataTypes } = Sequelize;
 
-const wisata = db.define("detail_wisata",     {
+const Kuliner = db.define("detailkuliner",     {
     uuid: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -12,7 +11,6 @@ const wisata = db.define("detail_wisata",     {
          validate: {
             notEmpty: true,
             },
-        
     },
 
     name: {
@@ -37,13 +35,6 @@ const wisata = db.define("detail_wisata",     {
             notEmpty: true,
             },
     },
-    price: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-         validate: {
-            notEmpty: true,
-            },
-    },
     categoryId: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -51,11 +42,12 @@ const wisata = db.define("detail_wisata",     {
             notEmpty: true,
             },
     },
+
 },{
     freezeTableName: true,
 });
 
-category.hasMany(wisata);
-wisata.belongsTo(category, {foreignKey: "categoryId", as: "category",});
+category.hasMany(Kuliner);
+Kuliner.belongsTo(category, {foreignKey: "categoryId", as: "category",});
 
-export default wisata;
+export default Kuliner;

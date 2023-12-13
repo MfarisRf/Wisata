@@ -1,10 +1,9 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
-import category from "./kategori.js";
-
+import Kuliner from "./KulinerModels.js";
 const { DataTypes } = Sequelize;
 
-const wisata = db.define("detail_wisata",     {
+const TempatKuliner = db.define("tempatkuliner",     {
     uuid: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -12,9 +11,7 @@ const wisata = db.define("detail_wisata",     {
          validate: {
             notEmpty: true,
             },
-        
     },
-
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -23,39 +20,32 @@ const wisata = db.define("detail_wisata",     {
             len: [3, 100],
             },
     },
-    description: {
+    address: {
         type: DataTypes.STRING,
         allowNull: false,
          validate: {
             notEmpty: true,
             },
     },
-    image: {
+    jam_buka: {
         type: DataTypes.STRING,
         allowNull: false,
          validate: {
             notEmpty: true,
             },
     },
-    price: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-         validate: {
-            notEmpty: true,
-            },
-    },
-    categoryId: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-         validate: {
-            notEmpty: true,
-            },
-    },
+    // KulinerId: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    //      validate: {
+    //         notEmpty: true,
+    //         },
+    // },
 },{
     freezeTableName: true,
 });
 
-category.hasMany(wisata);
-wisata.belongsTo(category, {foreignKey: "categoryId", as: "category",});
+Kuliner.hasMany(TempatKuliner);
+TempatKuliner.belongsTo(Kuliner, {foreignKey: "KulinerId", as: "Kuliner",});
 
-export default wisata;
+export default TempatKuliner;

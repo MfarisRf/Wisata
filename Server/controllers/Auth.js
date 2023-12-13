@@ -1,22 +1,6 @@
 import User from "../models/UserModel.js";
 import argon2 from "argon2";
 
-// export const Login = async (req, res) => {
-//     const user = await User.findOne({
-//         where: {
-//             username: req.body.username
-//         }
-//     });
-//     if (!user) {res.status(404).json({ msg : "User not found!" })}
-//     const match = await argon2.verify(user.password, req.body.password);
-//     if (!match) {res.status(400).json({ msg : "Incorrect password!" })}
-//     req.session.userId = user.uuid;
-//     const uuid = user.uuid;
-//     const username = user.username;
-//     const password = user.password;
-
-//     res.status(200).json(uuid, username, password);
-// }
 
 export const Login = async (req, res) => {
     try {

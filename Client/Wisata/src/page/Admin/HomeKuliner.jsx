@@ -17,7 +17,7 @@ const HomeWisata = () => {
    </svg>
 </button>
 
-<aside id="sidebar-multi-level-sidebar" className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 pt-24" aria-label="Sidebar">
+<aside id="sidebar-multi-level-sidebar" className="fixed top-0 left-0 z-0 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 pt-24" aria-label="Sidebar">
    <div className="h-full px-3 py-4 overflow-y-auto bg-[#BFDCAE] dark:bg-gray-800 ml-2 rounded-lg">
       <ul className="space-y-2 font-medium">
            {/*Profile */}
@@ -93,7 +93,7 @@ const HomeWisata = () => {
 <div className="p-4 sm:ml-64 pt-atas h-auto w-auto">
    <div className="p-52q border-2 border-gray-200 rounded-lg dark:border-gray-700 bg-[#BFDCAE] pt-10 px-20 pb-20">
       <div className="flex font-bold text-['Heebo'] text-[#29446F] text-[20px] mb-10">
-         <h3 className='pr-5'><a href="/HomeWisata">Wisata</a></h3>
+         <h3 className='pr-5'><a href="/Dashboard">Wisata</a></h3>
          <h3 className='pr-5'><a href="/HomeKuliner">Kuliner</a></h3>
          <h3><a href="/HomeOleh">Oleh-Oleh</a></h3>
       </div>
@@ -221,7 +221,7 @@ const HomeWisata = () => {
    </div>
    </div>
 
-   <div className='z-[99]'>
+   <div className='relative'>
          <FooterAdmin/>
    </div>
 

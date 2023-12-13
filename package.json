@@ -2,7 +2,10 @@
   "dependencies": {
     "@react-leaflet/core": "^2.1.0",
     "@reduxjs/toolkit": "^2.0.1",
+<<<<<<< HEAD
     "axios": "^1.6.2",
+=======
+>>>>>>> d13027b0b5b81bce8458fcf64a3532d6bf70e503
     "leaflet": "^1.9.4",
     "react-leaflet": "^4.2.1",
     "react-redux": "^9.0.4"
