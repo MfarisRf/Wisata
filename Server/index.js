@@ -11,9 +11,9 @@ import SequelizeStore from 'connect-session-sequelize';
 
 dotenv.config();
 
-// (async()=>{
-//     await db.sync();
-// })();
+(async()=>{
+    await db.sync();
+})();
 
 const app = express();
 
