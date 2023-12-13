@@ -4,15 +4,16 @@ import db from "../config/Database.js";
 const { DataTypes } = Sequelize;
 
 const category = db.define("category",     {
-    uuid: {
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
         allowNull: false,
          validate: {
             notEmpty: true,
             },
-        
     },
+    
     name: {
         type: DataTypes.STRING,
         allowNull: false,

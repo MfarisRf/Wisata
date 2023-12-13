@@ -1,5 +1,5 @@
 import Kuliner from "../models/KulinerModels.js";
-import TempatKuliner from "../models/Tempat_Kuliner.js";
+
 
 export const getKuliner =  (req, res) => {
     
