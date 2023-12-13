@@ -3,9 +3,7 @@ import Kuliner from "../models/KulinerModels.js";
 
 export const getKuliner = async (req, res) => {
     try {
-        const response = await User.findAll({
-            attributes: ['uuid', 'username', 'Password']
-        });
+        const response = await Kuliner.findAll();
         res.status(200).json(response);
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -14,7 +12,7 @@ export const getKuliner = async (req, res) => {
 
 export const getKulinerById = async (req, res) => {
     try {
-        const response = await User.findOne({
+        const response = await Kuliner.findOne({
             where: {
                 uuid: req.params.id
             }

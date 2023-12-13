@@ -38,10 +38,11 @@ const Kuliner = db.define("detailkuliner",     {
     categoryId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-         validate: {
-            notEmpty: true,
-            },
-    },
+        references: {
+            model: category,
+            key: 'id', // Atur sesuai dengan kolom yang Anda gunakan sebagai primary key di Category
+        },
+    }
 
 },{
     freezeTableName: true,
