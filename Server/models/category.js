@@ -6,13 +6,10 @@ const { DataTypes } = Sequelize;
 const category = db.define("category",     {
     uuid: {
         type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4,
+        defaultValue: Sequelize.UUIDV4,
         allowNull: false,
-         validate: {
-            notEmpty: true,
-            },
-        
     },
+    
     name: {
         type: DataTypes.STRING,
         allowNull: false,
