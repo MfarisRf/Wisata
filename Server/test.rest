@@ -4,7 +4,7 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "username" : "admindonegabang?",
+    "username" : "admin",
     "password" : "123456",
     "confPassword" : "123456"
 }
@@ -14,7 +14,7 @@ Content-Type: application/json
 GET http://localhost:5000/users
 
 ###
-GET http://localhost:5000/users/944c7243-a4b7-4839-be4b-9aef17d26863
+GET http://localhost:5000/users/454123da-8557-44fc-b081-1660f062ae5b
 
 ###
 PATCH http://localhost:5000/users/c4da1634-4130-42be-9cce-6f6ba422af73
@@ -23,13 +23,21 @@ Content-Type: application/json
 {
     "username": "admin"
 }
+###
+POST http://localhost:5000/users
+Content-Type: application/json
 
+{
+    "username" : "admin",
+    "password" : "123456",
+    "confPassword" : "123456"
+}
 ###
 POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "username" : "admindonegabang?",
+    "username" : "admin",
     "password" : "123456"   
 }
 
@@ -38,3 +46,73 @@ GET http://localhost:5000/me
  
 ###
 DELETE  http://localhost:5000/logout
+###
+
+GET http://localhost:5000/wisata
+
+###
+
+POST http://localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "name" : "Pantai",
+    "description" : "Pantai Indah",
+    "image" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
+    "price" : 100000,
+    "categoryId" : "Pantai",
+
+}
+
+###
+GET  http://localhost:5000/Category
+
+###
+POST http://localhost:5000/category
+Content-Type: application/json
+
+{
+    "name" : "Indramayu"
+}
+###
+
+PATCH  http://localhost:5000/category/3082d252-68e6-438e-b7a3-5b23db82c893
+Content-Type: application/json
+
+{
+    "name": "Cirebon"
+}
+
+###
+
+POST http://localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "name": "Cirebon",
+    "description": "Test Wisata",
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
+    "price": 100000,
+    "categoryId": "2"
+}
+
+###
+GET http://localhost:5000/wisata
+
+###
+GET http://localhost:5000/wisata/e2aa82c2-a9a8-456f-b946-de3d5a9e8b76
+
+###
+DELETE http://localhost:5000/wisata/e2aa82c2-a9a8-456f-b946-de3d5a9e8b76
+
+###
+PATCH  http://localhost:5000/wisata/50469aec-9767-4444-bc43-c5eeecbccd95
+Content-Type: application/json
+
+{
+    "name": "Telaga Biru",
+    "description": "Test Wisata",
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
+    "price": 80000,
+    "categoryId": "3"
+}
