@@ -23,7 +23,15 @@ Content-Type: application/json
 {
     "username": "admin"
 }
+###
+POST http://localhost:5000/users
+Content-Type: application/json
 
+{
+    "username" : "admin",
+    "password" : "123456",
+    "confPassword" : "123456"
+}
 ###
 POST http://localhost:5000/login
 Content-Type: application/json
@@ -58,3 +66,53 @@ Content-Type: application/json
 
 ###
 GET  http://localhost:5000/Category
+
+###
+POST http://localhost:5000/category
+Content-Type: application/json
+
+{
+    "name" : "Indramayu"
+}
+###
+
+PATCH  http://localhost:5000/category/3082d252-68e6-438e-b7a3-5b23db82c893
+Content-Type: application/json
+
+{
+    "name": "Cirebon"
+}
+
+###
+
+POST http://localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "name": "Cirebon",
+    "description": "Test Wisata",
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
+    "price": 100000,
+    "categoryId": "2"
+}
+
+###
+GET http://localhost:5000/wisata
+
+###
+GET http://localhost:5000/wisata/e2aa82c2-a9a8-456f-b946-de3d5a9e8b76
+
+###
+DELETE http://localhost:5000/wisata/e2aa82c2-a9a8-456f-b946-de3d5a9e8b76
+
+###
+PATCH  http://localhost:5000/wisata/50469aec-9767-4444-bc43-c5eeecbccd95
+Content-Type: application/json
+
+{
+    "name": "Telaga Biru",
+    "description": "Test Wisata",
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
+    "price": 80000,
+    "categoryId": "3"
+}

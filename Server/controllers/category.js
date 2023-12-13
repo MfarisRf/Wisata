@@ -24,20 +24,43 @@ export const getCategoryById = async (req, res) => {
 }
 
 export const createCategory = async (req, res) => {
+  const { name } = req.body;
   try {
-    const { name } = req.body;
-    const newCategory = await category.create({
-      id: id,
-      name: name,
+    await category.create({
+        name: name,
     });
-    res.status(201).json(newCategory);
+    res.status(201).json({ message: "Category created!" });
   } catch (error) { 
-    res.status(409).json({ message: error.message });
+    res.status(400).json({ message: error.message });
   }
 }
 
-export const updateCategory =  (req, res) => {
-    
+export const updateCategory = async (req, res) => {
+  try {
+      const existingCategory = await category.findOne({
+          where: {
+              uuid: req.params.id
+          }
+      });
+
+      if (!existingCategory) {
+          return res.status(404).json({ msg: "Category not found!" });
+      }
+
+      const { name } = req.body;
+
+      await existingCategory.update({
+          name
+      }, {
+          where: {
+              uuid: req.params.id
+          }
+      });
+
+      res.status(200).json({ message: "Category updated!" });
+  } catch (error) {
+      res.status(400).json({ message: error.message });
+  }
 }
 
 export const deleteCategory =  (req, res) => {
