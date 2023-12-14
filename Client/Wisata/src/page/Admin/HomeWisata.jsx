@@ -1,10 +1,27 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar_admin from '../../components/Navbar_admin '
 import Gambar from '../../assets/images/Ghandi.jpg'
 import FooterAdmin from '../../components/FooterAdmin'
 
 const HomeWisata = () => {
+   const [Wisata, setWisata] = useState([]) ;
+
+
+   useEffect(()=>{
+      getWisata();
+   },[]);
+
+   const getWisata = async () =>{
+      const response = await axios.get('https://localhost:5000/Wisata');
+      setWisata(response.data);
+   } ;
+
+   const deleteWisata = async (WisataId) =>{
+      await axios.delete('http://localhost:5000/Wisata/${Wisata}');
+      getWisata();
+   }
+
   return (
     <div>
    <Navbar_admin/>
@@ -101,6 +118,7 @@ const HomeWisata = () => {
          <div className='px-10 py-10'>
 
 <div className="relative overflow-x-auto shadow-md sm:rounded-lg ">
+    <Link to="/Wisata/add"className="button is-primary mb-2">Add New</Link>
     <table className="w-full text-sm text-left rtl:text-right text-[#6FA385] dark:text-gray-400 text-['Heebo']">
         <thead className="text-xs text-[#6FA385] uppercase bg-[#F1F1E8] dark:bg-gray-700 dark:text-gray-400 text-center">
             <tr>
@@ -128,6 +146,9 @@ const HomeWisata = () => {
             </tr>
         </thead>
         <tbody>
+         {Wisata.map((Wisata, index) => (
+
+         ))}                                                                                                                                                                                                                            
             <tr className="bg-[#F1F1E8] border-b dark:bg-gray-800 border-2 dark:border-[#206A5D] hover:bg-[#BFDCAE] dark:hover:bg-gray-600 text-center text-[#6FA385]">
                 <th scope="row" className="px-6 py-4 font-medium text-[#6FA385] whitespace-nowrap dark:text-white">
                   Pantai Kejawanan
@@ -144,6 +165,10 @@ const HomeWisata = () => {
                 <td className="px-6 py-4">
                     Cirebon
                 </td>
+
+                  <Link to={'/Wisata/edit/${Wisata.uuid}'} className="button is-small is-info"></Link>
+                  <button oneClick={()=> deleteWisata(Wisata.uuid)}className="button is-small is-danger">Delete</button>
+         
                 <td className="px-6 py-4 text-right">
                     <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline"><svg className="w-6 h-6 text-[#0B56C8] dark:text-white ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
