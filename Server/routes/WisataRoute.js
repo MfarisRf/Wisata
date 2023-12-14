@@ -10,8 +10,8 @@ import {verifyUser} from "../middleware/AuthUser.js";
 
 const router = express.Router();
 
-router.get("/wisata", getWisata);
-router.get("/wisata/:id", getWisataById);
+router.get("/wisata", verifyUser, getWisata);
+router.get("/wisata/:id", verifyUser, getWisataById);
 router.post("/wisata", verifyUser, createWisata);
 router.patch("/wisata/:id", verifyUser,updateWisata);
 router.delete("/wisata/:id", verifyUser, deleteWisata);

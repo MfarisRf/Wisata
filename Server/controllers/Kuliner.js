@@ -1,13 +1,9 @@
-import detailkuliner from "../models/KulinerModels.js";
+import Kuliner from "../models/KulinerModels.js";
 
 
 export const getKuliner = async (req, res) => {
     try {
-        const response = await detailkuliner.findAll(
-            {
-                include: 'category', 
-            }
-        );
+        const response = await Kuliner.findAll();
         res.status(200).json(response);
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -16,7 +12,7 @@ export const getKuliner = async (req, res) => {
 
 export const getKulinerById = async (req, res) => {
     try {
-        const response = await detailkuliner.findOne({
+        const response = await Kuliner.findOne({
             where: {
                 uuid: req.params.id
             }
@@ -34,7 +30,7 @@ export const createKuliner = async (req, res) => {
         
     
         // Buat data wisata baru
-        const newKuliner = await detailkuliner.create({
+        const newKuliner = await Kuliner.create({
           name,
           description,
           image,
@@ -52,7 +48,7 @@ export const createKuliner = async (req, res) => {
 
 export const updateKuliner = async (req, res) => {
     try {
-        const existingKuliner = await detailkuliner.findOne({
+        const existingKuliner = await Kuliner.findOne({
             where: {
                 uuid: req.params.id
             }
@@ -81,9 +77,10 @@ export const updateKuliner = async (req, res) => {
     }
   }
 
+
 export const deleteKuliner = async (req, res) => {
     try {
-        const existingKuliner = await detailkuliner.findOne({
+        const existingKuliner = await Kuliner.findOne({
             where: {
                 uuid: req.params.id
             }
@@ -103,4 +100,4 @@ export const deleteKuliner = async (req, res) => {
     }
 
 
-export default detailkuliner;
+export default Kuliner;

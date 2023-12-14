@@ -5,7 +5,7 @@ import {
     createKuliner,
     updateKuliner,
     deleteKuliner
-} from "../controllers/detailkuliner.js";
+} from "../controllers/Kuliner.js";
 
 import {
     getTempatKuliner,
