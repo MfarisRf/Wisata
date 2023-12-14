@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
-import background from "../assets/images/Teksturs3.png";
+import React from "react";
+
+import background from "../assets/images/teksturs3.png";
 
 const Layer_lp = () => {
   return (
