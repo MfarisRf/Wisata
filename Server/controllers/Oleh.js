@@ -1,10 +1,8 @@
-import Oleh from "../models/detailt_oleh.js";
+import detail_oleh from "../models/detailt_oleh";
 
 export const getOleh = async  (req, res) => {
     try {
-        const response = await Oleh.findAll({
-            attributes: ['uuid', 'username', 'Password']
-        });
+        const response = await detail_oleh.findAll();
         res.status(200).json(response);
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -13,8 +11,10 @@ export const getOleh = async  (req, res) => {
 
 export const getOlehById = async  (req, res) => {
     try {
-        const response = await Oleh.findAll({
-            attributes: ['uuid', 'username', 'Password']
+        const response = await detail_oleh.findOne({
+            where: {
+                uuid: req.params.id
+            }
         });
         res.status(200).json(response);
     } catch (error) {
