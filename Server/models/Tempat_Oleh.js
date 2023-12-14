@@ -1,10 +1,11 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
-import category from "./kategori.js";
+import Oleh from "./olehModels.js";
+import detailOleh from "./olehModels.js";
 
 const { DataTypes } = Sequelize;
 
-const Oleh = db.define("detailt_oleh",     {
+const detailOleh = db.define("detailOleh",     {
     uuid: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -12,9 +13,7 @@ const Oleh = db.define("detailt_oleh",     {
          validate: {
             notEmpty: true,
             },
-        
     },
-
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -23,39 +22,33 @@ const Oleh = db.define("detailt_oleh",     {
             len: [3, 100],
             },
     },
-    description: {
+    address: {
         type: DataTypes.STRING,
         allowNull: false,
          validate: {
             notEmpty: true,
             },
     },
-    image: {
+    jam_buka: {
         type: DataTypes.STRING,
         allowNull: false,
          validate: {
             notEmpty: true,
             },
     },
-    price: {
+    detailOlehId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-         validate: {
-            notEmpty: true,
-            },
-    },
-    categoryId: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-         validate: {
-            notEmpty: true,
-            },
-    },
+        references: {
+            model: detailt_oleh,
+            key: 'id', // Atur sesuai dengan kolom yang Anda gunakan sebagai primary key di Category
+        },
+    }
 },{
     freezeTableName: true,
 });
 
-category.hasMany(Oleh);
-wisata.belongsTo(category, {foreignKey: "categoryId", as: "category",});
+detailOleh.hasMany(TempatOleh);
+TempatOleh.belongsTo(detailOleh, {foreignKey: "detailOlehId", as: "detailOlehId",});
 
-export default Oleh;
+export default Tempat_Oleh;
