@@ -1,10 +1,9 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
-import category from "./kategori.js";
-
+import category from "./category.js";
 const { DataTypes } = Sequelize;
 
-const Oleh = db.define("detailt_oleh",     {
+const detail_oleh = db.define("detail_oleh",     {
     uuid: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -12,7 +11,6 @@ const Oleh = db.define("detailt_oleh",     {
          validate: {
             notEmpty: true,
             },
-        
     },
 
     name: {
@@ -37,25 +35,20 @@ const Oleh = db.define("detailt_oleh",     {
             notEmpty: true,
             },
     },
-    price: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-         validate: {
-            notEmpty: true,
-            },
-    },
     categoryId: {
         type: DataTypes.INTEGER,
         allowNull: false,
-         validate: {
-            notEmpty: true,
-            },
-    },
+        references: {
+            model: category,
+            key: 'id', // Atur sesuai dengan kolom yang Anda gunakan sebagai primary key di Category
+        },
+    }
+
 },{
     freezeTableName: true,
 });
 
-category.hasMany(Oleh);
-wisata.belongsTo(category, {foreignKey: "categoryId", as: "category",});
+category.hasMany(detail_oleh);
+detail_oleh.belongsTo(category, {foreignKey: "categoryId", as: "category",});
 
-export default Oleh;
+export default detail_oleh;

@@ -12,7 +12,7 @@ const router = express.Router();
 
 router.get("/users", verifyUser, getUsers);
 router.get("/users/:id", verifyUser, getUserById);
-router.post("/users",createUser);
+router.post("/users",createUser); // nonaktifkan setelah deploy
 router.patch("/users/:id", verifyUser, updateUser);
 router.delete("/users/:id", verifyUser, deleteUser);
 
