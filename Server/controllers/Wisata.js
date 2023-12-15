@@ -33,7 +33,7 @@ export const getWisataById = async (req, res) => {
 }
 
 export const createWisata = async (req, res) => {
-  const { name, description, image,jam_buka, price, categoryId } = req.body;
+  const { name, description, image,jam_buka, jam_tutup, price, categoryId } = req.body;
     try {
         // Ambil data dari body request
         
@@ -44,6 +44,7 @@ export const createWisata = async (req, res) => {
           description,
           image,
           jam_buka,
+          jam_tutup,
           price,
           categoryId,
         });
