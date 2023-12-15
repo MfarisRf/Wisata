@@ -43,6 +43,27 @@ const wisata = db.define("detail_wisata", {
             notEmpty: true,
         },
     },
+    location: {    
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        },
+    },
+    jam_buka: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        },
+    },
+    jam_tutup: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        },
+    },
     categoryId: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -50,7 +71,15 @@ const wisata = db.define("detail_wisata", {
             model: category,
             key: 'id', // Atur sesuai dengan kolom yang Anda gunakan sebagai primary key di Category
         },
-    }
+    },
+    address: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+        },
+    },
+
 }, {
     freezeTableName: true,
 });

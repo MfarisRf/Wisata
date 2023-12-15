@@ -28,17 +28,23 @@ export const getKulinerById = async (req, res) => {
 }
 
 export const createKuliner = async (req, res) => {
-    const { name, description, image, categoryId } = req.body;
+    const { name, description, image, categoryId,address,nama_restoran, price, jam_buka, jam_tutup, location} = req.body;
     try {
         // Ambil data dari body request
         
     
         // Buat data wisata baru
         const newKuliner = await detailkuliner.create({
-          name,
-          description,
-          image,
-          categoryId,
+            name,
+            description,
+            image,
+            price,
+            jam_buka,
+            jam_tutup,
+            location,
+            categoryId,
+            nama_restoran,
+            address,
         });
     
         // Mengirimkan data yang baru dibuat sebagai respons
@@ -62,13 +68,17 @@ export const updateKuliner = async (req, res) => {
             return res.status(404).json({ msg: "Kuliner not found!" });
         }
   
-        const { name, description, image, categoryId } = req.body;
-  
-        await existingKuliner.update({
-            name,
-            description,
-            image,
-            categoryId,
+        const { name, description, image, price,jam_buka,jam_tutup,location , categoryId } = req.body;
+
+        await existingWisata.update({
+              name,
+              description,
+              image,
+              price,
+              jam_buka,
+              jam_tutup,
+              location,
+              categoryId,
         }, {
             where: {
                 uuid: req.params.id
