@@ -13,6 +13,7 @@ const HomeWisata = () => {
    useEffect(() => {
       getWisata();
       getCategory();
+      // getCategoryName();
    },[]);
 
    const getCategory = async () => {
@@ -29,10 +30,10 @@ const HomeWisata = () => {
          setWisata(response.data);
    }
 
-   const getCategoryName = (categoryId) => {
-      const category = category.find((category) => category.id === categoryId);
-      return category ? category.name : 'Kategori Tidak Diketahui';
-    };
+   // const getCategoryName = (categoryId) => {
+   //    const category = category.find((category) => category.id === categoryId);
+   //    return category ? category.name : 'Kategori Tidak Diketahui';
+   //  };
 
     const deleteWisata = async (uuid) => {
       await axios.delete(`http://localhost:5000/Wisata/${uuid}`);
@@ -230,6 +231,7 @@ const HomeWisata = () => {
                   <td>{wisata.name}</td>
                   <td>{wisata.jam_buka}</td>
                   <td>{wisata.price}</td>
+                  {/* <td>{getCategoryName(wisata.categoryId)}</td> */}
                   <td>{wisata.categoryId}</td>
                   <td className="px-6 py-4 text-right">
                   <svg className="w-6 h-6 text-[#0B56C8] dark:text-white ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
