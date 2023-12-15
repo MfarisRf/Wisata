@@ -47,57 +47,10 @@ export const createKuliner = async (req, res) => {
 }
 
 export const updateKuliner = async (req, res) => {
-    try {
-        const existingKuliner = await Kuliner.findOne({
-            where: {
-                uuid: req.params.id
-            }
-        });
-  
-        if (!existingKuliner) {
-            return res.status(404).json({ msg: "Kuliner not found!" });
-        }
-  
-        const { name, description, image, categoryId } = req.body;
-  
-        await existingKuliner.update({
-            name,
-            description,
-            image,
-            categoryId,
-        }, {
-            where: {
-                uuid: req.params.id
-            }
-        });
-  
-        res.status(200).json({ message: "Kuliner updated!" });
-    } catch (error) {
-        res.status(400).json({ message: error.message });
-    }
-  }
-
+    
+}
 
 export const deleteKuliner = async (req, res) => {
-    try {
-        const existingKuliner = await Kuliner.findOne({
-            where: {
-                uuid: req.params.id
-            }
-        });
-  
-        if (!existingKuliner) {
-            return res.status(404).json({ msg: "Kuliner not found!" });
-        }
-  
-        await existingKuliner.destroy();
-  
-        res.status(200).json({ message: "Kuliner delete"})
-    } catch (error) {
-        res.status(400).json({ message: error.message})
-    }
-        
-    }
-
-
+    
+}
 export default Kuliner;
