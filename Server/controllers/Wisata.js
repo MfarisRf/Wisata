@@ -49,7 +49,6 @@ export const createWisata = async (req, res) => {
     
         // Mengirimkan data yang baru dibuat sebagai respons
         res.status(201).json(newWisata);
-        
       } catch (error) {
         // Menangani error jika terjadi
         console.error(error);

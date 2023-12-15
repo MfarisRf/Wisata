@@ -1,0 +1,19 @@
+
+
+
+Backend
+API USER
+/User
+CRUD, Login, Logout, session (Done)
+
+/Wisata
+CRUD (Done)
+
+/Category
+CRUD (Done)
+
+/Kuliner
+CRUD (Done)
+
+/OlehOleh
+CRUD
