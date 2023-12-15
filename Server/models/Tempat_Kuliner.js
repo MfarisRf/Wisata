@@ -35,6 +35,13 @@ const tempatkuliner = db.define("tempatkuliner",     {
             notEmpty: true,
             },
     },
+    jam_tutup: {
+        type: DataTypes.STRING,
+        allowNull: false,
+         validate: {
+            notEmpty: true,
+            },
+    },
     detailkulinerId: {
         type: DataTypes.INTEGER,
         allowNull: false,
