@@ -22,6 +22,7 @@
     "react-leaflet": "^4.2.1",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.20.1",
+    "seq": "^0.3.5",
     "swiper": "^11.0.4",
     "tw-elements": "^1.0.0",
     "tw-elements-react": "^1.0.0-alpha2",
