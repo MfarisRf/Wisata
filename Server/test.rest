@@ -75,7 +75,7 @@ POST http://localhost:5000/category
 Content-Type: application/json
 
 {
-    "name" : "Majalengka"
+    "name" : "Cirebon"
 }
 ###
 
@@ -109,15 +109,15 @@ GET http://localhost:5000/wisata/1b4a9b2e-3979-4526-b6ac-34018b6befc3
 DELETE http://localhost:5000/wisata/1b4a9b2e-3979-4526-b6ac-34018b6befc3
 
 ###
-POST http://localhost:5000/kuliner
+POST http://localhost:5000/Oleh
 Content-Type: application/json
 
 {
-    "name": "Empal Gentong",
+    "name": "Batik Mega Mendung",
     "description": "Test Kuliner Cirebon Kategori Cirebon",
     "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
     "price": "100000",
-    "nama_restoran" : "H. Apud",
+    "nama_toko" : "Ashiapp",
     "jam_buka": "08.00",
     "jam_tutup": "17.00",
     "location": "-6.733512661724268, 108.58584415526721",

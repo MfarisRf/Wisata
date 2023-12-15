@@ -9,6 +9,7 @@ import KulinerRoutes from './routes/KulinerRoutes.js';
 import KategoriRoute from './routes/KategoriRoute.js';
 import db from './config/Database.js';
 import SequelizeStore from 'connect-session-sequelize';
+import OlehRoute from './routes/OlehOlehRoutes.js'
 
 dotenv.config();
 
@@ -56,6 +57,7 @@ app.use(AuthRoute);
 app.use(WisataRoute);
 app.use(KulinerRoutes);
 app.use(KategoriRoute);
+app.use(OlehRoute);
 store.sync();
 app.listen(5000, () => {
     console.log("Server running on port 5000");
