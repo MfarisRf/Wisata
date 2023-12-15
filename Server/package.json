@@ -12,8 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "argon2": "^0.31.2",
-    "buffer": "^6.0.3",
-    "Buffer": "^0.0.0",
     "connect-session-sequelize": "^7.1.7",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",

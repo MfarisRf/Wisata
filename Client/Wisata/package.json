@@ -27,7 +27,7 @@
     "swiper": "^11.0.4",
     "tw-elements": "^1.0.0",
     "tw-elements-react": "^1.0.0-alpha2",
-    "typewriter": "^9.1.0",
+    "typewriter": "^6.1.8",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {

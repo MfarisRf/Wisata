@@ -1,11 +1,11 @@
-import Kuliner from '../models/detail_Kuliner.js';
+import kuliner from '../models/KulinerModels.js';
 import category from '../models/category.js';
 
 
 export const getKuliner = async (req, res) => {
     try {
         // Menggunakan findAll untuk mengambil semua data dari tabel Kuliner
-        const KulinerList = await Kuliner.findAll({
+        const KulinerList = await kuliner.findAll({
           include: 'category', // Sesuaikan dengan nama relasi yang digunakan di model Kuliner
            // Menentukan atribut yang ingin ditampilkan
         });
@@ -21,7 +21,7 @@ export const getKuliner = async (req, res) => {
 
 export const getKulinerById = async (req, res) => {
   try {
-    const response = await Kuliner.findOne({
+    const response = await kuliner.findOne({
         where: {
             uuid: req.params.id
         }
@@ -39,7 +39,7 @@ export const createKuliner = async (req, res) => {
         
     
         // Buat data Kuliner baru
-        const newKuliner = await Kuliner.create({
+        const newKuliner = await kuliner.create({
           name,
           description,
           image,
@@ -58,7 +58,7 @@ export const createKuliner = async (req, res) => {
 
 export const updateKuliner = async (req, res) => {
   try {
-      const existingKuliner = await Kuliner.findOne({
+      const existingKuliner = await kuliner.findOne({
           where: {
               uuid: req.params.id
           }
@@ -90,7 +90,7 @@ export const updateKuliner = async (req, res) => {
 
 export const deleteKuliner = async (req, res) => {
   try {
-      const existingKuliner = await Kuliner.findOne({
+      const existingKuliner = await kuliner.findOne({
           where: {
               uuid: req.params.id
           }
