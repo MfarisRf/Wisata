@@ -1,59 +1,109 @@
-import detailkuliner from "../models/KulinerModels.js";
+import Kuliner from '../models/detail_Kuliner.js';
+import category from '../models/category.js';
 
 
 export const getKuliner = async (req, res) => {
     try {
-        const response = await detailkuliner.findAll(
-            {
-                include: 'category', 
-            }
-        );
-        res.status(200).json(response);
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-
-@@ -12,7 +16,7 @@ export const getKuliner = async (req, res) => {
+        // Menggunakan findAll untuk mengambil semua data dari tabel Kuliner
+        const KulinerList = await Kuliner.findAll({
+          include: 'category', // Sesuaikan dengan nama relasi yang digunakan di model Kuliner
+           // Menentukan atribut yang ingin ditampilkan
+        });
+    
+        // Mengirimkan data sebagai respons
+        res.status(200).json(KulinerList);
+      } catch (error) {
+        // Menangani error jika terjadi
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
+}
 
 export const getKulinerById = async (req, res) => {
-    try {
-        const response = await detailkuliner.findOne({
-            where: {
-                uuid: req.params.id
-            }
+  try {
+    const response = await Kuliner.findOne({
+        where: {
+            uuid: req.params.id
+        }
+    });
+    res.status(200).json(response);
+} catch (error) {
+    res.status(500).json({ message: error.message });
+}
+}
 
-@@ -30,7 +34,7 @@ export const createKuliner = async (req, res) => {
+export const createKuliner = async (req, res) => {
+  const { name, description, image, price, categoryId } = req.body;
+    try {
+        // Ambil data dari body request
         
     
-        // Buat data wisata baru
-        const newKuliner = await detailkuliner.create({
+        // Buat data Kuliner baru
+        const newKuliner = await Kuliner.create({
           name,
           description,
           image,
-
-@@ -48,7 +52,7 @@ export const createKuliner = async (req, res) => {
+          price,
+          categoryId,
+        });
+    
+        // Mengirimkan data yang baru dibuat sebagai respons
+        res.status(201).json(newKuliner);
+      } catch (error) {
+        // Menangani error jika terjadi
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
+}
 
 export const updateKuliner = async (req, res) => {
-    try {
-        const existingKuliner = await detailkuliner.findOne({
-            where: {
-                uuid: req.params.id
-            }
+  try {
+      const existingKuliner = await Kuliner.findOne({
+          where: {
+              uuid: req.params.id
+          }
+      });
 
+      if (!existingKuliner) {
+          return res.status(404).json({ msg: "Kuliner not found!" });
+      }
 
-@@ -77,10 +81,9 @@ export const updateKuliner = async (req, res) => {
-    }
+      const { name, description, image, price, categoryId } = req.body;
+
+      await existingKuliner.update({
+          name,
+          description,
+          image,
+          price,
+          categoryId,
+      }, {
+          where: {
+              uuid: req.params.id
+          }
+      });
+
+      res.status(200).json({ message: "Kuliner updated!" });
+  } catch (error) {
+      res.status(400).json({ message: error.message });
   }
-
+}
 
 export const deleteKuliner = async (req, res) => {
-    try {
-        const existingKuliner = await detailkuliner.findOne({
-            where: {
-                uuid: req.params.id
-            }
+  try {
+      const existingKuliner = await Kuliner.findOne({
+          where: {
+              uuid: req.params.id
+          }
+      });
 
-@@ -100,4 +103,4 @@ export const deleteKuliner = async (req, res) => {
-    }
+      if (!existingKuliner) {
+          return res.status(404).json({ msg: "Kuliner not found!" });
+      }
 
+      await existingKuliner.destroy();
 
-export default detailkuliner;
+      res.status(200).json({ message: "Kuliner deleted!" });
+  } catch (error) {
+      res.status(400).json({ message: error.message });
+  }
+}
