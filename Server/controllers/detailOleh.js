@@ -1,12 +1,20 @@
+<<<<<<<< HEAD:Server/controllers/detailOleh.js
 import detailOleh from "../models/olehModels.js";
+========
+import Kuliner from "../models/KulinerModels.js";
+>>>>>>>> parent of c1648dc3 (API Relasi tabel Detail kuliner => Tempat kuliner(crud) Done):Server/controllers/Kuliner.js
 
 export const getOleh = async  (req, res) => {
     try {
+<<<<<<<< HEAD:Server/controllers/detailOleh.js
         const response = await detailOleh.findAll(
             {
                 include: 'category', 
             }
         );
+========
+        const response = await Kuliner.findAll();
+>>>>>>>> parent of c1648dc3 (API Relasi tabel Detail kuliner => Tempat kuliner(crud) Done):Server/controllers/Kuliner.js
         res.status(200).json(response);
     } catch (error) {
         res.status(500).json({ message: error.message });
@@ -15,7 +23,11 @@ export const getOleh = async  (req, res) => {
 
 export const getOlehById = async  (req, res) => {
     try {
+<<<<<<<< HEAD:Server/controllers/detailOleh.js
         const response = await detailOleh.findOne({
+========
+        const response = await Kuliner.findOne({
+>>>>>>>> parent of c1648dc3 (API Relasi tabel Detail kuliner => Tempat kuliner(crud) Done):Server/controllers/Kuliner.js
             where: {
                 uuid: req.params.id
             }
@@ -33,7 +45,11 @@ export const createOleh = async  (req, res) => {
         
     
         // Buat data wisata baru
+<<<<<<<< HEAD:Server/controllers/detailOleh.js
         const newOleh = await detailOleh.create({
+========
+        const newKuliner = await Kuliner.create({
+>>>>>>>> parent of c1648dc3 (API Relasi tabel Detail kuliner => Tempat kuliner(crud) Done):Server/controllers/Kuliner.js
           name,
           description,
           image,
@@ -51,7 +67,11 @@ export const createOleh = async  (req, res) => {
 
 export const updateOleh = async (req, res) => {
     try {
+<<<<<<<< HEAD:Server/controllers/detailOleh.js
         const existingOleh = await detailOleh.findOne({
+========
+        const existingKuliner = await Kuliner.findOne({
+>>>>>>>> parent of c1648dc3 (API Relasi tabel Detail kuliner => Tempat kuliner(crud) Done):Server/controllers/Kuliner.js
             where: {
                 uuid: req.params.id
             }
@@ -80,9 +100,16 @@ export const updateOleh = async (req, res) => {
     }
 }
 
+<<<<<<<< HEAD:Server/controllers/detailOleh.js
 export const deleteOleh = async (req, res) => {
     try {
         const existingOleh = await detailOleh.findOne({
+========
+
+export const deleteKuliner = async (req, res) => {
+    try {
+        const existingKuliner = await Kuliner.findOne({
+>>>>>>>> parent of c1648dc3 (API Relasi tabel Detail kuliner => Tempat kuliner(crud) Done):Server/controllers/Kuliner.js
             where: {
                 uuid: req.params.id
             }
@@ -100,4 +127,9 @@ export const deleteOleh = async (req, res) => {
     }
 }
 
+<<<<<<<< HEAD:Server/controllers/detailOleh.js
 export default detailOleh;
+========
+
+export default Kuliner;
+>>>>>>>> parent of c1648dc3 (API Relasi tabel Detail kuliner => Tempat kuliner(crud) Done):Server/controllers/Kuliner.js
