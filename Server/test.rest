@@ -118,7 +118,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE  http://localhost:5000/kuliner/f850a07c-b030-41f4-8122-5711e87abda6
+DELETE  http://localhost:5000/kuliner/d15d2d4d-a89c-438e-9ede-2c365bcb916c
 
 ###
 GET http://localhost:5000/kuliner

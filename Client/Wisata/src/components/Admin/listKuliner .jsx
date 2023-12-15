@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import TempatKuliner from '../../../../../Server/controllers/TempatKuliner';
 
-const TempatKuliner = () => {
-  const [kuliner, setKuliner] = useState([]);
+const List_Kuliner = () => {
+  const [ Kuliner, setKuliner] = useState([]);
 
   useEffect(() => {
     getKuliner();
@@ -18,7 +19,7 @@ const TempatKuliner = () => {
     }
   };
 
-  const deleteKuliner = async (kulinerId) => {
+  const deleteTempatKuliner = async (kulinerId) => {
     try {
       await axios.delete(`http://localhost:5000/Kuliner/${kulinerId}`);
       getKuliner();
@@ -33,7 +34,7 @@ const TempatKuliner = () => {
         <tbody>
             {TempatKuliner.map((TempatKuliner, index) => (
                <tr key={TempatKuliner.uuid} className="bg-[#F1F1E8] border-b dark:bg-gray-800 border-2 dark:border-[#206A5D] hover:bg-[#BFDCAE] dark:hover:bg-gray-600 text-center text-[#6FA385]">
-                  <td>{TempatKuliner.name}</td>
+                  <td>{TempatKuliner.detailkuliner.name}</td>
                   <td>{TempatKuliner.jam_buka}</td>
                   <td>{TempatKuliner.price}</td>
                   <td>{TempatKuliner.categoryId}</td>
@@ -55,4 +56,4 @@ const TempatKuliner = () => {
   );
 };
 
-export default TempatKuliner;
+export default List_Kuliner
