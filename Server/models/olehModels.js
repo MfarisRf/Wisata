@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 import db from "../config/Database.js";
-import category from "./kategori.js";
+import category from "./category.js";
 const { DataTypes } = Sequelize;
 
 const detailOleh = db.define("detailOleh",     {
@@ -13,6 +13,7 @@ const detailOleh = db.define("detailOleh",     {
             notEmpty: true,
             },
     },
+
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -43,6 +44,7 @@ const detailOleh = db.define("detailOleh",     {
             key: 'id', // Atur sesuai dengan kolom yang Anda gunakan sebagai primary key di Category
         },
     },
+
     nama_toko: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -73,14 +75,6 @@ const detailOleh = db.define("detailOleh",     {
             notEmpty: true,
             },
     },
-    price : {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-            notEmpty: true,
-            },
-    },
-
 },{
     freezeTableName: true,
 });
