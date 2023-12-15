@@ -1,5 +1,4 @@
-import { HSTORE, Sequelize } from "sequelize";
-import 'pg-hstore';
+import { Sequelize } from "sequelize";
 
 const db = new Sequelize("wisata", "root", "", {
     host: "localhost",
