@@ -1,27 +1,40 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
 import Navbar_admin from '../../components/Navbar_admin '
 import Gambar from '../../assets/images/Ghandi.jpg'
 import FooterAdmin from '../../components/FooterAdmin'
 
 const HomeWisata = () => {
-   const [Wisata, setWisata] = useState([]) ;
+   // const [Wisata, setWisata] = useState([]) ;
+   // const [category, setCategory] = useState('') ;
 
 
-   useEffect(()=>{
-      getWisata();
-   },[]);
+   // useEffect(()=>{
+   //    getWisata();
+   //    getCategory();
+   // },[]);
 
-   const getWisata = async () =>{
-      const response = await axios.get('https://localhost:5000/Wisata');
-      setWisata(response.data);
-   } ;
+   // getCategory = async () => {
+   //    try {
+   //       const response = await axios.get('https://localhost:5000/category');
+   //       setCategory(response.data);
+   //    } catch (error) {
+   //       console.error('Error fetching category: ', error);
+   //    }
+   // };
 
-   const deleteWisata = async (WisataId) =>{
-      await axios.delete('http://localhost:5000/Wisata/${Wisata}');
-      getWisata();
-   }
+   // const getWisata = async () =>{
+   //    const response = await axios.get('https://localhost:5000/Wisata');
+   //    setWisata(response.data);
+   // } ;
 
+   // const getCategoryName = (categoryId) => {
+   //    const category = category.find((category) => category.id === id);
+   //    return category ? category.name : 'Kateogri tidak ditemukan';
+   // };
+
+   
   return (
     <div>
    <Navbar_admin/>
