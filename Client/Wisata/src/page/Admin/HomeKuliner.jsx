@@ -8,22 +8,22 @@ import Gambar from '../../assets/images/Ghandi.jpg'
 import FooterAdmin from '../../components/FooterAdmin'
 
 const HomeWisata = () => {
-//    const [Kuliner, setKuliner] = useState([]);
+   const [Kuliner, setKuliner] = useState([]);
 
 
-//    useEffect(()=>{
-//       getKuliner();
-//    },[]);
+   useEffect(()=>{
+      getKuliner();
+   },[]);
 
-//    const getKuliner = async () =>{
-//       const response = await axios.get('http://localhost:5000/Kuliner');
-//       setKuliner(response.data);
-//    };
+   const getKuliner = async () =>{
+      const response = await axios.get('http://localhost:5000/Kuliner');
+      setKuliner(response.data);
+   };
 
-//    const deleteKuliner = async (KulinerId) =>{
-//       await axios.delete(`http://localhost:5000/Kuliner/${KulinerId}`);
-//       getKuliner();
-//    }
+   const deleteKuliner = async (KulinerId) =>{
+      await axios.delete(`http://localhost:5000/Kuliner/${KulinerId}`);
+      getKuliner();
+   }
   return (
     <div>
    <Navbar_admin/>

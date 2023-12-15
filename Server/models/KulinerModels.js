@@ -3,7 +3,7 @@ import db from "../config/Database.js";
 import category from "./category.js";
 const { DataTypes } = Sequelize;
 
-const Kuliner = db.define("detailkuliner",     {
+const detailkuliner = db.define("detailkuliner",     {
     uuid: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -48,7 +48,7 @@ const Kuliner = db.define("detailkuliner",     {
     freezeTableName: true,
 });
 
-category.hasMany(Kuliner);
-Kuliner.belongsTo(category, {foreignKey: "categoryId", as: "category",});
+category.hasMany(detailkuliner);
+detailkuliner.belongsTo(category, {foreignKey: "categoryId", as: "category",});
 
-export default Kuliner;
+export default detailkuliner;

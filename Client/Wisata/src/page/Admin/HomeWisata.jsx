@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 import Navbar_admin from '../../components/Navbar_admin '
 import Gambar from '../../assets/images/Ghandi.jpg'
 import FooterAdmin from '../../components/FooterAdmin'
-import wisata from '../../../../../Server/models/detail_wisata'
 
 const HomeWisata = () => {
    const [Wisata, setWisata] = useState([]) ;
@@ -147,11 +146,7 @@ const HomeWisata = () => {
             </tr>
         </thead>
         <tbody>
-
-         
-         {Wisata.map((Wisata, index) => (
-
-                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                     
             <tr className="bg-[#F1F1E8] border-b dark:bg-gray-800 border-2 dark:border-[#206A5D] hover:bg-[#BFDCAE] dark:hover:bg-gray-600 text-center text-[#6FA385]">
                 <th scope="row" className="px-6 py-4 font-medium text-[#6FA385] whitespace-nowrap dark:text-white">
                   Pantai Kejawanan
@@ -183,7 +178,7 @@ const HomeWisata = () => {
                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
                      </svg></a>
                 </td>
-            </tr>))}
+            </tr>
             <tr className="bg-[#F1F1E8] border-b dark:bg-gray-800 border-2 dark:border-[#206A5D] hover:bg-[#BFDCAE] dark:hover:bg-gray-600">
                 <th scope="row" className="px-6 py-4 font-medium text-[#6FA385] whitespace-nowrap dark:text-white text-center">
                   Situ Cipanten

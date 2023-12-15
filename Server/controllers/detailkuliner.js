@@ -1,8 +1,9 @@
-import detailOleh from "../models/olehModels.js";
+import detailkuliner from "../models/KulinerModels.js";
 
-export const getOleh = async  (req, res) => {
+
+export const getKuliner = async (req, res) => {
     try {
-        const response = await detailOleh.findAll(
+        const response = await detailkuliner.findAll(
             {
                 include: 'category', 
             }
@@ -13,9 +14,9 @@ export const getOleh = async  (req, res) => {
     }
 }
 
-export const getOlehById = async  (req, res) => {
+export const getKulinerById = async (req, res) => {
     try {
-        const response = await detailOleh.findOne({
+        const response = await detailkuliner.findOne({
             where: {
                 uuid: req.params.id
             }
@@ -26,14 +27,14 @@ export const getOlehById = async  (req, res) => {
     }
 }
 
-export const createOleh = async  (req, res) => {
+export const createKuliner = async (req, res) => {
     const { name, description, image, categoryId } = req.body;
     try {
         // Ambil data dari body request
         
     
         // Buat data wisata baru
-        const newOleh = await detailOleh.create({
+        const newKuliner = await detailkuliner.create({
           name,
           description,
           image,
@@ -41,7 +42,7 @@ export const createOleh = async  (req, res) => {
         });
     
         // Mengirimkan data yang baru dibuat sebagai respons
-        res.status(201).json(newOleh);
+        res.status(201).json(newKuliner);
       } catch (error) {
         // Menangani error jika terjadi
         console.error(error);
@@ -49,21 +50,21 @@ export const createOleh = async  (req, res) => {
       }
 }
 
-export const updateOleh = async (req, res) => {
+export const updateKuliner = async (req, res) => {
     try {
-        const existingOleh = await detailOleh.findOne({
+        const existingKuliner = await detailkuliner.findOne({
             where: {
                 uuid: req.params.id
             }
         });
   
-        if (!existingOleh) {
-            return res.status(404).json({ msg: "Oleh-Oleh not found!" });
+        if (!existingKuliner) {
+            return res.status(404).json({ msg: "Kuliner not found!" });
         }
   
         const { name, description, image, categoryId } = req.body;
   
-        await existingOleh.update({
+        await existingKuliner.update({
             name,
             description,
             image,
@@ -74,30 +75,32 @@ export const updateOleh = async (req, res) => {
             }
         });
   
-        res.status(200).json({ message: "Oleh-oleh updated!" });
+        res.status(200).json({ message: "Kuliner updated!" });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
-}
+  }
 
-export const deleteOleh = async (req, res) => {
+export const deleteKuliner = async (req, res) => {
     try {
-        const existingOleh = await detailOleh.findOne({
+        const existingKuliner = await detailkuliner.findOne({
             where: {
                 uuid: req.params.id
             }
         });
   
-        if (!existingOleh) {
-            return res.status(404).json({ msg: "Oleh-Oleh not found!" });
+        if (!existingKuliner) {
+            return res.status(404).json({ msg: "Kuliner not found!" });
         }
   
-        await existingOleh.destroy();
+        await existingKuliner.destroy();
   
-        res.status(200).json({ message: "Oleh-oleh delete"})
+        res.status(200).json({ message: "Kuliner delete"})
     } catch (error) {
         res.status(400).json({ message: error.message})
     }
-}
+        
+    }
 
-export default detailOleh;
+
+export default detailkuliner;
