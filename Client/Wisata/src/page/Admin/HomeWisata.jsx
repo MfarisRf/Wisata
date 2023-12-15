@@ -1,45 +1,27 @@
 // eslint-disable-next-line no-unused-vars
-import { Link } from 'react-router-dom'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Navbar_admin from '../../components/Navbar_admin '
 import Gambar from '../../assets/images/Ghandi.jpg'
 import FooterAdmin from '../../components/FooterAdmin'
-import axios from 'axios'
 
 const HomeWisata = () => {
-   const [category, setCategory] = useState([]);
-   const [Wisata, setWisata] = useState([]);
+   const [Wisata, setWisata] = useState([]) ;
 
-   useEffect(() => {
+
+   useEffect(()=>{
       getWisata();
-      getCategory();
-      // getCategoryName();
    },[]);
 
-   const getCategory = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/category');
-        setCategory(response.data);
-      } catch (error) {
-        console.error('Error fetching categories:', error);
-      }
-    };
+   const getWisata = async () =>{
+      const response = await axios.get('https://localhost:5000/Wisata');
+      setWisata(response.data);
+   } ;
 
-   const getWisata = async () => {
-         const response = await axios.get('http://localhost:5000/Wisata');
-         setWisata(response.data);
+   const deleteWisata = async (WisataId) =>{
+      await axios.delete('http://localhost:5000/Wisata/${Wisata}');
+      getWisata();
    }
 
-   // const getCategoryName = (categoryId) => {
-   //    const category = category.find((category) => category.id === categoryId);
-   //    return category ? category.name : 'Kategori Tidak Diketahui';
-   //  };
-
-    const deleteWisata = async (uuid) => {
-      await axios.delete(`http://localhost:5000/Wisata/${uuid}`);
-      getWisata();
-    };
-   
   return (
     <div>
    <Navbar_admin/>
@@ -136,6 +118,7 @@ const HomeWisata = () => {
          <div className='px-10 py-10'>
 
 <div className="relative overflow-x-auto shadow-md sm:rounded-lg ">
+    <Link to="/Wisata/add"className="button is-primary mb-2">Add New</Link>
     <table className="w-full text-sm text-left rtl:text-right text-[#6FA385] dark:text-gray-400 text-['Heebo']">
         <thead className="text-xs text-[#6FA385] uppercase bg-[#F1F1E8] dark:bg-gray-700 dark:text-gray-400 text-center">
             <tr>
@@ -145,9 +128,9 @@ const HomeWisata = () => {
                 <th scope="col" className="px-6 py-3">
                     Jam Buka
                 </th>
-                {/* <th scope="col" className="px-6 py-3">
+                <th scope="col" className="px-6 py-3">
                     Jam Tutup
-                </th> */}
+                </th>
                 <th scope="col" className="px-6 py-3">
                     Harga Tiket
                 </th>
@@ -155,16 +138,16 @@ const HomeWisata = () => {
                 Kategori Wilayah
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    UPDATE
+                    Action
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    DELETE
+                    Action
                 </th>
             </tr>
         </thead>
         <tbody>
                                                                                                                                                                                                                                      
-            {/* <tr className="bg-[#F1F1E8] border-b dark:bg-gray-800 border-2 dark:border-[#206A5D] hover:bg-[#BFDCAE] dark:hover:bg-gray-600 text-center text-[#6FA385]">
+            <tr className="bg-[#F1F1E8] border-b dark:bg-gray-800 border-2 dark:border-[#206A5D] hover:bg-[#BFDCAE] dark:hover:bg-gray-600 text-center text-[#6FA385]">
                 <th scope="row" className="px-6 py-4 font-medium text-[#6FA385] whitespace-nowrap dark:text-white">
                   Pantai Kejawanan
                 </th>
@@ -222,32 +205,36 @@ const HomeWisata = () => {
                      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
                      </svg></a>
                 </td>
-            </tr> */}
-            
-        </tbody>
-        <tbody className="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-            {Wisata.map((wisata, index) => (
-               <tr key={wisata.uuid} className="bg-[#F1F1E8] border-b dark:bg-gray-800 border-2 dark:border-[#206A5D] hover:bg-[#BFDCAE] dark:hover:bg-gray-600 text-center text-[#6FA385]">
-                  <td>{wisata.name}</td>
-                  <td>{wisata.jam_buka}</td>
-                  <td>{wisata.price}</td>
-                  {/* <td>{getCategoryName(wisata.categoryId)}</td> */}
-                  <td>{wisata.categoryId}</td>
-                  <td className="px-6 py-4 text-right">
-                  <svg className="w-6 h-6 text-[#0B56C8] dark:text-white ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
-                  <Link to={'/Wisata/edit/${Wisata.uuid}'} className="button is-small is-info"></Link>
-                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
-                  </svg>
+            </tr>
+            <tr className="bg-[#F1F1E8] dark:bg-gray-800 hover:bg-[#BFDCAE] dark:hover:bg-gray-600">
+                <th scope="row" className="px-6 py-4 font-medium text-[#6FA385] whitespace-nowrap dark:text-white text-center">
+                  Pantai Dadap
+                </th>
+                <td className="px-6 py-4">
+                  07.00
                 </td>
-                  <td className="px-6 py-4 text-right">
-                  <Link to={'/Wisata/edit/${Wisata.uuid}'} className="button is-small is-info"></Link>
-                  <button onClick={()=> deleteWisata(wisata.uuid)}className="button is-small is-danger">Delete</button>
-                  </td>
-               </tr>
-               
-            ))}
-
-            </tbody>
+                <td className="px-6 py-4">
+                  17.00
+                </td>
+                <td className="px-6 py-4">
+                  Gratis
+                </td>
+                <td className="px-6 py-4">
+                  Indramayu
+                </td>
+                <td className="px-6 py-4 text-center">
+                  <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline"><svg className="w-6 h-6 text-[#0B56C8] dark:text-white ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
+                     </svg></a>
+                </td>
+                <td className="px-6 py-4 text-center">
+                    <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    <svg className="w-6 h-6 text-[#FF0606] dark:text-white ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
+                     </svg></a>
+                </td>
+            </tr>
+        </tbody>
     </table>
    </div>
 

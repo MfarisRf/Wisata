@@ -29,13 +29,6 @@ const wisata = db.define("detail_wisata", {
             notEmpty: true,
         },
     },
-    jam_buka: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            notEmpty: true,
-        },
-    },
     image: {
         type: DataTypes.STRING,
         allowNull: false,
