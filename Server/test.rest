@@ -56,11 +56,12 @@ POST http://localhost:5000/wisata
 Content-Type: application/json
 
 {
-    "name" : "Pantai",
-    "description" : "Pantai Indah",
+    "name" : "Pantai Kejawanan",
+    "description" : "Pantai yang ada di kejawanan",
+    "jam_buka" : "08.00",
     "image" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
-    "price" : 100000,
-    "categoryId" : "1"
+    "price" : 20000,
+    "categoryId" : "2"
 
 }
 
@@ -103,7 +104,7 @@ GET http://localhost:5000/wisata
 GET http://localhost:5000/wisata/1b4a9b2e-3979-4526-b6ac-34018b6befc3
 
 ###
-DELETE http://localhost:5000/wisata/1b4a9b2e-3979-4526-b6ac-34018b6befc3
+DELETE http://localhost:5000/wisata/a17d568b-108e-4167-9dd7-f98a9f6616cb
 
 ###
 POST http://localhost:5000/kuliner

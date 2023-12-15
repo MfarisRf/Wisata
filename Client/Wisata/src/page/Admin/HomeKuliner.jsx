@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 // import React from 'react'
 import Navbar_admin from '../../components/Navbar_admin '
@@ -149,25 +149,11 @@ const HomeWisata = () => {
         <tbody>
          {Kuliner.map((Kuliner, index) => (
             <tr key={Kuliner.uuid} className="bg-[#F1F1E8] border-b dark:bg-gray-800 border-2 dark:border-[#206A5D] hover:bg-[#BFDCAE] dark:hover:bg-gray-600 text-center text-[#6FA385]">
-                <th scope="row" className="px-6 py-4 font-medium text-[#6FA385] whitespace-nowrap dark:text-white">
-                Empal Gentong
-                </th>
-                <td className="px-6 py-4">
-                 {index + 1} 
-                07.00
-                </td>
-                <td className="px-6 py-4">
-                 {Kuliner.name}
-                21.00 
-                </td>
-                <td className="px-6 py-4">
-                 {Kuliner.price} 
-                Empal Gentong Bu Darma
-                </td>
-                <td className="px-6 py-4">
-                 {Kuliner.user.name} 
-                Cirebon
-                </td>
+               <td key={Kuliner.name}></td>
+               <td key={Kuliner.detailkulinerid}></td>
+               <td key={Kuliner.name}></td>
+               <td key={Kuliner.name}></td>
+               <td key={Kuliner.name}></td>
 
                 <td className="px-6 py-4 text-right">
                   <link to ={`/Kuliner/edit/${Kuliner.uuid}`} className="button is-small is-info">
