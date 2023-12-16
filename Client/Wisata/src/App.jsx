@@ -28,7 +28,10 @@ import HomeOleh from './page/Admin/HomeOleh'
 import TambahKuliner from './page/Admin/TambahKuliner'
 import TambahWisata from './page/Admin/TambahWisata'
 import TambahOleh from './page/Admin/TambahOleh'
-import Dashboard from './page/Admin/Dashboard'
+// import Dashboard from './page/Admin/Dashboard'
+import Editwisata from './page/Admin/Wisata/Edit'
+import EditKuliner from './page/Admin/Kuliner/Edit'
+import EditOlehOleh from './page/Admin/OlehOleh/Edit'
 
 const App = () => {
   return (
@@ -64,7 +67,9 @@ const App = () => {
           <Route path="/TambahKuliner" element={<TambahKuliner/>} />
           <Route path="/TambahWisata" element={<TambahWisata/>} />
           <Route path="/TambahOleh" element={<TambahOleh/>} />
-
+          <Route path="/Editwisata" element={<Editwisata/>} />
+          <Route path="/Editkuliner" element={<EditKuliner/>} />
+          <Route path="/EditOlehOleh" element={<EditOlehOleh/>} />
         </Routes>
       </Router>
     </div>
