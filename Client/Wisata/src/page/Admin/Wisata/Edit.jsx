@@ -3,7 +3,7 @@ import React, { useState, useEffect} from 'react'
 import Navbar_admin from '../../../components/Navbar_admin '
 import Gambar from '../../../assets/images/Ghandi.jpg'
 import FooterAdmin from '../../../components/FooterAdmin'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -18,11 +18,35 @@ const Editwisata = () => {
    const [ categoryId, setCategoryId]= useState("")
    const [ address, setAddress]= useState("")
    const navigate = useNavigate();
+   const { id } = useParams();
 
-   const saveWisata = async(e) => {
+   useEffect(()=>{
+      const getWisataById = async () =>{
+         try {
+               const response = await axios.get('http://localhost:3000/wisata/${id}');
+               setName(response.data.name);
+               setJam_buka(response.data.jam_buka);
+               setDescription(response.data.description);
+               setJam_tutup(response.data.jam_tutup);
+               setPrice(response.data.price);
+               setLocation(response.data.location);
+               setCategoryId(response.data.categoryId);
+               setAddress(response.data.address);
+         } catch (error) {
+            if(error.response){
+               console.log(error.response.data);
+               console.log(error.response.status);
+               console.log(error.response.headers);
+            }
+         }
+      }
+      getWisataById();
+   }, [id]);
+
+   const updateWisata = async(e) => {
       e.preventDefault();
       try {
-         await axios.post("http://localhost:3000/wisata", {
+         await axios.patch('http://localhost:3000/wisata/${id}', {
             name,
             jam_buka,
             description,
@@ -135,7 +159,7 @@ const Editwisata = () => {
 
    
 
-<form className="max-w-md mx-auto mr-[48%]">
+<form className="max-w-md mx-auto mr-[48%]" onSubmit={updateWisata}>
 <div className="mb-5">
     <label htmlFor="name"className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Nama Wisata</label>
     <input type="name" 
@@ -189,8 +213,8 @@ const Editwisata = () => {
   </form>
   </div>
 
-   {/* <div className='py-2 mr-14 mb-4 '> */}
-   {/* <form className="max-w-sm mx-auto shadow-lg">
+   <div className='py-2 mr-14 mb-4 '>
+   <form className="max-w-sm mx-auto shadow-lg">
       <label htmlFor="countries" className="block mb-2 w-[500%] text-[15px] font-medium text-[#29446F]">Kategori</label>
       <select id="countries" 
       value= "{categoryId}" 
@@ -203,7 +227,7 @@ const Editwisata = () => {
          <option>{categoryId}</option>
       </select>
    </form>
-   </div> */}
+   </div>
 
   <div className="grid md:gap-6">
    <div className="mb-5">
@@ -211,18 +235,22 @@ const Editwisata = () => {
      <input type="address" 
      id="address" 
      value= "{address}" 
-    onChange={(e) => setAddress(e.target.value)}
+     onChange={(e) => setAddress(e.target.value)}
      className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-[#6FA385] focus:border-[#6FA385] block w-full p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
     </div>
   </div>
   <div className="grid md:gap-6 pb-5 mr-52 mb-4">
       <form className="max-w-lg mx-auto w-[187%] shadow-lg">
          <label className=" block mb-2 text-[15px] font-medium text-[#29446F] dark:text-[#29446F]" htmlFor="image">Upload file</label>
-            <input className="block w-full text-sm text-red-900 border-2 border-[#206A5D] rounded-lg cursor-pointer bg-gray-50 dark:text-[#C7E8B4] focus:outline-none dark:bg-[#C7E8B4] dark:border-[#C7E8B4] dark:placeholder-gray-400" aria-describedby="image" id="image" type="file" placeholder='No file chosen'/>
+            <input
+            value= "{address}" 
+            onChange={(e) => setAddress(e.target.value)}
+            className="block w-full text-sm text-red-900 border-2 border-[#206A5D] rounded-lg cursor-pointer bg-gray-50 dark:text-[#C7E8B4] focus:outline-none dark:bg-[#C7E8B4] dark:border-[#C7E8B4] dark:placeholder-gray-400" aria-describedby="image" id="image" type="file" placeholder='No file chosen'/>
       </form>
   </div>
   <div className='ml-[90%] pt-10'>
-      <button type="submit" className="text-[#222D3F] bg-[#6FA385] hover:bg-[#6FA385]focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-[200%] px-5 py-2.5 text-center text-bold shadow-lg">Simpan</button>
+      <button type="submit" 
+      className="text-[#222D3F] bg-[#6FA385] hover:bg-[#6FA385]focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-[200%] px-5 py-2.5 text-center text-bold shadow-lg">Simpan</button>
   </div>
 </form>
 
