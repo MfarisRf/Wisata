@@ -164,7 +164,7 @@ const HomeOleh = () => {
                   <td className="px-6 py-4">{detailoleh.nama_toko}</td>
                   <td className="px-6 py-4">{detailoleh.categoryId}</td>
                   <td className="px-6 py-4 text-right">
-                  <link to ={`/TambahWisata/${detailoleh.uuid}`} className="button is-small is-info"/>
+                  <link to ={`/editOleh/${detailoleh.uuid}`} className="button is-small is-info"/>
                   <button className="button is-small is-info">Edit</button>
                   
                   
