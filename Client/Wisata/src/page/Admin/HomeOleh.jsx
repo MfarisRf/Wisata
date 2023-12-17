@@ -7,17 +7,17 @@ import FooterAdmin from '../../components/FooterAdmin'
 import axios from 'axios'
 
 const HomeOleh = () => {
-
+   const [category, setCategory] = useState([]);
    const [detailoleh, setDetailOleh] = useState([])
    useEffect(() => {
       getOleh();
-      // getCategory();
+      getCategory();
       // deleteKuliner();
    },[]);
 
    const getCategory = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/oleh');
+        const response = await axios.get('http://localhost:5000/category');
         setCategory(response.data);
       } catch (error) {
         console.error('Error fetching categories:', error);
@@ -28,10 +28,14 @@ const HomeOleh = () => {
          const response = await axios.get('http://localhost:5000/oleh');
          setDetailOleh(response.data);
    }
-   const deleteOleh = async (WisataId) =>{
-      await axios.delete(`http://localhost:5000/wisata/${detailolehId}`);
-      getOleh();
-   }
+   const deleteOleh = async (detailolehId) => {
+      try {
+         await axios.delete(`http://localhost:5000/oleh/${detailolehId}`);
+         getOleh(); // Pastikan getWisata telah didefinisikan
+      } catch (error) {
+         console.error('Error deleting Oleh:', error);
+      }
+   };
 
   return (
     <div>
@@ -148,10 +152,10 @@ const HomeOleh = () => {
                 Kategori Wilayah
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    Action
+                    Edit
                 </th>
                 <th scope="col" className="px-6 py-3">
-                    Action
+                    Delete
                 </th>
             </tr>
         </thead>
@@ -162,13 +166,24 @@ const HomeOleh = () => {
                   <td className="px-6 py-4">{detailoleh.jam_buka}</td>
                   <td className="px-6 py-4">{detailoleh.jam_tutup}</td>
                   <td className="px-6 py-4">{detailoleh.nama_toko}</td>
-                  <td className="px-6 py-4">{detailoleh.categoryId}</td>
-                  <td className="px-6 py-4 text-right">
-                  <link to ={`/editOleh/${detailoleh.uuid}`} className="button is-small is-info"/>
-                  <button className="button is-small is-info">Edit</button>
-                  
-                  
+                  <td className="px-6 py-4">{detailoleh.category.name}</td>
+                  <td className="px-6 py-4 text-center">
+                     <button>
+                        <Link to={`/dashboard/editOleh/${detailoleh.uuid}`}>
+                           <svg className="w-6 h-6 text-[#0B56C8] dark:text-white ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                           <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
+                           </svg>
+                        </Link>
+                     </button>
+                     
                   </td>
+                  <td>
+                     {/* <button onClick={/editwisata/} className="button is-small is-danger">Delete</button> */}
+                     <button onClick={() => deleteOleh(detailoleh.uuid)} className="button is-small is-danger"><svg className="w-6 h-6 text-[#FF0606] dark:text-white ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
+                     </svg></button>
+                  </td>
+                  
                </tr>
                
             ))}   

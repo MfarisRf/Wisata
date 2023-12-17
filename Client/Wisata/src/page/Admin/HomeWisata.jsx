@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import  {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import React, { useEffect, useState} from 'react'
 import Navbar_admin from '../../components/Navbar_admin '
 import Gambar from '../../assets/images/Ghandi.jpg'
@@ -14,7 +14,6 @@ const HomeWisata = () => {
    useEffect(() => {
       getWisata();
       getCategory();
-      deleteKuliner();
    },[]);
 
    const getCategory = async () => {
@@ -30,10 +29,15 @@ const HomeWisata = () => {
          const response = await axios.get('http://localhost:5000/Wisata');
          setWisata(response.data);
    }
-   const deleteKuliner = async (WisataId) =>{
-      await axios.delete(`http://localhost:5000/wisata/${WisataId}`);
-      getKuliner();
-   }
+   const deleteWisata = async (wisataId) => {
+      try {
+         await axios.delete(`http://localhost:5000/wisata/${wisataId}`);
+         getWisata(); // Pastikan getWisata telah didefinisikan
+      } catch (error) {
+         console.error('Error deleting wisata:', error);
+      }
+   };
+   
    // const getCategoryName = (categoryId) => {
    //    const category = category.find((category) => category.id === categoryId);
    //    return category ? category.name : 'Kategori Tidak Diketahui';
@@ -167,12 +171,22 @@ const HomeWisata = () => {
                   <td className="px-6 py-4">{wisata.jam_buka}</td>
                   <td className="px-6 py-4">{wisata.jam_tutup}</td>
                   <td className="px-6 py-4">{wisata.price}</td>
-                  <td className="px-6 py-4">{wisata.categoryId}</td>
-                  <td className="px-6 py-4 text-right">
-                  <link to ={`/TambahWisata/${Wisata.uuid}`} className="button is-small is-info"/>
-                  <button className="button is-small is-info">Edit</button>
-                  
-                  
+                  <td className="px-6 py-4">{wisata.category.name}</td>
+                  <td className="px-6 py-4 text-center">
+                     <button>
+                     <Link to={`/dashboard/editwisata/${wisata.uuid}`}>
+                     <svg className="w-6 h-6 text-[#0B56C8] dark:text-white ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 21">
+                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.418 17.861 1 20l2.139-6.418m4.279 4.279 10.7-10.7a3.027 3.027 0 0 0-2.14-5.165c-.802 0-1.571.319-2.139.886l-10.7 10.7m4.279 4.279-4.279-4.279m2.139 2.14 7.844-7.844m-1.426-2.853 4.279 4.279"/>
+                     </svg>
+                     </Link>
+                     </button>
+                     
+                  </td>
+                  <td>
+                     {/* <button onClick={/editwisata/} className="button is-small is-danger">Delete</button> */}
+                     <button onClick={() => deleteWisata(wisata.uuid)} className="button is-small is-danger"><svg className="w-6 h-6 text-[#FF0606] dark:text-white ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20">
+                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h16M7 8v8m4-8v8M7 1h4a1 1 0 0 1 1 1v3H6V2a1 1 0 0 1 1-1ZM3 5h12v13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5Z"/>
+                     </svg></button>
                   </td>
                </tr>
                

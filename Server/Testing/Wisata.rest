@@ -6,7 +6,7 @@ POST http://localhost:5000/wisata
 Content-Type: application/json
 
 {
-    "name" : "Batu Lawang",
+    "name" : "Pantai kejawanan",
     "description" : "Wisata ini dekat dengan gempol",
     "image" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
     "price" : "100000",
@@ -30,5 +30,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5000/wisata/1b4a9b2e-3979-4526-b6ac-34018b6befc3
+DELETE http://localhost:5000/wisata/3b0ad82c-4202-4294-8643-7a57c46f1dc3
 
