@@ -1,10 +1,64 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, {useState, useEffect} from "react"
 import Navbar_admin from '../../../components/Navbar_admin '
 import Gambar from '../../../assets/images/Ghandi.jpg'
 import FooterAdmin from '../../../components/FooterAdmin'
+import { useNavigate } from 'react-router-dom'
+import axios from "axios"
 
-const Edit = () => {
+const EditKuliner = () => {
+
+   const [ name, setName] = useState("")
+   const [ jam_buka, setJam_buka]= useState("")
+   const [ description, setDescription]= useState("")
+   const [ price, setPrice]= useState("")
+   const [ categoryId, setCategoryId]= useState("")
+   const [ address, setAddress]= useState("")
+   const navigate = useNavigate();
+
+   useEffect(()=>{
+      const getWisataById = async () =>{
+         try {
+               const response = await axios.get('http://localhost:3000/wisata/${id}');
+               setName(response.data.name);
+               setJam_buka(response.data.jam_buka);
+               setDescription(response.data.description);
+               setPrice(response.data.price);
+               setCategoryId(response.data.categoryId);
+               setAddress(response.data.address);
+         } catch (error) {
+            if(error.response){
+               console.log(error.response.data);
+               console.log(error.response.status);
+               console.log(error.response.headers);
+            }
+         }
+      }
+      getWisataById();
+   }, [id]);
+
+
+   const updateKuliner = async(e) => {
+      e.preventDefault();
+      try {
+         await axios.post("http://localhost:3000/Kuliner", {
+            name,
+            jam_buka,
+            description,
+            price,
+            categoryId,
+            address,
+         });
+         navigate("/Dashboard");
+      } catch (error) {
+         if (error.response) {
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+         }
+      }
+   };
+
   return (
 <div>
    <Navbar_admin/>
@@ -98,21 +152,32 @@ const Edit = () => {
    
    
 
-<form className="max-w-md mx-auto mr-[45%] pt-5">
+   <form className="max-w-md mx-auto mr-[48%]" onSubmit={updateKuliner}>
   <div className="flex md:grid-cols-2 md:gap-6">
   <div className="mb-5">
     <label htmlFor="name" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Nama Kuliner</label>
-    <input type="name" id="name" className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required/>
+    <input type="name" 
+    id="name" value= "{name}" 
+    onChange={(e) => setName(e.target.value)} 
+    className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required/>
+    
   </div>
       <form className="max-w-sm mx-auto">
          <label htmlFor="message" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Deskripsi</label>
-            <textarea id="message" rows="4" className="block p-2.5 w-[120%] text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-[#206A5D] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
+            <textarea id="message"
+             rows="4"
+             value= "{description}" 
+             onChange={(e) => setDescription(e.target.value)}
+             className="block p-2.5 w-[120%] text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-[#206A5D] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
       </form>
   </div>
   <div className='py-2 mr-14 mb-4 '>
    <form className="max-w-sm mx-auto">
       <label htmlFor="countries" className="block mb-2 w-[500%] text-[15px] font-medium text-[#29446F]">Kategori</label>
-      <select id="countries" className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg block w-[115%] p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#6FA385] dark:focus:border-[#6FA385]">
+      <select id="countries"
+      value= "{categoryId}" 
+      onChange={(e) => setCategoryId(e.target.value)}
+      className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg block w-[115%] p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#6FA385] dark:focus:border-[#6FA385]">
          <option></option>
          <option>Cirebon</option>
          <option>Indramayu</option>
@@ -139,19 +204,33 @@ const Edit = () => {
   </div>
   <div className="mb-5">
     <label htmlFor="address" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Alamat Tempat</label>
-    <input type="address" id="address" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+    <input type="address" 
+    id="address"
+    value= "{address}" 
+    onChange={(e) => setAddress(e.target.value)}
+    className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
   </div>
   <div className="mb-5">
     <label htmlFor="time" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jam Buka</label>
-    <input type="time" id="time" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+    <input type="time" id="time"
+    value= "{jam_buka}" 
+    onChange={(e) => setJam_buka(e.target.value)}
+   className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
   </div>
   <div className="mb-5">
     <label htmlFor="price" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Harga</label>
-    <input type="text" id="price" className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+    <input type="text" 
+    id="price" 
+    value= "{price}" 
+    onChange={(e) => setPrice(e.target.value)}
+    className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
   </div>
 </form>
   </div>
-  <button type="submit" className="px-[9%] ml-[75%] mt-[15%] text-[] bg-[#6FA385] font-medium rounded-lg text-sm w-[100%] sm:w-auto py-2.5 text-center">Simpan</button>
+  <button type="submit" 
+  value= "{Save}" 
+  onChange={(e) => setPrice(e.target.value)}
+  className="px-[9%] ml-[75%] mt-[15%] text-[] bg-[#6FA385] font-medium rounded-lg text-sm w-[100%] sm:w-auto py-2.5 text-center">Simpan</button>
 </form>
    </div>
    </div>
@@ -164,4 +243,4 @@ const Edit = () => {
   )
 }
 
-export default Edit
+export default EditKuliner
