@@ -1,11 +1,47 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+import React, { useState, useEffect} from 'react'
 import Navbar_admin from '../../../components/Navbar_admin '
 import Gambar from '../../../assets/images/Ghandi.jpg'
 import FooterAdmin from '../../../components/FooterAdmin'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 
 const Editwisata = () => {
+
+   const [ name, setName] = useState("")
+   const [ jam_buka, setJam_buka]= useState("")
+   const [ description, setDescription]= useState("")
+   const [ jam_tutup, setJam_tutup]= useState("")
+   const [ price, setPrice]= useState("")
+   const [ location, setLocation]= useState("")
+   const [ categoryId, setCategoryId]= useState("")
+   const [ address, setAddress]= useState("")
+   const navigate = useNavigate();
+
+   const saveWisata = async(e) => {
+      e.preventDefault();
+      try {
+         await axios.post("http://localhost:3000/wisata", {
+            name,
+            jam_buka,
+            description,
+            jam_tutup,
+            price,
+            location,
+            categoryId,
+            address,
+         });
+         navigate("/Dashboard");
+      } catch (error) {
+         if (error.response) {
+            console.log(error.response.data);
+            console.log(error.response.status);
+            console.log(error.response.headers);
+         }
+      }
+   };
+
   return (
     <div>
    <Navbar_admin/>
@@ -101,51 +137,82 @@ const Editwisata = () => {
 
 <form className="max-w-md mx-auto mr-[48%]">
 <div className="mb-5">
-    <label htmlFor="name" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Nama Wisata</label>
-    <input type="name" id="name" className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" placeholder="" required />
+    <label htmlFor="name"className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Nama Wisata</label>
+    <input type="name" 
+    id="name" 
+    value= "{name}" 
+    onChange={(e) => setName(e.target.value)}
+    className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+   placeholder="" required />
   </div>
   <div className="grid md:grid-cols-2 md:gap-6">
   <div className="mb-5">
     <label htmlFor="time" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Jam Buka</label>
-    <input type="time" id="time" className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+    <input type="text" id="time" 
+    value= "{jam_buka}" 
+    onChange={(e) => setJam_buka(e.target.value)}
+    className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
    </div>
    <form className="max-w-sm mx-auto w-[100%]">
       <label htmlFor="message" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Deskripsi</label>
-      <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-[#206A5D] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
+      <textarea id="message" 
+      rows="4" 
+      value= "{description}" 
+      onChange={(e) => setDescription(e.target.value)}
+      className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-[#206A5D] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
    </form>
     </div>
    <div className="mb-5">
       <label htmlFor="time" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Jam Tutup</label>
-      <input type="time" id="time" className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+      <input type="text" 
+      id="time" 
+      value= "{jam_tutup}" 
+      onChange={(e) => setJam_tutup(e.target.value)}
+      className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
    </div>
   <div className="grid md:grid-cols-2 md:gap-6">
   <div className="mb-5">
     <label htmlFor="price" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Harga Tiket</label>
-    <input type="price" id="price" className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+    <input type="price" 
+    id="price" 
+    value= "{price}" 
+    onChange={(e) => setPrice(e.target.value)}
+    className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
    </div>
   <form className="max-w-sm mx-auto w-[100%] shadow-lg">
      <label htmlFor="message" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Maps / Lokasi Wisata</label>
-     <textarea id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-[#206A5D] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
+     <textarea id="message" 
+     rows="4" 
+     value= "{location}" 
+    onChange={(e) => setLocation(e.target.value)}
+     className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-[#206A5D] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
   </form>
   </div>
 
-   <div className='py-2 mr-14 mb-4 '>
-   <form className="max-w-sm mx-auto shadow-lg">
+   {/* <div className='py-2 mr-14 mb-4 '> */}
+   {/* <form className="max-w-sm mx-auto shadow-lg">
       <label htmlFor="countries" className="block mb-2 w-[500%] text-[15px] font-medium text-[#29446F]">Kategori</label>
-      <select id="countries" className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg block w-[115%] p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#6FA385] dark:focus:border-[#6FA385]">
+      <select id="countries" 
+      value= "{categoryId}" 
+      onChange={(e) => setCategoryId(e.target.value)}
+      className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg block w-[115%] p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#6FA385] dark:focus:border-[#6FA385]">
 
          <option></option>
-         <option>Cirebon</option>
-         <option>Indramayu</option>
-         <option>Kuninggan</option>
+         <option>{categoryId}</option>
+         <option>{categoryId}</option>
+         <option>{categoryId}</option>
       </select>
    </form>
-   </div>
+   </div> */}
 
   <div className="grid md:gap-6">
    <div className="mb-5">
      <label htmlFor="address" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Alamat</label>
-     <input type="address" id="address" className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-[#6FA385] focus:border-[#6FA385] block w-full p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
+     <input type="address" 
+     id="address" 
+     value= "{address}" 
+    onChange={(e) => setAddress(e.target.value)}
+     className="shadow-lg bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-[#6FA385] focus:border-[#6FA385] block w-full p-2.5 dark:bg-[#6FA385] dark:border-[#6FA385] dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
     </div>
   </div>
   <div className="grid md:gap-6 pb-5 mr-52 mb-4">

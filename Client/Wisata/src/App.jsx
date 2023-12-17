@@ -67,7 +67,7 @@ const App = () => {
           <Route path="/TambahKuliner" element={<TambahKuliner/>} />
           <Route path="/TambahWisata" element={<TambahWisata/>} />
           <Route path="/TambahOleh" element={<TambahOleh/>} />
-          <Route path="/dashboard/editwisata" element={<Editwisata/>} />
+          <Route path="/dashboard/editwisata/:id" element={<Editwisata/>} />
           <Route path="/Editkuliner" element={<EditKuliner/>} />
           <Route path="/EditOlehOleh" element={<EditOlehOleh/>} />
         </Routes>
