@@ -17,6 +17,7 @@ const Editwisata = () => {
    const [ location, setLocation]= useState("")
    const [ categoryId, setCategoryId]= useState("")
    const [ address, setAddress]= useState("")
+   const [image, setImage] = useState("")
    const navigate = useNavigate();
    const { id } = useParams();
 
@@ -32,6 +33,8 @@ const Editwisata = () => {
                setLocation(response.data.location);
                setCategoryId(response.data.categoryId);
                setAddress(response.data.address);
+               setImage(response.data.image);
+
          } catch (error) {
             if(error.response){
                console.log(error.response.data);
@@ -55,6 +58,7 @@ const Editwisata = () => {
             location : location,
             categoryId : categoryId,
             address : address,
+            image : image
          });
          navigate("/Dashboard");
       } catch (error) {
@@ -248,7 +252,7 @@ const Editwisata = () => {
       <form className="max-w-lg mx-auto w-[187%] shadow-lg">
          <label className=" block mb-2 text-[15px] font-medium text-[#29446F] dark:text-[#29446F]" htmlFor="image">Upload file</label>
             <input
-            value={images}
+            value={image}
             onChange={(e) => setImage(e.target.value)}
             className="block w-full text-sm text-red-900 border-2 border-[#206A5D] rounded-lg cursor-pointer bg-gray-50 dark:text-[#C7E8B4] focus:outline-none dark:bg-[#C7E8B4] dark:border-[#C7E8B4] dark:placeholder-gray-400" aria-describedby="image" id="image" type="file"/>
       </form>
