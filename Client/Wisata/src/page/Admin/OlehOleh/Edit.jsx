@@ -23,7 +23,7 @@ const EditOlehOleh = () => {
     useEffect(()=>{
         const getOlehOlehById = async () =>{
         try {
-                const response = await axios.get('http://localhost:3000/wisata/${id}');
+                const response = await axios.get('http://localhost:3000/oleh/${id}');
                 setName(response.data.name);
                 setDescription(response.data.description);
                 setCategoryId(response.data.categoryId);
@@ -47,7 +47,7 @@ const EditOlehOleh = () => {
     const updateOlehOleh = async(e) => {
         e.preventDefault();
         try {
-            await axios.patch('http://localhost:3000/wisata/${id}', {
+            await axios.patch('http://localhost:3000/oleh/${id}', {
                 name,
                 description,
                 categoryId,
