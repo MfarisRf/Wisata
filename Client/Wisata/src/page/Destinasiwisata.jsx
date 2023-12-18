@@ -89,9 +89,7 @@ const getWisata = async () => {
 <br/>
 {/* ini awal card */}
 <div>
-{Wisata.map(Wisata => (
   <Card_wisata key={Wisata.uuid} data={Wisata} />
-))}
 
     </div>
 {/* ini akhir card */}
