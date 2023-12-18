@@ -4,7 +4,7 @@ Content-Type: application/json
 {
     "name": "Docang",
     "description": "Test Kuliner Cirebon Kategori Cirebon",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
+    "image": "https://pict-b.sindonews.net/dyn/620/pena/news/2020/06/28/701/83718/lezatnya-docang-makanan-khas-cirebon-xba.png",
     "price": "100000",
     "nama_restoran" : "Ashiapp",
     "jam_buka": "08.00",

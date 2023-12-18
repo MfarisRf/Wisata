@@ -90,9 +90,8 @@ function Kuliner() {
 
 {/* Card pembuka */}
        <div className='py-10'>
-          {Kuliner.map(Kuliner => (
+         
                   <Card_Kuliner key={Kuliner.uuid} data={Kuliner} />
-      ))}
                     </div>
 {/* Card penutup */}
 
