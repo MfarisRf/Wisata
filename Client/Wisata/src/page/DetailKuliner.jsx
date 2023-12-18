@@ -7,7 +7,7 @@ import 'flowbite'
 import GambarEmpalGentong from '../assets/images/EmpalGentong.png'
 import GambarCirebon from '../assets/images/Cirebon.png'
 
-function DetailKulinerCirebon() {
+function DetailKuliner() {
   return (
     <div className='bg-[#D5EDC7]'>
         <Navbar/>
@@ -64,4 +64,4 @@ function DetailKulinerCirebon() {
   )
 }
 
-export default DetailKulinerCirebon
+export default DetailKuliner

@@ -7,7 +7,7 @@ import 'flowbite'
 import GambarBMM from '../assets/images/BMM.png'
 import GambarCirebon from '../assets/images/Cirebon.png'
 
-function DetailOlehOlehCirebon() {
+function DetailOlehOleh() {
   return (
     <div className='bg-[#D5EDC7]'>
         <Navbar/>
@@ -64,4 +64,4 @@ function DetailOlehOlehCirebon() {
   )
 }
 
-export default DetailOlehOlehCirebon
+export default DetailOlehOleh

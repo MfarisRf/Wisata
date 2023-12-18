@@ -10,17 +10,8 @@ import Notfoundkuliner from './page/Notfoundkuliner'
 import Notfoundwisata from './page/Notfoundwisata'
 import Notfoundoleholeh from './page/Notfoundoleholeh'
 import DetailWisata from './page/DetailWisata'
-import DetailKulinerMajalengka from './page/DetailKulinerMajalengka'
-import DetailWisataIndramayu from './page/DetailWisataIndramayu'
-import DetailWisataMajalengka from './page/DetailWisataMajalengka'
-import DetailKulinerIndramayu from './page/DetailKulinerindramayu'
-import DetailKulinerCirebon from './page/DetailKulinerCirebon'
-import DetailOlehOlehMajalengka from './page/DetailOlehOlehMajalengka'
-import DetailOlehOlehCirebon from './page/DetailOlehOlehCirebon'
-import DetailOlehOlehIndramayu from './page/DetailOlehOlehIndramayu'
-import DetailWisataKuningan from './page/DetailWisataKuningan'
-import DetailKulinerKuningan from './page/DetailKulinerKuningan'
-import DetailOlehOlehKuningan from './page/DetailOlehOlehKuningan'
+import DetailKuliner from './page/DetailKuliner'
+import DetailOlehOleh from './page/DetailOlehOleh'
 import ProfileAdmin from './page/Admin/ProfileAdmin'
 import HomeWisata from './page/Admin/HomeWisata'
 import HomeKuliner from './page/Admin/HomeKuliner'
@@ -28,7 +19,6 @@ import HomeOleh from './page/Admin/HomeOleh'
 import TambahKuliner from './page/Admin/TambahKuliner'
 import TambahWisata from './page/Admin/TambahWisata'
 import TambahOleh from './page/Admin/TambahOleh'
-// import Dashboard from './page/Admin/Dashboard'
 import Editwisata from './page/Admin/Wisata/Edit'
 import EditKuliner from './page/Admin/Kuliner/Edit'
 import EditOlehOleh from './page/Admin/OlehOleh/Edit'
@@ -39,27 +29,27 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Landingpage />} />
+          <Route path="/About" element={<About />} />
+
+
+
+          {/* All Item */}
           <Route path="/Destinasiwisata" element={<Destinasiwisata/>} /> 
-          <Route path="/destinasiwisata/detailwisata/:id" element={<DetailWisata/>} />
-          <Route path='/DetailWisataMajalengka' element={<DetailWisataMajalengka/>} />
-          <Route path="/DetailWisataIndramayu" element={<DetailWisataIndramayu/>} />
-          <Route path="/DetailKulinerCirebon" element={<DetailKulinerCirebon/>} />
-          <Route path="/DetailKulinerMajalengka" element={<DetailKulinerMajalengka/>} />
-          <Route path="/DetailOlehOlehMajalengka" element={<DetailOlehOlehMajalengka/>} />
-          <Route path="/DetailOlehOlehCirebon" element={<DetailOlehOlehCirebon/>} />
-          <Route path="/DetailWisataKuningan" element={<DetailWisataKuningan/>} />
-          <Route path="/DetailKulinerKuningan" element={<DetailKulinerKuningan/>} />
-          <Route path="/DetailKulinerIndramayu" element={<DetailKulinerIndramayu/>} />
-          <Route path="/DetailOlehOlehKuningan" element={<DetailOlehOlehKuningan/>} />
-          <Route path="/DetailOleholehIndramayu" element={<DetailOlehOlehIndramayu/>} />
           <Route path="/Kuliner" element={<Kuliner/>} />
           <Route path="/Oleholeh" element={<Oleholeh/>} />
+          {/* Halaman detail */}
+          <Route path="/destinasiwisata/detailwisata/:id" element={<DetailWisata/>} />
+          <Route path="/DetailKuliner/detailkuliner/:id" element={<DetailKuliner/>} />
+          <Route path="/DetailOlehOleh/detailoleh/:id" element={<DetailOlehOleh/>} />
+          {/* Login */}
           <Route path="/Login" element={<Login />} />
-          <Route path="/About" element={<About />} />
+          {/* Not Found */}
           <Route path="/Notfoundkuliner" element={<Notfoundkuliner/>} />
           <Route path="/Notfoundwisata" element={<Notfoundwisata/>} />
           <Route path="/Notfoundoleholeh" element={<Notfoundoleholeh/>} />
+
           <Route path="/Team" element={<OurTeam/>} />
+          {/* Halaman Admin */}
           <Route path="/ProfileAdmin" element={<ProfileAdmin/>} />
           <Route path="/Dashboard" element={<HomeWisata/>} />
           <Route path="/HomeKuliner" element={<HomeKuliner/>} />
