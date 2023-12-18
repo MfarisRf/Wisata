@@ -2,6 +2,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -9,8 +10,7 @@ import MapBox from '../components/MapBox'
 import 'flowbite'
 
 // import background from "../assets/images/Teksturs.png";
-import GambarDetwisCrb from '../assets/images/DetwisCrb.png'
-import GambarPK from '../assets/images/PK.png'
+import GambarDetwisCrb from '../assets/images/HeaderWisata.png'
 
 
 function DetailWisata() {
