@@ -1,17 +1,47 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+
+import { useEffect, useState } from 'react'
+import axios from 'axios';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import 'flowbite'
-import Gambarnfk from '../assets/images/B_kuliner.png'
-import Slider_kuliner from '../components/Slide_kuliner'
 import background from "../assets/images/Backgroud_kwo.png";
+import Card_Kuliner from "../components/Card_Kuliner"
+
+// import background from "../assets/images/Teksturs.png";
+import GambarExploreWisata from '../assets/images/ExploreWisata.png'
+// import Cardwisata from '../components/Card_wisata
+
 
 function Kuliner() {
+    const [category, setCategory] = useState([]);
+     const [Kuliner, setKuliner] = useState([]);
+  
+    useEffect(() => {
+      getKuliner();
+      getCategory();
+   },[]);
+  
+   const getCategory = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/category');
+      setCategory(response.data);
+    } catch (error) {
+      console.error('Error fetching categories:', error);
+    }
+  };
+  
+  const getKuliner = async () => {
+       const response = await axios.get('http://localhost:5000/Kuliner');
+       setKuliner(response.data);
+  }
+
+
+
   return (
     <div  style={{backgroundImage: `url(${background}) `}}>
     <Navbar/>
-    <img className="h-2/5 w-5/5 pt-20" src={Gambarnfk} alt="image description"></img>
+    <img className="h-2/5 w-5/5 pt-20" src={GambarExploreWisata} alt="image description"></img>
     <br/>
     <h2 className="font-bold text-[#29446F] font-['Boogaloo'] text-[25px] pl-20 pb-5 tracking-[.1em]">Kuliner</h2>
     {/* Card */}
@@ -60,8 +90,8 @@ function Kuliner() {
 
 {/* Card pembuka */}
        <div className='py-10'>
-          {detailkunliner.map(item => (
-                  <Slider_kuliner key={detailkunliner.id} data={detailkunliner} />
+          {Kuliner.map(Kuliner => (
+                  <Card_Kuliner key={Kuliner.uuid} data={Kuliner} />
       ))}
                     </div>
 {/* Card penutup */}

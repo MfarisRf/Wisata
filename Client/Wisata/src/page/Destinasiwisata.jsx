@@ -2,11 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import background from "../assets/images/Backgroud_kwo.png"
 import 'flowbite'
+import background from "../assets/images/Backgroud_kwo.png"
 import Card_wisata from '../components/Card_wisata'
 
 // import background from "../assets/images/Teksturs.png";
@@ -59,7 +58,6 @@ const getWisata = async () => {
     <span className="sr-only">Search</span>
   </button>
 </div>
-
 
 
 <form>
