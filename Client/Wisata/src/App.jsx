@@ -6,12 +6,15 @@ import Destinasiwisata from './page/Destinasiwisata'
 import Kuliner from './page/Kuliner'
 import Oleholeh from './page/Oleholeh'
 import OurTeam from './components/OurTeam'
+
 import Notfoundkuliner from './page/Notfoundkuliner'
 import Notfoundwisata from './page/Notfoundwisata'
 import Notfoundoleholeh from './page/Notfoundoleholeh'
+
 import DetailWisata from './page/DetailWisata'
 import DetailKuliner from './page/DetailKuliner'
 import DetailOlehOleh from './page/DetailOlehOleh'
+
 import ProfileAdmin from './page/Admin/ProfileAdmin'
 import HomeWisata from './page/Admin/HomeWisata'
 import HomeKuliner from './page/Admin/HomeKuliner'
