@@ -169,16 +169,16 @@ const EditOlehOleh = () => {
             onChange={(e) => setName(e.target.value)}
             className="bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required/>
     </div>
-        <form className="max-w-sm mx-auto">
+        <div className="max-w-sm mx-auto">
             <label htmlFor="message" className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white">Deskripsi</label>
                 <textarea id="message" rows="4"  
                 value= "{description}" 
                 onChange={(e) => setDescription(e.target.value)}
                 className="block p-2.5 w-[120%] text-sm text-gray-900 bg-gray-50 rounded-lg border-2 border-[#206A5D] focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder=""></textarea>
-        </form>
+        </div>
     </div>
     <div className='py-2 mr-14 mb-4 '>
-        <form className="max-w-sm mx-auto">
+        <div className="max-w-sm mx-auto">
         <label htmlFor="countries" className="block mb-2 w-[500%] text-[15px] font-medium text-[#29446F]">Kategori</label>
         <select id="countries" 
         value= "{categoryId}" 
@@ -191,23 +191,23 @@ const EditOlehOleh = () => {
             <option>{categoryId}</option>
             <option>{categoryId}</option>
         </select>
-        </form>
+        </div>
         </div>
     <div className="mb-5">
-        <form className="max-w-lg mx-auto">
+        <div className="max-w-lg mx-auto">
             <label className="block mb-2 text-[15px] font-medium text-[#29446F] dark:text-white" htmlFor="user_avatar">Photo</label>
                 <input
                 value= "{name}" 
                 onChange={(e) => setName(e.target.value)}
                 className="block w-full text-sm text-gray-900 border-2 border-[#206A5D] rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file"/>
-        </form>
+        </div>
     </div>
         <div className='py-10'>
             <h3 className="text-[25px] font-bold text-[#29446F] text-['Heebo']">Rekomendasi Tempat Oleh oleh </h3>
         </div>
     <div className='bg-[#D8E7CB] bg:opacity-[50%] w-[180%] h-auto rounded-lg border-2 border-[#206A5D]'>
     
-    <form className="max-w-sm mx-auto py-10 mr-[45%]">
+    <div className="max-w-sm mx-auto py-10 mr-[45%]">
     <div className="mb-5">
         <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nama Toko Oleh-oleh</label>
         <input type="name" id="name"
@@ -236,7 +236,7 @@ const EditOlehOleh = () => {
         onChange={(e) => setPrice(e.target.value)}
         className="shadow-sm bg-gray-50 border-2 border-[#206A5D] text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[180%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light" required/>
     </div>
-    </form>
+    </div>
     </div>
     <button type="submit" className="px-[9%] ml-[75%] mt-[15%] text-[] bg-[#6FA385] font-medium rounded-lg text-sm w-[100%] sm:w-auto py-2.5 text-center">Simpan</button>
     </form>
