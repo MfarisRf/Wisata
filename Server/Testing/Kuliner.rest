@@ -2,7 +2,7 @@ POST http://localhost:5000/kuliner
 Content-Type: application/json
 
 {
-    "name": "Docang",
+    "name": "Nasi Lengko",
     "description": "Test Kuliner Cirebon Kategori Cirebon",
     "image": "https://pict-b.sindonews.net/dyn/620/pena/news/2020/06/28/701/83718/lezatnya-docang-makanan-khas-cirebon-xba.png",
     "price": "100000",
