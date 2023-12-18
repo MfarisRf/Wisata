@@ -6,7 +6,7 @@ POST http://localhost:5000/wisata
 Content-Type: application/json
 
 {
-    "name" : "Pantai kejawanan",
+    "name" : "Pantai Tai",
     "description" : "Wisata ini dekat dengan gempol",
     "image" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
     "price" : "100000",

@@ -1,15 +1,43 @@
 // eslint-disable-next-line no-unused-vars
+
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import background from "../assets/images/Backgroud_kwo.png"
 import 'flowbite'
+import Card_wisata from '../components/Card_wisata'
 
 // import background from "../assets/images/Teksturs.png";
 import GambarExploreWisata from '../assets/images/ExploreWisata.png'
-import Cardwisata from '../components/Card_wisata'
+// import Cardwisata from '../components/Card_wisata
 
 function Destinasiwisata() {
+  const [category, setCategory] = useState([]);
+   const [Wisata, setWisata] = useState([]);
+
+  useEffect(() => {
+    getWisata();
+    getCategory();
+ },[]);
+
+ const getCategory = async () => {
+  try {
+    const response = await axios.get('http://localhost:5000/category');
+    setCategory(response.data);
+  } catch (error) {
+    console.error('Error fetching categories:', error);
+  }
+};
+
+const getWisata = async () => {
+     const response = await axios.get('http://localhost:5000/Wisata');
+     setWisata(response.data);
+}
+
+
+
   return (
     <div className='bg-cover' style={{backgroundImage: `url(${background}) `}}>
     <Navbar/>
@@ -62,7 +90,12 @@ function Destinasiwisata() {
 <br/>
 <br/>
 {/* ini awal card */}
-        <Cardwisata />
+<div>
+{Wisata.map(Wisata => (
+  <Card_wisata key={Wisata.uuid} data={Wisata} />
+))}
+
+    </div>
 {/* ini akhir card */}
         <br/>
       <div>

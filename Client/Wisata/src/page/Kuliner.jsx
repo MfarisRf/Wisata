@@ -59,8 +59,10 @@ function Kuliner() {
 </div>
 
 {/* Card pembuka */}
-                    <div className='py-10'>
-                    <Slider_kuliner />
+       <div className='py-10'>
+          {detailkunliner.map(item => (
+                  <Slider_kuliner key={detailkunliner.id} data={detailkunliner} />
+      ))}
                     </div>
 {/* Card penutup */}
 

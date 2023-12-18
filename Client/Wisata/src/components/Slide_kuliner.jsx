@@ -1,22 +1,22 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
-
+import React, { useEffect, useState } from 'react'
+import axios from 'axios';
 import Kuliner1 from '../assets/images/kuliner1.png';
-import Kuliner2 from '../assets/images/kuliner2.png';
-import Kuliner3 from '../assets/images/kuliner3.png';
-import Kuliner4 from '../assets/images/kuliner4.png';
-import Kuliner5 from '../assets/images/kuliner5.png';
-import Kuliner6 from '../assets/images/kuliner6.png';
-import Kuliner7 from '../assets/images/kuliner7.png';
-import Kuliner8 from '../assets/images/kuliner8.png';
+
+
 
 // import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 // import { Pagination } from 'swiper/modules';
 
-const Slide_layer = () => {
+const Slide_layer = ({detailkuliner}) => {
+    
+
+
+
   return (
+    // {Kuliner.map((kuliner, index) => (
     <div className="grid px-12 grid-cols-1 gap-6 lg:grid-cols-4 ">
     <a href="#" className=" shadow-2xl relative ">
         <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
@@ -32,12 +32,11 @@ const Slide_layer = () => {
                     </div>
                 </div>
             </div>
-            <img src={Kuliner1} className="w-full z-0 h-full object-fill example "></img>
+            <img src={kuliner} className="w-full z-0 h-full object-fill example "></img>
         </div>
     </a>
-    
 </div>
-    
+    // ))}    
   )
 }
 
