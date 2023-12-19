@@ -9,7 +9,7 @@ import background from "../assets/images/Backgroud_kwo.png";
 import Card_Kuliner from "../components/Card_Kuliner"
 
 // import background from "../assets/images/Teksturs.png";
-import GambarExploreWisata from '../assets/images/ExploreWisata.png'
+import GambarExploreWisata from '../assets/images/ExplorKuliner.png'
 // import Cardwisata from '../components/Card_wisata
 
 

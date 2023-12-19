@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import background from "../assets/images/Backgroud_kwo.png"
 import 'flowbite'
-import Gambarnfo from '../assets/images/NFO 1920x689.png'
+import Gambarnfo from '../assets/images/ExplorOlehOleh.png'
 import Card_Oleh from '../components/Card_Oleh'
 
 
