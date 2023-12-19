@@ -43,7 +43,7 @@ const App = () => {
           {/* Halaman detail */}
           <Route path="/destinasiwisata/detailwisata/:id" element={<DetailWisata/>} />
           <Route path="/DetailKuliner/detailkuliner/:id" element={<DetailKuliner/>} />
-          <Route path="/DetailOlehOleh/detailOleh/:id" element={<DetailOlehOleh/>} />
+          <Route path="/DetailOlehOleh/detailOlehOleh/:id" element={<DetailOlehOlehOleh/>} />
           {/* Login */}
           <Route path="/Login" element={<Login />} />
           {/* Not Found */}
