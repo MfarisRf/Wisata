@@ -61,7 +61,7 @@ function DetailWisata() {
         <div className="bg-[#D5EDC7] p-4 mt-4 rounded-lg shadow-md">
             <h2 className="text-lg font-bold mb-2 text-left">Tiket</h2>
             <div className="bg-[#E6E6E6] p-4 mt-4 rounded-lg shadow-md">
-                <h3 className="text-lg mb-2 text-left font-semibold"> Rp.{wisata.price},00</h3>
+                <h3 className="text-lg mb-2 text-left font-semibold"> Rp.{wisata.price}</h3>
             </div>
 
             <ul className="list-disc list-inside">
