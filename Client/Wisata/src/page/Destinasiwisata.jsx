@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import 'flowbite'
 import background from "../assets/images/Backgroud_kwo.png"
-import Card_wisata from '../components/Card_wisata'
+// import Card_wisata from '../components/Card_wisata'
 import { Link } from 'react-router-dom'
 
 // import background from "../assets/images/Teksturs.png";
@@ -102,7 +102,7 @@ const filteredWisata = Wisata.filter((record) =>
 <div>
   <div className="grid px-12 grid-cols-1 gap-6 lg:grid-cols-4 ">
   {filteredWisata.map((record) => (
-            <div href="" className=" shadow-2xl relative ">
+            <div href="" className=" shadow-2xl relative">
                 <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
                     <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
                         <div className="w-full h-full p-5 relative">
@@ -116,7 +116,7 @@ const filteredWisata = Wisata.filter((record) =>
                             </div>
                         </div>
                     </div>
-                    <img src={record.image} className="w-full z-0  h-full    object-fill example "></img>
+                    <img src={record.image} className="w-full h-48 object-fill example "></img>
                 </div>
             </div>
             ))}

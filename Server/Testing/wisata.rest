@@ -10,7 +10,7 @@ Content-Type: application/json
     "jam_buka": "08.00",
     "jam_tutup": "17.00",
     "categoryId": 1,
-    "address": "Jl. Pantai Kejawanan, Kec. Lemahwungkuk, Kota Cirebon, Jawa Barat 45113",
+    "address": "Jl. Pantai Kejawanan, Kec. Lemahwungkuk, Kota Cirebon, Jawa Barat 45113"
 }
 ###
 GET http://localhost:5000/wisata
