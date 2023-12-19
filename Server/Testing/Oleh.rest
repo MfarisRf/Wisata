@@ -2,15 +2,15 @@ POST http://localhost:5000/Oleh
 Content-Type: application/json
 
 {
-    "name": "Batik Megawati",
-    "description": "Test Kuliner Cirebon Kategori Cirebon",
-    "image": "https://pict-b.sindonews.net/dyn/620/pena/news/2020/06/28/701/83718/lezatnya-docang-makanan-khas-cirebon-xba.png",
+    "name": "Batik Mega Mendung",
+    "description": "Batik Mega Mendung: Pola batik asli Cirebon, memadukan awan megah dengan warna cerah, elegan, dan kontras.",
+    "image": "https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2019/09/batik-mega-mendung.jpg",
     "price": "100000",
-    "nama_toko" : "Ashiapp",
+    "nama_toko" : "Batik Trusmi",
     "jam_buka": "08.00",
-    "jam_tutup": "17.00",
-    "location": "-6.733512661724268, 108.58584415526721",
-    "address": "Jl. Pantai Kejawanan, Kec. Lemahwungkuk, Kota Cirebon, Jawa Barat 45113",
+    "jam_tutup": "20.00",
+    "location": "-6.705239, 108.506599",
+    "address": "Jl. Trusmi kulon 40124, Cirebon",
 
     "categoryId": "1"
 }

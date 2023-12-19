@@ -39,11 +39,11 @@ const App = () => {
           {/* All Item */}
           <Route path="/Destinasiwisata" element={<Destinasiwisata/>} /> 
           <Route path="/Kuliner" element={<Kuliner/>} />
-          <Route path="/Oleholeh" element={<Oleholeh/>} />
+          <Route path="/OlehOleh" element={<OlehoOleh/>} />
           {/* Halaman detail */}
           <Route path="/destinasiwisata/detailwisata/:id" element={<DetailWisata/>} />
           <Route path="/DetailKuliner/detailkuliner/:id" element={<DetailKuliner/>} />
-          <Route path="/DetailOlehOleh/detailoleh/:id" element={<DetailOlehOleh/>} />
+          <Route path="/DetailOlehOleh/detailOlehOleh/:id" element={<DetailOlehOlehOleh/>} />
           {/* Login */}
           <Route path="/Login" element={<Login />} />
           {/* Not Found */}
