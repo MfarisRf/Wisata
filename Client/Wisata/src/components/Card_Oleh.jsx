@@ -3,6 +3,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Oleh1 from '../assets/images/Oleh1.png'
+import Oleh2 from '../assets/images/Oleh2.png'
+import Oleh3 from '../assets/images/Oleh3.png'
+import Oleh4 from '../assets/images/Oleh4.png'
+import Oleh5 from '../assets/images/Oleh5.png'
+import Oleh6 from '../assets/images/Oleh6.png'
+import Oleh7 from '../assets/images/Oleh7.png'
+import Oleh8 from '../assets/images/Oleh8.png'
+import Oleh9 from '../assets/images/Oleh9.png'
+import Oleh10 from '../assets/images/Oleh10.png'
+import Oleh11 from '../assets/images/Oleh11.png'
+import Oleh12 from '../assets/images/Oleh12.png'
+
+
 
 
 const Card_Oleh = () => {
