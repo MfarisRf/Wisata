@@ -24,27 +24,27 @@ function Kuliner() {
   
     useEffect(() => {
       // Pencarian
-      axios.get('http://localhost:5000/Kuliner')
-      .then((response) => {
-        setData(response.data);
-        setFilteredData(response.data);
+      // axios.get('http://localhost:5000/Kuliner')
+      // .then((response) => {
+      //   setData(response.data);
+      //   setFilteredData(response.data);
 
       getKuliner();
       getCategory();
     })
-    .catch((error) => {
-      console.error('Error fetching data:', error);
-    });
-   },[]);
+  //   .catch((error) => {
+  //     console.error('Error fetching data:', error);
+  //   });
+  //  },[]);
 
   //  Pencarian
-   const handleSearch = (search) => {
-    setSearchTerm(search);
-    const filtered = data.filter((item) =>
-      item.title.toLowerCase().includes(search.toLowerCase())
-    );
-    setFilteredData(filtered);
-  };
+  //  const handleSearch = (search) => {
+  //   setSearchTerm(search);
+  //   const filtered = data.filter((item) =>
+  //     item.title.toLowerCase().includes(search.toLowerCase())
+  //   );
+  //   setFilteredData(filtered);
+  // };
   
    const getCategory = async () => {
     try {
@@ -106,10 +106,10 @@ function Kuliner() {
 
 {/* Card pembuka */}
        <div className='py-10'>
-       <Pencarian handleSearch={handleSearch} />
-              {filteredData.map((kuliner) => (
+       {/* <Pencarian handleSearch={handleSearch} />
+              {filteredData.map((kuliner) => ( */}
                   <Card_Kuliner key={Kuliner.uuid} data={Kuliner} />
-                  ))}
+                  {/* ))} */}
                     </div>
 {/* Card penutup */}
 

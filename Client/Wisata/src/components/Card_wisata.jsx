@@ -42,7 +42,7 @@ const getWisata = async () => {
     
 <div>
   <div className="grid px-12 grid-cols-1 gap-6 lg:grid-cols-4 ">
-  {Wisata.map(Wisata => (
+  {/* {Wisata.map(Wisata => ( */}
             <div href="" className=" shadow-2xl relative ">
                 <div className="  h-full relative shadow-md rounded-lg shadow-black overflow-hidden group ">
                     <div className=" absolute -bottom-10 group-hover:top-0 left-0 w-full h-full group-hover:bg-[#2D8C14] transition-all ease-in-out duration-500  ">
@@ -60,7 +60,7 @@ const getWisata = async () => {
                     <img src={Wisata.image} className="w-full z-0  h-full    object-fill example "></img>
                 </div>
             </div>
-            ))}
+            {/* ))} */}
             </div>
         <br/>
         </div>

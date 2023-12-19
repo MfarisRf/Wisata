@@ -13,6 +13,10 @@ import GambarExploreWisata from '../assets/images/ExplorWisata.png'
 // import Cardwisata from '../components/Card_wisata
 
 function Destinasiwisata() {
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
   const [category, setCategory] = useState([]);
    const [Wisata, setWisata] = useState([]);
 
@@ -89,7 +93,11 @@ const getWisata = async () => {
 <br/>
 {/* ini awal card */}
 <div>
+{searchTerm ? (
+  <Card_wisata key={searchResults.uuid} data={searchResults} />
+) : (
   <Card_wisata key={Wisata.uuid} data={Wisata} />
+)}
 
     </div>
 {/* ini akhir card */}

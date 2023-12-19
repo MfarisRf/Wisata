@@ -40,17 +40,19 @@ const App = () => {
           <Route path="/Destinasiwisata" element={<Destinasiwisata/>} /> 
           <Route path="/Kuliner" element={<Kuliner/>} />
           <Route path="/Oleholeh" element={<Oleholeh/>} />
+
           {/* Halaman detail */}
           <Route path="/destinasiwisata/detailwisata/:id" element={<DetailWisata/>} />
           <Route path="/DetailKuliner/detailkuliner/:id" element={<DetailKuliner/>} />
           <Route path="/DetailOlehOleh/detailoleh/:id" element={<DetailOlehOleh/>} />
+
           {/* Login */}
           <Route path="/Login" element={<Login />} />
+
           {/* Not Found */}
           <Route path="/Notfoundkuliner" element={<Notfoundkuliner/>} />
           <Route path="/Notfoundwisata" element={<Notfoundwisata/>} />
           <Route path="/Notfoundoleholeh" element={<Notfoundoleholeh/>} />
-
           <Route path="/Team" element={<OurTeam/>} />
           {/* Halaman Admin */}
           <Route path="/ProfileAdmin" element={<ProfileAdmin/>} />
@@ -63,10 +65,10 @@ const App = () => {
           <Route path="/dashboard/editwisata/:id" element={<Editwisata/>} />
           <Route path="/HomeKuliner/editkuliner/:id" element={<EditKuliner/>} />
           <Route path="/homeoleh/editoleh/:id" element={<EditOlehOleh/>} />
+          
         </Routes>
       </Router>
     </div>
-
   )
 }
 
