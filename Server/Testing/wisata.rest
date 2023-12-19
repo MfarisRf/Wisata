@@ -1,0 +1,16 @@
+POST http://localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "name": "Pantai Kejawanan",
+    "description": "Pantai Indah",
+    "image": "https://mediacirebon.id/wp-content/uploads/2022/09/FB_IMG_1664271508985.jpg",
+    "price": 100000,
+    "location": "-6.733512661724268, 108.58584415526721",
+    "jam_buka": "08.00",
+    "jam_tutup": "17.00",
+    "categoryId": 1,
+    "address": "Jl. Pantai Kejawanan, Kec. Lemahwungkuk, Kota Cirebon, Jawa Barat 45113",
+}
+###
+GET http://localhost:5000/wisata
