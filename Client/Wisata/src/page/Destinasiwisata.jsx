@@ -116,7 +116,9 @@ const filteredWisata = Wisata.filter((record) =>
                             </div>
                         </div>
                     </div>
-                    <img src={record.image} className="w-full h-48 object-fill example "></img>
+                    <div className='aspect-w-5 aspect-h-5'>
+                    <img src={record.image} className="w-full h-60 object-fill example "></img>
+                    </div>
                 </div>
             </div>
             ))}
