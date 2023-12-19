@@ -1,26 +1,50 @@
 // eslint-disable-next-line no-unused-vars
 
 import { useEffect, useState } from 'react'
-import axios from 'axios';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import 'flowbite'
 import background from "../assets/images/Backgroud_kwo.png";
+import GambarExploreWisata from '../assets/images/ExploreWisata.png'
+
+// Pencarian
 import Card_Kuliner from "../components/Card_Kuliner"
-
-// import background from "../assets/images/Teksturs.png";
-import GambarExploreWisata from '../assets/images/ExplorKuliner.png'
-// import Cardwisata from '../components/Card_wisata
-
+import Pencarian from '../components/Pencarian'
+import axios from 'axios'
 
 function Kuliner() {
+  // Pencarian
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+
+
     const [category, setCategory] = useState([]);
-     const [Kuliner, setKuliner] = useState([]);
+    const [Kuliner, setKuliner] = useState([]);
   
     useEffect(() => {
+      // Pencarian
+      axios.get('http://localhost:5000/Kuliner')
+      .then((response) => {
+        setData(response.data);
+        setFilteredData(response.data);
+
       getKuliner();
       getCategory();
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+    });
    },[]);
+
+  //  Pencarian
+   const handleSearch = (search) => {
+    setSearchTerm(search);
+    const filtered = data.filter((item) =>
+      item.title.toLowerCase().includes(search.toLowerCase())
+    );
+    setFilteredData(filtered);
+  };
   
    const getCategory = async () => {
     try {
@@ -50,16 +74,8 @@ function Kuliner() {
 
   <div className="flex items-center justify-between w-full sm:w-96">
   <div className="relative w-full mr-2 pl-20">
-  <input type="search" id="search-dropdown" className="block p-2.5 w-72 z-20 text-sm text-gray-900 bg-[#F1F1E8] rounded-lg border-s-[#2D8C14] border-s-1 border border-[#2D8C14] focus:ring-[#2D8C14] focus:border-[#2D8C14] dark:bg-gray-700 dark:border-s-gray-700 dark:border-[#2D8C14] dark:placeholder-gray-400 dark:text-white" placeholder="Search" required />
-
-  <button type="submit" className="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-gray-900 bg-[#D5EDC7] bg-opacity-80 rounded-lg border border-[#2D8C14] hover:bg-opacity-90 focus:ring-1 focus:outline-none focus:ring-[#2D8C14] dark:bg-gray-800 dark:border-s-gray-700 dark:border-gray-700 dark:text-white dark:hover:bg-gray-900">
-    <svg className="w-10 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-      <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-    </svg>
-    <span className="sr-only">Search</span>
-  </button>
-</div>
-
+      {/* <Pencarian/> */}
+  </div>
 
 
 <form>
@@ -90,10 +106,16 @@ function Kuliner() {
 
 {/* Card pembuka */}
        <div className='py-10'>
-         
+       <Pencarian handleSearch={handleSearch} />
+              {filteredData.map((kuliner) => (
                   <Card_Kuliner key={Kuliner.uuid} data={Kuliner} />
+                  ))}
                     </div>
 {/* Card penutup */}
+
+
+        {/* <CardItem key={item.id} data={item} /> */}
+
 
     <br/>
       <div>
