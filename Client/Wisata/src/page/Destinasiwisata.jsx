@@ -16,9 +16,9 @@ function Destinasiwisata() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-
   const [category, setCategory] = useState([]);
-   const [Wisata, setWisata] = useState([]);
+  const [selectedCategoryId, setSelectedCategoryId] = useState(null); // Tambahkan state untuk menyimpan categoryId yang dipilih
+  const [Wisata, setWisata] = useState([]);
 
   useEffect(() => {
     getWisata();
@@ -38,7 +38,25 @@ const getWisata = async () => {
      const response = await axios.get('http://localhost:5000/Wisata');
      setWisata(response.data);
 }
+const handleSearch = (event) => {
+  const searchTerm = event.target.value.toLowerCase();
+  setSearchTerm(searchTerm);
 
+  const filteredWisata = Wisata.filter((wisata) =>
+    wisata.nama.toLowerCase().includes(searchTerm)
+  );
+  setSearchResults(filteredWisata);
+};
+
+const handleCategoryFilter = (categoryId) => {
+  setSelectedCategoryId(categoryId);
+
+  // Filter data Wisata berdasarkan categoryId
+  const filteredWisata = Wisata.filter((wisata) =>
+    categoryId ? wisata.categoryId === categoryId : true
+  );
+  setSearchResults(filteredWisata);
+};
 
 
   return (
@@ -73,17 +91,13 @@ const getWisata = async () => {
         <div id="dropdown" className="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
             <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-[#F1F1E8]" aria-labelledby="dropdown-button">
                 <li>
-                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cirebon</button>
+                    <button type="button" onClick={() => handleCategoryFilter(null)}  className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></button>
                 </li>
+                {category.map((categoryItem) => (
                 <li>
-                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Indramayu</button>
+                    <button type="button" onClick={() => handleCategoryFilter(categoryItem.id)} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></button>
                 </li>
-                <li>
-                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Majalengka</button>
-                </li>
-                <li>
-                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kuningan</button>
-                </li>
+               ))}
             </ul>
         </div>
     </div>
@@ -93,12 +107,7 @@ const getWisata = async () => {
 <br/>
 {/* ini awal card */}
 <div>
-{searchTerm ? (
-  <Card_wisata key={searchResults.uuid} data={searchResults} />
-) : (
-  <Card_wisata key={Wisata.uuid} data={Wisata} />
-)}
-
+    <Card_wisata key={Wisata.uuid} data={Wisata} />
     </div>
 {/* ini akhir card */}
         <br/>
