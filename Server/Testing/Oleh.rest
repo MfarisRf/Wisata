@@ -2,15 +2,15 @@ POST http://localhost:5000/Oleh
 Content-Type: application/json
 
 {
-    "name": "Batik Mega Mendung",
-    "description": "Batik Mega Mendung: Pola batik asli Cirebon, memadukan awan megah dengan warna cerah, elegan, dan kontras.",
-    "image": "https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2019/09/batik-mega-mendung.jpg",
+    "name": "Batik Bokor",
+    "description": "Batik Kuningan motif Bokor melambangkan sejarah lahirnya sang Adipati Kuningan yang menjadi kepala pemerintahan pertama, juga sebagai lambang lahirnya pemerintahan Kuningan pada tanggal 1 september 1498.",
+    "image": "https://i.pinimg.com/originals/3c/20/6a/3c206a3b15f46707637cb0f0e254e0c9.jpg",
     "price": "100000",
-    "nama_toko" : "Batik Trusmi",
+    "nama_toko" : "Bojong Asri Batik",
     "jam_buka": "08.00",
-    "jam_tutup": "20.00",
-    "location": "-6.705239, 108.506599",
-    "address": "Jl. Trusmi kulon 40124, Cirebon",
+    "jam_tutup": "22.00",
+    "location": "-6.933475, 108.487640",
+    "address": "Desa Bojong, Kecamatan Kramatmulya 45553 Kuningan West Java",
 
     "categoryId": "1"
 }
