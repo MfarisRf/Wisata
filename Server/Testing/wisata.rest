@@ -1,0 +1,16 @@
+POST http://localhost:5000/wisata
+Content-Type: application/json
+
+{
+    "name": "Situ Wulukut",
+    "description": "Situ Wulukut merupakan salah satu objek wisata alam di Kabupaten Kuningan yang berlokasi di Desa Kertayuga Kecamatan Nusaherang Kabupaten Kuningan. Situ Wulukut mempunyai luas 1,2 Ha yang berada di wilayah pangkuan tanah Perum Perhutani Kabupaten Kuningan.",
+    "image": "https://i.misteraladin.com/blog/2020/06/02083513/wulukut.jpg",
+    "price":25000,
+    "location": "-7.03828777233505, 108.42966631349145",
+    "jam_buka": "24 jam",
+    "jam_tutup": "-",
+    "categoryId": 4,
+    "address": "Kertayuga, Kec. Nusaherang, Kabupaten Kuningan, Jawa Barat 45563"
+}
+###
+GET http://localhost:5000/wisata

@@ -13,9 +13,9 @@ import OlehRoute from './routes/OlehOlehRoutes.js'
 
 dotenv.config();
 
-// (async()=>{
-//     await db.sync();
-// })();
+(async()=>{
+    await db.sync();
+})();
 
 const app = express();
 
@@ -58,7 +58,7 @@ app.use(WisataRoute);
 app.use(KulinerRoutes);
 app.use(KategoriRoute);
 app.use(OlehRoute);
-// store.sync();
+store.sync();
 app.listen(5000, () => {
     console.log("Server running on port 5000");
 });
