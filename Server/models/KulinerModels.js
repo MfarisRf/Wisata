@@ -42,8 +42,45 @@ const detailkuliner = db.define("detailkuliner",     {
             model: category,
             key: 'id', // Atur sesuai dengan kolom yang Anda gunakan sebagai primary key di Category
         },
-    }
+    },
 
+    nama_restoran: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+            len: [3, 100],
+            },
+    },
+    address: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+            len: [3, 100],
+            },
+    },
+    price: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+            },
+    },
+    jam_buka: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+            },
+    },
+    jam_tutup: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            notEmpty: true,
+            },
+    },
 },{
     freezeTableName: true,
 });

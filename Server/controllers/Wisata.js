@@ -33,18 +33,22 @@ export const getWisataById = async (req, res) => {
 }
 
 export const createWisata = async (req, res) => {
-  const { name, description, image, price, categoryId } = req.body;
+  const { name, description, image, price,address, jam_buka,jam_tutup,location , categoryId } = req.body;
     try {
         // Ambil data dari body request
         
     
         // Buat data wisata baru
         const newWisata = await wisata.create({
-          name,
-          description,
-          image,
-          price,
-          categoryId,
+            name,
+            description,
+            image,
+            price,
+            jam_buka,
+            jam_tutup,
+            location,
+            address,
+            categoryId,
         });
     
         // Mengirimkan data yang baru dibuat sebagai respons
@@ -69,14 +73,17 @@ export const updateWisata = async (req, res) => {
           return res.status(404).json({ msg: "Wisata not found!" });
       }
 
-      const { name, description, image, price, categoryId } = req.body;
+      const { name, description, image, price,jam_buka,jam_tutup,location , categoryId } = req.body;
 
       await existingWisata.update({
-          name,
-          description,
-          image,
-          price,
-          categoryId,
+            name,
+            description,
+            image,
+            price,
+            jam_buka,
+            jam_tutup,
+            location,
+            categoryId,
       }, {
           where: {
               uuid: req.params.id

@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Navbar_admin from '../../components/Navbar_admin '
 import Gambar from '../../assets/images/Ghandi.jpg'
 import FooterAdmin from '../../components/FooterAdmin'
