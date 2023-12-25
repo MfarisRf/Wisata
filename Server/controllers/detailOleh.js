@@ -27,17 +27,23 @@ export const getOlehById = async  (req, res) => {
 }
 
 export const createOleh = async  (req, res) => {
-    const { name, description, image, categoryId } = req.body;
+    const { name, description, image, categoryId,address,nama_toko, price, jam_buka, jam_tutup, location} = req.body;
     try {
         // Ambil data dari body request
         
     
         // Buat data wisata baru
         const newOleh = await detailOleh.create({
-          name,
-          description,
-          image,
-          categoryId,
+            name,
+            description,
+            image,
+            price,
+            jam_buka,
+            jam_tutup,
+            location,
+            categoryId,
+            nama_toko,
+            address,
         });
     
         // Mengirimkan data yang baru dibuat sebagai respons
@@ -61,12 +67,16 @@ export const updateOleh = async (req, res) => {
             return res.status(404).json({ msg: "Oleh-Oleh not found!" });
         }
   
-        const { name, description, image, categoryId } = req.body;
+        const { name, description, image, price,jam_buka,jam_tutup,location , categoryId } = req.body;
   
         await existingOleh.update({
             name,
             description,
             image,
+            price,
+            jam_buka,
+            jam_tutup,
+            location,
             categoryId,
         }, {
             where: {

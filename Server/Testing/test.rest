@@ -1,0 +1,14 @@
+
+
+
+###
+PATCH   http://localhost:5000/tempatkuliner/fb2fa8d4-de38-4eed-bce5-a5afd7b9c6a2
+Content-Type: application/json
+
+{
+    "name": "Empal Gentong H. Apud",
+    "address": "Jl. Raya Cirebon - Indramayu, Kec. Kandanghaur, Kabupaten Indramayu, Jawa Barat 45252",
+    "jam_buka": "08.00",
+    "detailkulinerId": "1"
+}
+

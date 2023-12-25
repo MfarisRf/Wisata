@@ -37,6 +37,7 @@ export const createWisata = async (req, res) => {
     try {
         // Ambil data dari body request
         
+        
     
         // Buat data wisata baru
         const newWisata = await wisata.create({
@@ -48,7 +49,7 @@ export const createWisata = async (req, res) => {
             jam_tutup,
             location,
             address,
-            categoryId,
+            categoryId
         });
     
         // Mengirimkan data yang baru dibuat sebagai respons

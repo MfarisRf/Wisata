@@ -1,0 +1,39 @@
+POST http://localhost:5000/Oleh
+Content-Type: application/json
+
+{
+    "name": "Batik Bokor",
+    "description": "Batik Kuningan motif Bokor melambangkan sejarah lahirnya sang Adipati Kuningan yang menjadi kepala pemerintahan pertama, juga sebagai lambang lahirnya pemerintahan Kuningan pada tanggal 1 september 1498.",
+    "image": "https://i.pinimg.com/originals/3c/20/6a/3c206a3b15f46707637cb0f0e254e0c9.jpg",
+    "price": "100000",
+    "nama_toko" : "Bojong Asri Batik",
+    "jam_buka": "08.00",
+    "jam_tutup": "22.00",
+    "location": "-6.933475, 108.487640",
+    "address": "Desa Bojong, Kecamatan Kramatmulya 45553 Kuningan West Java",
+
+    "categoryId": "1"
+}
+###
+GET  http://localhost:5000/Oleh
+
+###
+
+PATCH http://localhost:5000/Oleh
+Content-Type: application/json
+
+{
+    "name": "Batik Mega Mendung",
+    "description": "Test Kuliner Cirebon Kategori Cirebon",
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pegipegi.com%2Fhotel%2Fbali%2Fpantai_kuta%2F&psig=AOvVaw0QZ3Z4Z4Z4Z4Z4Z4Z4Z4Z4&ust=1629786166594000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCJjQ4ZqHgvICFQAAAAAdAAAAABAD",
+    "price": "100000",
+    "nama_toko" : "Ashiapp",
+    "jam_buka": "08.00",
+    "jam_tutup": "17.00",
+    "location": "-6.733512661724268, 108.58584415526721",
+    "address": "Jl. Pantai Kejawanan, Kec. Lemahwungkuk, Kota Cirebon, Jawa Barat 45113",
+
+    "categoryId": "1"
+}
+###
+DELETE http://localhost:5000/Oleh/8202f0a9-c706-4787-bb3d-7e780cef737a

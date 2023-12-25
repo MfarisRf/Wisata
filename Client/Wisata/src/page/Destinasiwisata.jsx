@@ -1,15 +1,64 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react'
+
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import background from "../assets/images/Backgroud_kwo.png"
 import 'flowbite'
+import background from "../assets/images/Backgroud_kwo.png"
+import Card_wisata from '../components/Card_wisata'
 
 // import background from "../assets/images/Teksturs.png";
-import GambarExploreWisata from '../assets/images/ExploreWisata.png'
-import Cardwisata from '../components/Card_wisata'
+import GambarExploreWisata from '../assets/images/ExplorWisata.png'
+// import Cardwisata from '../components/Card_wisata
 
 function Destinasiwisata() {
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [category, setCategory] = useState([]);
+  const [selectedCategoryId, setSelectedCategoryId] = useState(null); // Tambahkan state untuk menyimpan categoryId yang dipilih
+  const [Wisata, setWisata] = useState([]);
+
+  useEffect(() => {
+    getWisata();
+    getCategory();
+ },[]);
+
+ const getCategory = async () => {
+  try {
+    const response = await axios.get('http://localhost:5000/category');
+    setCategory(response.data);
+  } catch (error) {
+    console.error('Error fetching categories:', error);
+  }
+};
+
+const getWisata = async () => {
+     const response = await axios.get('http://localhost:5000/Wisata');
+     setWisata(response.data);
+}
+const handleSearch = (event) => {
+  const searchTerm = event.target.value.toLowerCase();
+  setSearchTerm(searchTerm);
+
+  const filteredWisata = Wisata.filter((wisata) =>
+    wisata.nama.toLowerCase().includes(searchTerm)
+  );
+  setSearchResults(filteredWisata);
+};
+
+const handleCategoryFilter = (categoryId) => {
+  setSelectedCategoryId(categoryId);
+
+  // Filter data Wisata berdasarkan categoryId
+  const filteredWisata = Wisata.filter((wisata) =>
+    categoryId ? wisata.categoryId === categoryId : true
+  );
+  setSearchResults(filteredWisata);
+};
+
+
   return (
     <div className='bg-cover' style={{backgroundImage: `url(${background}) `}}>
     <Navbar/>
@@ -33,7 +82,6 @@ function Destinasiwisata() {
 </div>
 
 
-
 <form>
     <div className="relative flex-shrink-0 z-10 inline-flex items-center">
         <label htmlFor="search-dropdown" className="mb-2 text-sm font-medium text-[#B3B3B3] sr-only dark:text-[#B3B3B3]">Cari</label>
@@ -43,17 +91,13 @@ function Destinasiwisata() {
         <div id="dropdown" className="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
             <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-[#F1F1E8]" aria-labelledby="dropdown-button">
                 <li>
-                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cirebon</button>
+                    <button type="button" onClick={() => handleCategoryFilter(null)}  className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></button>
                 </li>
+                {category.map((categoryItem) => (
                 <li>
-                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Indramayu</button>
+                    <button type="button" onClick={() => handleCategoryFilter(categoryItem.id)} className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"></button>
                 </li>
-                <li>
-                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Majalengka</button>
-                </li>
-                <li>
-                    <button type="button" className="inline-flex w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Kuningan</button>
-                </li>
+               ))}
             </ul>
         </div>
     </div>
@@ -62,7 +106,9 @@ function Destinasiwisata() {
 <br/>
 <br/>
 {/* ini awal card */}
-        <Cardwisata />
+<div>
+    <Card_wisata key={Wisata.uuid} data={Wisata} />
+    </div>
 {/* ini akhir card */}
         <br/>
       <div>

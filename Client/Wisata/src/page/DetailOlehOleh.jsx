@@ -1,13 +1,36 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
+import { useEffect, useState } from 'react'
+import {useParams} from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import axios from 'axios'
 import 'flowbite'
+
 // eslint-disable-next-line no-unused-vars
 import GambarBMM from '../assets/images/BMM.png'
 import GambarCirebon from '../assets/images/Cirebon.png'
 
-function DetailOlehOlehCirebon() {
+function DetailOlehOleh() {
+  const { id } = useParams();
+  const [OlehOleh, setOlehOleh] = useState(null);
+
+  useEffect(() => {
+    getOlehOlehById();
+  }, [id]);
+
+  const getOlehOlehById = async () => {
+    try {
+      const response = await axios.get(`http://localhost:5000/OlehOleh/${id}`);
+      setOlehOleh(response.data);
+    } catch (error) {
+      console.error('Error fetching OlehOleh details:', error);
+    }
+  };
+
+
+
+
   return (
     <div className='bg-[#D5EDC7]'>
         <Navbar/>
@@ -64,4 +87,4 @@ function DetailOlehOlehCirebon() {
   )
 }
 
-export default DetailOlehOlehCirebon
+export default DetailOlehOleh

@@ -1,0 +1,17 @@
+###
+GET  http://localhost:5000/Category
+
+###
+POST http://localhost:5000/category
+Content-Type: application/json
+
+{
+    "name" : "Cirebon"
+}
+###
+PATCH  http://localhost:5000/category/b2181dd9-c95d-45b0-9cf0-a50436dc595f
+Content-Type: application/json
+
+{
+    "name": "Cirebon"
+}

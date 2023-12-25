@@ -6,6 +6,8 @@ import Olcirebon3 from '../LP/Ol_cirebon3.png';
 import Olcirebon4 from '../LP/Ol_cirebon4.png';
 
 const CardCirebon = () => {
+    const [detailoleh, setDetailoleh] = React.useState([]);
+
   return (
     <div className="max-w-sm w-468 bg-f1f1e8 border border-gray-200 rounded-lg shadow-2xl h-70 grid grid-cols-2 content-start absolute">
                 <a href="#">
@@ -15,6 +17,7 @@ const CardCirebon = () => {
                     <img className="w-234" src={Olcirebon2} alt="wisata indramayu" />
                 </a>
                 <a href="#">
+                
                     <img className="w-234" src={Olcirebon3} alt="wisata indramayu" />
                 </a>
                 <a href="#">
